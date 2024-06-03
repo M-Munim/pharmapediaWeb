@@ -1,16 +1,12 @@
-export const cards = [
+export const products = [
   {
-    title: '5 Exercises You Should Be Using To Develop Strength...',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.'
+    image: "./product1.svg"
+  }, {
+    image: "./product2.svg"
+  }, {
+    image: "./product3.svg"
+  }, {
+    image: "./product4.svg"
   },
-  {
-    title: '5 Exercises You Should Be Using To Develop Strength...',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.'
-  },
-  {
-    title: '5 Exercises You Should Be Using To Develop Strength...',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.'
-  },
-  // Add more card objects as needed
 ];
 
