@@ -54,34 +54,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-11/12 mx-auto bg-slate-400 py-16">
-        <div className="">
-          <div className="flex flex-col justify-start items-start gap-4" style={{ width: "677px" }}>
-            <h2 className="text-5xl text-heading_blue font-light">OUR PRODUCTS</h2>
-            <p className="text-xl text-text_grey">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
+      <section className="w-11/12 mx-auto bg-red-400 py-16">
+        <div className="flex flex-col items-start gap-4" style={{ width: "677px" }}>
+          <h2 className="text-5xl text-heading_blue font-light">OUR PRODUCTS</h2>
+          <p className="text-xl text-text_grey">
+            Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.
+          </p>
+          <button className="button-filled">
+            Explore More
+          </button>
+        </div>
 
-            <button className="button-filled">
-              Explore More
-            </button>
-          </div>
-
-          {/* Products */}
-
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-10">
-            {
-              products.map((data, i) => {
-                return <div key={i}>
-
-                  <Image
-                    src={data.image}
-                    width={676}
-                    height={362}
-                    alt="Products Image"
-                  />
-                </div>
-              })
-            }
-          </div>
+        {/* Products */}
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-10">
+          {products.map((data, i) => (
+            <div key={i}>
+              <Image
+                src={data.image}
+                width={676}
+                height={362}
+                alt="Products Image"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          ))}
         </div>
       </section>
     </main >
