@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button-outlined {
+  width: 154px;
+  height: 48px;
+  border: 1px solid #33ABFF;
+  color: #33ABFF;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.button-outlined:hover {
+  color: white;
+  background: #33ABFF;
+  transition: .2s ease-in;
+  /* transform: scale(1.1); */
+}
+
+
+.button-filled {
+  width: 154px;
+  height: 48px;
+  background-color: #33ABFF;
+  border-radius: 5px;
+  font-weight: 500;
+  color: white;
+}
+
+.button-filled:hover {
+  background: transparent;
+  transition: .2s ease-out;
+  border: 1px solid #33ABFF;
+  /* transform: scale(1.1); */
+}
