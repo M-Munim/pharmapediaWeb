@@ -24,7 +24,10 @@ module.exports = {
         pClr: "#6C6C72",
         bg_1: "#FAFBFF",
         heading_blue: "#0A64B3",
-        text_grey: "#707070"
+        t_grey: "#707070",
+        lightBlue: "#33ABFF"
+      },
+      gradients: {
       },
       navWidth: {
         width: "400px"
