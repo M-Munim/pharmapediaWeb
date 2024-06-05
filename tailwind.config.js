@@ -25,7 +25,8 @@ module.exports = {
         bg_1: "#FAFBFF",
         heading_blue: "#0A64B3",
         t_grey: "#707070",
-        lightBlue: "#33ABFF"
+        lightBlue: "#33ABFF",
+        footerGrey: "#A0A0A0",
       },
       gradients: {
       },

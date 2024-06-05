@@ -49,7 +49,7 @@ export default function Home() {
   };
   return (
     <main className='bg-bg_1'>
-      <section className="w-11/12 mx-auto relative bg-bg_1 py-8 flex justify-center items-center flex-col">
+      <section className="w-10/12 mx-auto relative bg-bg_1 py-8 flex justify-center items-center flex-col">
         <div className="bg-red-200 text-center h-72 flex justify-center items-center flex-col gap-4 max-w-3xl">
           <h1 className="font-light text-6xl text-heading_blue">Pharmapedia</h1>
           <p className="text-t_grey text-xl px-4">
@@ -97,7 +97,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-11/12 mx-auto bg-red-400 my-28">
+      <section className="w-10/12 mx-auto bg-red-400 my-28">
         <div className="flex flex-col items-start gap-4" style={{ width: "677px" }}>
           <h2 className="text-5xl text-heading_blue font-light">OUR PRODUCTS</h2>
           <p className="text-xl text-t_grey">
@@ -109,15 +109,15 @@ export default function Home() {
         </div>
 
         {/* Products */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mt-10">
+        <div className="flex flex-wrap items-center justify-center gap-3 mt-10">
           {products.map((data, i) => (
             <div key={i}>
               <Image
                 src={data.image}
-                width={676}
+                width={646}
                 height={362}
                 alt="Products Image"
-                className="w-full h-auto"
+                className="h-auto" style={{ width: "627px" }}
                 loading="lazy"
               />
             </div>
@@ -126,7 +126,7 @@ export default function Home() {
       </section>
 
       <section className="bg-blue my-28" style={{ height: "716px" }}>
-        <div className=" flex h-full w-11/12 m-auto">
+        <div className=" flex h-full w-10/12 m-auto">
           <div className="left w-1/2">
             {/* <Image src='./Downloadapp2.svg' width={382} height={785}/> */}
             <img src="./Downloadapp2.svg" alt="DownloadApp" />
@@ -149,7 +149,7 @@ export default function Home() {
       </section>
 
 
-      <section className="w-10/12 m-auto my-28">
+      <section className="w-10/12 m-auto my-28 bg-purple-100">
         <div className="w-7/12 bg-red-200 text-center m-auto pb-12 ">
           <h3 className="uppercase font-medium text-xl  tracking-widest">News& Events</h3>
           <h1 className="uppercase font-light text-6xl text-heading_blue mb-6">Our Blogs</h1>
@@ -192,7 +192,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-28 w-10/12 m-auto">
+      <section className="my-28 w-10/12 m-auto bg-purple-100">
         <div className="w-7/12 text-center m-auto pb-12 ">
           <h3 className="uppercase font-semibold text-xl tracking-widest">Reviews</h3>
           <h1 className="uppercase font-light text-6xl text-heading_blue mb-5">Testimonials</h1>
@@ -300,6 +300,67 @@ export default function Home() {
             </div>
           </SwiperSlide>
         </Swiper>
+      </section>
+
+      <section className="my-28 w-10/12 m-auto bg-purple-300">
+        <div className="w-11/12 m-auto flex items-center justify-center gap-20">
+          <div className="left bg-slate-300 w-1/2">
+            <form action="">
+              <div className="flex">
+                <div className="">
+                  <label htmlFor="firstName">First Name</label>
+                  <input type="text" name="firstName" id="firstName" placeholder='First Name' required />
+                </div>
+                <div className="">
+                  <label htmlFor="lastName">Last Name</label>
+                  <input type="text" name="lastName" id="lastName" placeholder='Last Name' required />
+                </div>
+              </div>
+
+              <div className="flex flex-col">
+                <label htmlFor="email">Email</label>
+                <input type="email" name="email" id="email" placeholder='Example@company.com' required />
+              </div>
+
+              <div className="">
+                <label for="phone">Phone number</label>
+                <div class="phone-input">
+                  <select id="country-code" name="country-code">
+                    <option value="PK">PK +92</option>
+                    {/* <!-- Add more country options here --> */}
+                  </select>
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" />
+                </div>
+              </div>
+
+              <div className="flex flex-col">
+                <label htmlFor="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+              </div>
+
+              <div className="flex">
+                <input type="checkbox" name="" id="" />
+                <p className="">You agree to our friendly <a href="">privacy policy.</a></p>
+              </div>
+
+              <button className="button-filledext">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div className="right bg-yellow-200 w-1/2">
+            <div className="flex flex-col gap-4">
+              <h2 className="uppercase font-light text-6xl text-heading_blue ">Get in Touch</h2>
+
+              <p className="text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
+
+              <button className="button-filled">
+                Contact us
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </main >
   );

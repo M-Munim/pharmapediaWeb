@@ -7,52 +7,70 @@ import { FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <section className='bg-darkblue relative z-20'>
-      <div className="text-white">
-        <div className="w-10/12 pb-16 flex flex-wrap mx-auto items-center justify-between">
-          <div className="w-3/6 lg:w-2/6">
-            <Image src="/FooterLogo.svg" className='' width={374} height={184} />
-            <div className="icons flex md:flex-row flex-col gap-4 items-center justify-center md:gap-6">
+    <section className='bg-black py-3'>
+      <div className="w-10/12 m-auto">
+        <div className="flex justify-center items-start gap-16">
+          <div className="bg-purple-100 w-4/12">
+            <Image
+              src="/logo.svg"
+              alt="Pharmapedia Logo"
+              width={270}
+              height={95}
+              priority
+            />
 
-              <div className='text-xl border-r-none md:border-r-2 pr-5 cursor-pointer' >
-                <FaFacebookF />
-              </div>
-              <div className='text-xl border-r-none md:border-r-2 pr-5 cursor-pointer' >
-                <AiFillInstagram />
-              </div>
-              <div className='text-xl border-r-none md:border-r-2 pr-5 cursor-pointer' >
-                <FaTwitter />
-              </div>
-
-              <div className='text-xl border-r-none md:border-r-2 pr-5 cursor-pointer' >
-                <FaYoutube />
-              </div>
+            <p className="text-footerGrey text-lg">
+              Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.
+            </p>
+          </div>
+          <div className="bg-purple-200 w-2/12">
+            <div className="links flex flex-col items-start justify-start text-lg text-footerGrey gap-3">
+              <p className="font-bold text-xl text-white">Quick Links</p>
+              <a href="">About Us</a>
+              <a href="">Our Products</a>
+              <a href="">FAQS</a>
+              <a href="">Blogs</a>
             </div>
           </div>
-
-          <div className="flex flex-col mt-10 md:mt-28 w-2/6  lg:w-2/6">
-            <p className="uppercase text-2xl font-semibold pb-4">quick links</p>
-            <a href="" className='mb-2'>About</a>
-            <a href="" className='mb-2'>Products</a>
-            <a href="" className='mb-2'>Faq</a>
-            <a href="" className='mb-2'>Blog</a>
-          </div>
-
-          <div className="w-6/6  lg:w-2/6">
-            <div className="w-10/12">
-              <p className="uppercase text-2xl font-semibold mt-14 pb-4">NEWS</p>
-              <p className="pb-6">Subscribe our newsletter to get our latest update & news</p>
+          <div className="bg-purple-400 w-2/12">
+            <div className="links flex flex-col items-start justify-start text-lg text-footerGrey gap-3">
+              <p className="font-bold text-xl text-white">Customer Care</p>
+              <a href="">Contact us</a>
+              <a href="">FAQs</a>
             </div>
-            <div className="w-full relative z-20">
-              <input type="email" name="email" id="" placeholder='Your email address' className='w-full h-12 p-4 outline-none text-black  rounded-sm' />
+          </div>
+          <div className="bg-purple-400 w-4/12">
+            <div className="links flex flex-col items-start justify-start text-lg gap-3 text-white">
+              <p className="font-bold text-xl">Address</p>
+              <a href="">SAHARBEGUM@PHARMAPEDIA.PRO</a>
+              <a href="">+923494428783</a>
             </div>
           </div>
         </div>
-        <hr className=' w-10/12 mx-auto  lg:w-2/6' />
 
-        <p className="text-center py-6">© Copyright 2024. All Right Reserved.</p>
+        <div className="mt-4">
+          <div className="flex justify-between items-center w-6/12 ms-auto">
+            <div className="">
+              <p className="text-white">Copyright 2024. All Right Reserved.</p>
+            </div>
+            <div className="flex items-center text-white gap-4">
+              <a href="#" className='text-base border-r border-white md:border-r-2 pr-3 py-1' aria-label="Facebook">
+                <FaFacebookF className='cursor-pointer' />
+              </a>
+              <a href="#" className='text-base border-r border-white md:border-r-2 pr-3 py-1' aria-label="YouTube">
+                <AiFillInstagram className='cursor-pointer' />
+              </a>
+              <a href="#" className='text-base border-r border-white md:border-r-2 pr-3 py-1' aria-label="Instagram">
+                <FaTwitter className='cursor-pointer' />
+              </a>
+
+              <a href="#" className='text-base' aria-label="Instagram">
+                <FaYoutube className='cursor-pointer' />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <Image src="/section2vector.svg" alt="Main Mesh" className="absolute z-10 right-0 bottom-0" width={500} height={300} />
     </section>
   )
 }
