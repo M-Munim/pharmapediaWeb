@@ -8,6 +8,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/bundle';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { FaStar } from "react-icons/fa";
+import { CiStar } from "react-icons/ci";
+
 
 export default function Home() {
   var settings = {
@@ -148,7 +151,7 @@ export default function Home() {
 
       <section className="w-10/12 m-auto my-28">
         <div className="w-7/12 bg-red-200 text-center m-auto pb-12 ">
-          <h3 className="uppercase font-medium text-xl">News& Events</h3>
+          <h3 className="uppercase font-medium text-xl  tracking-widest">News& Events</h3>
           <h1 className="uppercase font-light text-6xl text-heading_blue mb-6">Our Blogs</h1>
           <p className="text-xl text-t_grey mb-5">Lorem ipsum dolor sit amet consectetur. Morbi in vulputate id tellus. Et scelerisque consequat egestas volutpat semper pretium morbi amet.</p>
           <button className="button-filled">
@@ -190,9 +193,9 @@ export default function Home() {
       </section>
 
       <section className="my-28 w-10/12 m-auto">
-        <div className="w-7/12 bg-red-200 text-center m-auto pb-12 ">
-          <h3 className="uppercase font-medium text-xl">Reviews</h3>
-          <h1 className="uppercase font-light text-6xl text-heading_blue mb-6">Testimonials</h1>
+        <div className="w-7/12 text-center m-auto pb-12 ">
+          <h3 className="uppercase font-semibold text-xl tracking-widest">Reviews</h3>
+          <h1 className="uppercase font-light text-6xl text-heading_blue mb-5">Testimonials</h1>
         </div>
 
 
@@ -202,95 +205,100 @@ export default function Home() {
           spaceBetween={50}
           slidesPerView={1} // Default for large screens
           navigation
-          pagination={{ clickable: true }}
-          // breakpoints={{
-          //   640: {
-          //     slidesPerView: 1,
-          //     spaceBetween: 20,
-          //   },
-          //   768: {
-          //     slidesPerView: 2,
-          //     spaceBetween: 30,
-          //   },
-          //   1024: {
-          //     slidesPerView: 3,
-          //     spaceBetween: 40,
-          //   },
-          // }}
+          // pagination={{ clickable: true }}
           onSlideChange={() => console.log('slide change')}
         >
-          <SwiperSlide className=''>
-            <div className="bg-red-100 w-3/6 m-auto">
-              <div className="">
-                <p className="text-center">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
-
-                <div className="">
-                  <p className="">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
+          <SwiperSlide className=' pb-10'>
+            <div className=" w-3/6 m-auto">
+              <div className="flex flex-col items-center justify-center gap-24">
+                <p className="text-center text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
+                <div className="flex justify-center items-center gap-6">
+                  <div className="">
+                    <Image src='./testimonialImg.svg' width={92} height={92} alt="Ellipse Image" className='' />
+                  </div>
+                  <div className="flex flex-col justify-center items-center gap-2">
+                    <h3 className="font-bold text-3xl">Aliyan Baig</h3>
+                    <div className="icons text-4xl flex justify-center items-center gap-2">
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <CiStar style={{ color: "#E3E6F0" }} />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
 
-          <SwiperSlide className=''>
-            <div className="bg-red-100 w-3/6 m-auto">
-              <div className="">
-                <p className="text-center">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
-
-                <div className="">
-                  <p className="">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
+          <SwiperSlide className=' pb-10'>
+            <div className=" w-3/6 m-auto">
+              <div className="flex flex-col items-center justify-center gap-24">
+                <p className="text-center text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
+                <div className="flex justify-center items-center gap-6">
+                  <div className="">
+                    <Image src='./testimonialImg.svg' width={92} height={92} alt="Ellipse Image" className='' />
+                  </div>
+                  <div className="flex flex-col justify-center items-center gap-2">
+                    <h3 className="font-bold text-3xl">Aliyan Baig</h3>
+                    <div className="icons text-4xl flex justify-center items-center gap-2">
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <CiStar style={{ color: "#E3E6F0" }} />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
 
-          <SwiperSlide className=''>
-            <div className="bg-red-100 w-3/6 m-auto">
-              <div className="">
-                <p className="text-center">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
-
-                <div className="">
-                  <p className="">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
+          <SwiperSlide className=' pb-10'>
+            <div className=" w-3/6 m-auto">
+              <div className="flex flex-col items-center justify-center gap-24">
+                <p className="text-center text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
+                <div className="flex justify-center items-center gap-6">
+                  <div className="">
+                    <Image src='./testimonialImg.svg' width={92} height={92} alt="Ellipse Image" className='' />
+                  </div>
+                  <div className="flex flex-col justify-center items-center gap-2">
+                    <h3 className="font-bold text-3xl">Aliyan Baig</h3>
+                    <div className="icons text-4xl flex justify-center items-center gap-2">
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <CiStar style={{ color: "#E3E6F0" }} />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
 
-          {/* <SwiperSlide>
-            <div className="">
-              <div className="">
-                <p className="">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
-
-                <div className="">
-                  <p className="">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
+          <SwiperSlide className=' pb-10'>
+            <div className=" w-3/6 m-auto">
+              <div className="flex flex-col items-center justify-center gap-24">
+                <p className="text-center text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
+                <div className="flex justify-center items-center gap-6">
+                  <div className="">
+                    <Image src='./testimonialImg.svg' width={92} height={92} alt="Ellipse Image" className='' />
+                  </div>
+                  <div className="flex flex-col justify-center items-center gap-2">
+                    <h3 className="font-bold text-3xl">Aliyan Baig</h3>
+                    <div className="icons text-4xl flex justify-center items-center gap-2">
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <FaStar style={{ color: "#FFA928" }} />
+                      <CiStar style={{ color: "#E3E6F0" }} />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="">
-              <div className="">
-                <p className="">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
-
-                <div className="">
-                  <p className="">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="">
-              <div className="">
-                <p className="">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
-
-                <div className="">
-                  <p className="">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide> */}
-
         </Swiper>
       </section>
     </main >
