@@ -8,9 +8,9 @@ import { FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <section className='bg-black py-3'>
-      <div className="w-10/12 m-auto">
+      <div className="w-10/12 m-auto mt-14">
         <div className="flex justify-center items-start gap-16">
-          <div className="bg-purple-100 w-4/12">
+          <div className="w-4/12">
             <Image
               src="/logo.svg"
               alt="Pharmapedia Logo"
@@ -19,11 +19,12 @@ const Footer = () => {
               priority
             />
 
-            <p className="text-footerGrey text-lg">
+            <p className="text-footerGrey text-lg mt-2 pr-5">
               Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.
             </p>
           </div>
-          <div className="bg-purple-200 w-2/12">
+
+          <div className="w-2/12 pt-10">
             <div className="links flex flex-col items-start justify-start text-lg text-footerGrey gap-3">
               <p className="font-bold text-xl text-white">Quick Links</p>
               <a href="">About Us</a>
@@ -32,14 +33,14 @@ const Footer = () => {
               <a href="">Blogs</a>
             </div>
           </div>
-          <div className="bg-purple-400 w-2/12">
+          <div className="w-2/12 pt-10">
             <div className="links flex flex-col items-start justify-start text-lg text-footerGrey gap-3">
               <p className="font-bold text-xl text-white">Customer Care</p>
               <a href="">Contact us</a>
               <a href="">FAQs</a>
             </div>
           </div>
-          <div className="bg-purple-400 w-4/12">
+          <div className="w-4/12 pt-10">
             <div className="links flex flex-col items-start justify-start text-lg gap-3 text-white">
               <p className="font-bold text-xl">Address</p>
               <a href="">SAHARBEGUM@PHARMAPEDIA.PRO</a>
@@ -49,7 +50,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-4">
-          <div className="flex justify-between items-center w-6/12 ms-auto">
+          <div className="flex justify-between items-center w-7/12 ms-auto">
             <div className="">
               <p className="text-white">Copyright 2024. All Right Reserved.</p>
             </div>
