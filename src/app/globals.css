@@ -14,7 +14,9 @@ h6 {
   font-family: "Montserrat", sans-serif;
 }
 
-p {
+p,
+a,
+button {
   font-family: "DM Sans", sans-serif
 }
 
@@ -25,13 +27,13 @@ p {
   color: #33ABFF;
   border-radius: 5px;
   font-weight: 500;
+  font-size: 17px;
 }
 
 .button-outlined:hover {
   color: white;
   background: #33ABFF;
   transition: .2s ease-in;
-  /* transform: scale(1.1); */
 }
 
 .button-filled {
@@ -47,7 +49,6 @@ p {
   background: transparent;
   transition: .2s ease-out;
   border: 1px solid #33ABFF;
-  /* transform: scale(1.1); */
 }
 
 
