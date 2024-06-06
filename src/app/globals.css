@@ -16,7 +16,9 @@ h6 {
 
 p,
 a,
-button {
+button,
+label,
+input {
   font-family: "DM Sans", sans-serif
 }
 
@@ -49,6 +51,7 @@ button {
   background: transparent;
   transition: .2s ease-out;
   border: 1px solid #33ABFF;
+  color: #15B2F5;
 }
 
 
