@@ -50,7 +50,7 @@ input {
 .button-filled:hover {
   background: transparent;
   transition: .2s ease-out;
-  border: 1px solid #33ABFF;
+  border: 2px solid #33ABFF;
   color: #15B2F5;
 }
 

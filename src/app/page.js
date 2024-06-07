@@ -16,25 +16,28 @@ export default function Home() {
 
   return (
     <main className=''>
-      <section className="w-10/12 mx-auto relative py-8 flex justify-center items-center flex-col mb-28">
-        <div className="text-center h-72 flex justify-center items-center flex-col gap-4 max-w-3xl">
-          <h1 className="font-light text-6xl text-heading_blue  tracking-wide">Pharmapedia</h1>
-          <p className="text-t_grey text-xl px-4">
-            Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.
-          </p>
-          <div>
-            <button className="button-filled">
-              About us
-            </button>
+      <section className="relative pb-28">
+        <div className="w-10/12 mx-auto relative flex justify-center items-center flex-col overflow-hidden">
+          <div className="text-center h-72 flex justify-center items-center flex-col gap-4 max-w-3xl relative z-30">
+            <h1 className="font-light text-6xl text-heading_blue  tracking-wide">Pharmapedia</h1>
+            <p className="text-t_grey text-xl px-4">
+              Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.
+            </p>
+            <div>
+              <button className="button-filled">
+                About us
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div className="w-full">
-          <Image src='/MainImg.svg' width={1728} height={698} layout="responsive" alt="Illustration of Pharmapedia's mobile application development" priority />
+          <div className="w-full relative z-10">
+            <Image src='/MainImg.svg' width={1728} height={698} layout="responsive" alt="Illustration of Pharmapedia's mobile application development" priority />
+          </div>
+
+          <div className="w-[1199px] h-[1199px] border-1 rounded-full border-grey opacity-65 absolute top-[98%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
         </div>
+        <Image src='./Ellipse 42.svg' width={116} height={116} alt="Ellipse Image" className='absolute -bottom-10 left-0' />
       </section>
-
-      {/* <Image src='./Ellipse 42.svg' width={116} height={116} alt="Ellipse Image" className='absolute bottom-0 left-0' /> */}
 
       <section className="w-full mx-auto h-96 relative overflow-hidden my-28" style={{
         background: "linear-gradient(#57A8D1 100%, #2980B9 100%)"
@@ -338,15 +341,14 @@ export default function Home() {
             </div>
           </div>
         </div>
+
         <div className="w-96 h-96 border-2 rounded-full border-grey absolute -bottom-60 -right-36  z-10"></div>
         <div className="border-2 rounded-full border-grey  absolute -bottom-60 -right-36 z-10" style={{ width: '456px', height: '456px' }}></div>
         <div className="border-2 rounded-full border-grey opacity-65 absolute -bottom-60 -right-36 z-10" style={{ width: '526px', height: '526px' }}></div>
         <div className="border-2 rounded-full border-grey opacity-65 absolute -bottom-60 -right-36 z-10" style={{ width: '599px', height: '599px' }}></div>
+
+        <Image src='./Ellipse 45.svg' width={116} height={116} alt="Ellipse Image" className='absolute top-1/3 right-0' />
       </section>
-
-
-
-
     </main >
   );
 }
