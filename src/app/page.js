@@ -129,7 +129,7 @@ export default function Home() {
             </div>
           </div>
           <div className="right w-1/2 flex justify-center items-end relative overflow-hidden">
-            <img src="/downloadapp2.svg" alt="Download App Image 2" style={{ width: "511px" }} className='absolute top-1/4'
+            <img src="/phone13.svg" alt="Download App Image 2" style={{ width: "511px" }} className='absolute top-1/4'
             />
           </div>
         </div>
