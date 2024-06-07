@@ -161,7 +161,7 @@ export default function Home() {
             </div>
 
             <div className="w-2/6">
-              <img src='./BlogImg.svg' alt="BlogImg" width={506} height={659} className='block' />
+              <img src='./BlogImgPhone.svg' alt="BlogImg" width={506} height={659} className='block' />
               {/* <Image src='./Ellipse 45.svg' width={132} height={132} alt="Ellipse Image" className='' /> */}
             </div>
 
