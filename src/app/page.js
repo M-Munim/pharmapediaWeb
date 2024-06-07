@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <main className=''>
-      <section className="relative pb-28">
+      <section className="relative pb-40">
         <div className="w-10/12 mx-auto relative flex justify-center items-center flex-col overflow-hidden">
           <div className="text-center h-72 flex justify-center items-center flex-col gap-4 max-w-3xl relative z-30">
             <h1 className="font-light text-6xl text-heading_blue  tracking-wide">Pharmapedia</h1>
@@ -39,45 +39,50 @@ export default function Home() {
         <Image src='./Ellipse 42.svg' width={116} height={116} alt="Ellipse Image" className='absolute -bottom-10 left-0' />
       </section>
 
-      <section className="w-full mx-auto h-96 relative overflow-hidden my-28" style={{
+      <section className="w-full mx-auto h-96 relative my-28" style={{
         background: "linear-gradient(#57A8D1 100%, #2980B9 100%)"
       }}>
-        <div className="w-10/12 mx-auto flex justify-center items-center h-full z-20 relative">
-          <div className="left w-1/2 flex justify-center items-center">
-            <div className="circle bg-white rounded-full" style={{ width: '500px', height: '500px' }}>
-              <Image
-                src="/aboutImg.svg"
-                width={304}
-                height={304}
-                alt="Illustration related to Pharmapedia"
-                className="rounded-full"
-                priority
-              />
-            </div>
-          </div>
-
-          <div className="right w-1/2 text-white flex flex-col justify-center items-start gap-6">
-            <h2 className="font-light text-5xl uppercase  tracking-wide">About us</h2>
-            <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra
-              vulputate amet nunc lectus non ac. Arcu diam nullam ultrices
-              consectetur. Gravida enim in sagittis mauris aliquam duis.
-            </p>
-            <button className="button-filled">
-              Learn More
-            </button>
+        <div className="left w-1/2 flex justify-center items-center left-16 absolute -top-12 z-50">
+          <div className="circle bg-white rounded-full flex justify-center items-center relative overflow-visible" style={{ width: '500px', height: '500px' }}>
+            <Image
+              // src="/aboutImg.svg"
+              src="/Group1000011108.svg"
+              width={304}
+              height={624}
+              alt="Illustration related to Pharmapedia"
+              // className="absolute"
+              priority
+            />
           </div>
         </div>
-        <div className="w-52 h-52 border rounded-full border-white opacity-30 absolute -bottom-10 -right-10 z-10"></div>
-        <div className="w-72 h-72 border rounded-full border-white opacity-30 absolute -bottom-12 -right-12 z-10"></div>
-        <div className="border rounded-full border-white opacity-30 absolute top-20 -right-20 z-10" style={{ width: '406px', height: '406px' }}></div>
-        <div className="border rounded-full border-white opacity-30 absolute top-2 -right-24 z-10" style={{ width: '499px', height: '499px' }}></div>
 
-        <div className="border rounded-full border-white opacity-30 absolute -top-48 left-20 z-10" style={{ width: '761px', height: '761px' }}></div>
-        <div className="border rounded-full border-white opacity-30 absolute -top-28 left-36 z-10" style={{ width: '605px', height: '605px' }}></div>
+        <div className="overflow-hidden relative h-96">
+
+
+          <div className="w-10/12 mx-auto flex justify-end items-center h-full z-20 relative">
+            <div className="right w-1/2 text-white flex flex-col justify-center items-start gap-6">
+              <h2 className="font-light text-5xl uppercase  tracking-wide">About us</h2>
+              <p className="text-lg">
+                Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra
+                vulputate amet nunc lectus non ac. Arcu diam nullam ultrices
+                consectetur. Gravida enim in sagittis mauris aliquam duis.
+              </p>
+              <button className="button-filled">
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div className="w-52 h-52 border rounded-full border-white opacity-30 absolute -bottom-10 -right-10 z-10"></div>
+          <div className="w-72 h-72 border rounded-full border-white opacity-30 absolute -bottom-12 -right-12 z-10"></div>
+          <div className="border rounded-full border-white opacity-30 absolute top-20 -right-20 z-10" style={{ width: '406px', height: '406px' }}></div>
+          <div className="border rounded-full border-white opacity-30 absolute top-2 -right-24 z-10" style={{ width: '499px', height: '499px' }}></div>
+
+          <div className="border rounded-full border-white opacity-30 absolute -top-48 left-20 z-10" style={{ width: '761px', height: '761px' }}></div>
+          <div className="border rounded-full border-white opacity-30 absolute -top-28 left-36 z-10" style={{ width: '605px', height: '605px' }}></div>
+        </div>
       </section>
 
-      <section className="w-10/12 mx-auto my-28">
+      <section className="w-10/12 mx-auto mb-28 mt-52">
         <div className="flex flex-col items-start gap-4" style={{ maxWidth: "677px" }}>
           <h2 className="text-5xl text-heading_blue font-light tracking-wide">OUR PRODUCTS</h2>
           <p className="text-xl text-t_grey">
@@ -106,13 +111,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-28" style={{ height: "516px", background: "linear-gradient(#57A8D1 100%, #2980B9 100%)" }}>
+      <section className="my-28" style={{ height: "616px", background: "linear-gradient(#57A8D1 100%, #2980B9 100%)" }}>
         <div className="flex h-full w-10/12 mx-auto">
-          <div className="left w-1/2">
-            <Image src='./Downloadapp2.svg' width={382} height={785} alt="Download App Image" />
+          <div className="left w-1/2 relative overflow-hidden">
+            <img src="/downloadapp.svg" alt="Download App Image 2" style={{ width: "511px" }} className='absolute bottom-[65%]'
+            />
             {/* <img src="./Downloadapp2.svg" alt="Download App Image" /> */}
 
-            <div className="txt w-10/12 mx-auto text-white flex flex-col gap-3">
+            <div className="txt w-10/12 mx-auto text-white flex flex-col gap-3 absolute bottom-[15%]">
               <h2 className="font-medium text-5xl uppercase">Download App Now</h2>
               <p className="leading-9 text-3xl">The content in this smartphone application is verified by qualified and registered healthcare professionals!</p>
 
@@ -122,8 +128,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="right w-1/2 flex justify-center items-end bg-red-100">
-            <img src="./Downloadapp1.svg" alt="Download App Image 2" style={{ width: "511px" }} />
+          <div className="right w-1/2 flex justify-center items-end relative overflow-hidden">
+            <img src="/downloadapp2.svg" alt="Download App Image 2" style={{ width: "511px" }} className='absolute top-1/4'
+            />
           </div>
         </div>
       </section>
@@ -153,8 +160,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-2/6 flex justify-center items-center bg-red-400">
-              <img src='./blogImg.svg' alt="" />
+            <div className="w-2/6">
+              <img src='./BlogImg.svg' alt="BlogImg" width={506} height={659} className='block' />
+              {/* <Image src='./Ellipse 45.svg' width={132} height={132} alt="Ellipse Image" className='' /> */}
             </div>
 
             <div className="w-2/6 flex flex-col gap-16">
