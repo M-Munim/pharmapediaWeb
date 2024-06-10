@@ -7,7 +7,7 @@ const Blogs = () => {
     <main>
       <section className="flex justify-center items-center h-[597px] overflow-hidden relative z-30" style={{
         background: "radial-gradient(circle, #57A8D1 0%, #2980B9 100%)"
-          // background: "radial-gradient(circle , #ABDCFF 0%, #298ED6 100%)"
+        // background: "radial-gradient(circle , #ABDCFF 0%, #298ED6 100%)"
       }}>
         <div className="text-white w-3/6 text-center flex flex-col justify-center items-center gap-5">
           <h1 className="text-6xl font-light">Our Blogs</h1>
@@ -28,7 +28,7 @@ const Blogs = () => {
       <section className="py-20 w-10/12 m-auto">
         <div className="flex justify-center items-center flex-wrap gap-7">
           {blogs.map((blogData) => (
-            <div className="relative my-5" style={{ width: "400px" }}>
+            <div className="relative my-5" style={{ width: "400px" }} key={blogData.id}>
               <Image src={blogData.BlogImg}
                 alt={blogData.alt}
                 width={468}
