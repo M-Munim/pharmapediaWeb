@@ -40,42 +40,44 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <div className="w-10/12 flex justify-between items-center m-auto h-28">
-          <div className="flex-shrink-0">
-            <Image
-              src="/logo.svg"
-              alt="Pharmapedia Logo"
-              width={289}
-              height={87}
-              priority
-            />
-          </div>
-          <div className="flex-grow hidden lg:flex items-center justify-center">
-            <ul className='flex justify-center items-center gap-7 text-base xl:text-lg'>
-              <li onClick={() => setMoveTo("Home")}>
-                <Link href="/" className={`${moveTo === "Home" ? "text-hover_blue font-bold" : "text-black"}`}>Home</Link>
-              </li>
-              <li onClick={() => setMoveTo("About us")}>
-                <a href="#about-us" className={`${moveTo === "About us" ? "text-hover_blue font-bold" : "text-black"}`}>About us</a>
-              </li>
-              <li onClick={() => setMoveTo("Blogs")}>
-                <Link href="/Blog" className={`${moveTo === "Blogs" ? "text-hover_blue font-bold" : "text-black"}`}>Blogs</Link>
-              </li>
-              <li onClick={() => setMoveTo("Our Products")}>
-                <a href="#our-products" className={`${moveTo === "Our Products" ? "text-hover_blue font-bold" : "text-black"}`}>Our Products</a>
-              </li>
-              <li onClick={() => setMoveTo("FAQs")}>
-                <a href="#faqs" className={`${moveTo === "FAQs" ? "text-hover_blue font-bold" : "text-black"}`}>FAQs</a>
-              </li>
-            </ul>
-          </div>
-          <div className="hidden lg:block">
-            <button className="button-outlined">Contact Us</button>
-          </div>
-          <div className="lg:hidden text-2xl">
-            <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
-              {menuOpen ? <FaTimes /> : <FaBars />}
-            </button>
+        <div className={`h-28 ${moveTo !== "Home" ? "absolute bg-transparent w-full top-12 z-50" : ""} `}>
+          <div className="w-10/12 flex justify-between items-center m-auto  ">
+            <div className="flex-shrink-0">
+              <Image
+                src="/logo.svg"
+                alt="Pharmapedia Logo"
+                width={289}
+                height={87}
+                priority
+              />
+            </div>
+            <div className="flex-grow hidden lg:flex items-center justify-center">
+              <ul className={`flex justify-center items-center gap-7 text-base xl:text-lg ${moveTo !== "Home" ? "text-white" : ""}`}>
+                <li onClick={() => setMoveTo("Home")}>
+                  <Link href="/" className={`${moveTo === "Home" ? "text-hover_blue font-bold" : ""}`}>Home</Link>
+                </li>
+                <li onClick={() => setMoveTo("About us")}>
+                  <a href="#about-us" className={`${moveTo === "About us" ? "text-hover_blue2 font-bold" : ""}`}>About us</a>
+                </li>
+                <li onClick={() => setMoveTo("Blogs")}>
+                  <Link href="/Blog" className={`${moveTo === "Blogs" ? "text-hover_blue2 font-bold" : ""}`}>Blogs</Link>
+                </li>
+                <li onClick={() => setMoveTo("Our Products")}>
+                  <a href="#our-products" className={`${moveTo === "Our Products" ? "text-hover_blue2 font-bold" : ""}`}>Our Products</a>
+                </li>
+                <li onClick={() => setMoveTo("FAQs")}>
+                  <a href="#faqs" className={`${moveTo === "FAQs" ? "text-hover_blue2 font-bold" : ""}`}>FAQs</a>
+                </li>
+              </ul>
+            </div>
+            <div className="hidden lg:block">
+              <button className={` ${moveTo !== "Home" ? "button-outlined2" : "button-outlined"} `}>Contact Us</button>
+            </div>
+            <div className="lg:hidden text-2xl">
+              <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+                {menuOpen ? <FaTimes /> : <FaBars />}
+              </button>
+            </div>
           </div>
         </div>
         {menuOpen && (

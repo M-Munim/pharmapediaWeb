@@ -5,6 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
+/* * {
+  transition: 0.1s ease-in;
+} */
+
 h1,
 h2,
 h3,
@@ -33,6 +37,22 @@ input {
 }
 
 .button-outlined:hover {
+  color: white;
+  background: #33ABFF;
+  transition: .2s ease-in;
+}
+
+.button-outlined2 {
+  width: 154px;
+  height: 48px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.button-outlined2:hover {
   color: white;
   background: #33ABFF;
   transition: .2s ease-in;
@@ -71,6 +91,17 @@ input {
   /* transform: scale(1.1); */
 }
 
+.button-blog {
+  width: 124px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.185);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 .swiper-container .swiper-button-next,
 .swiper-container .swiper-button-prev {
   color: white !important;
@@ -79,45 +110,4 @@ input {
   height: 58px;
   border-radius: 50%;
   padding: 14px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* Replace with your desired color */
 }
-
-/* .swiper-container .swiper-button-next::after,
-.swiper-container .swiper-button-prev::after {
-  color: white !important;
- 
-} */
-
-
-
-/* .phone-input {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-select {
-  border: none;
-  background-color: #f0f0f0;
-  padding: 10px;
-  font-size: 16px;
-  border-right: 1px solid #ccc;
-  outline: none;
-}
-
-input[type="tel"] {
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  flex: 1;
-  outline: none;
-}
-
-input[type="tel"]::placeholder {
-  color: #ccc;
-} */

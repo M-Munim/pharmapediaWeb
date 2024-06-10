@@ -21,6 +21,7 @@ module.exports = {
         blue_sec: "#438AB8",
         borderBlue: "#2AA7FF",
         hover_blue: "#297AAF",
+        hover_blue2: "#64C2FF",
         darkblue: "#2980B9",
         pClr: "#6C6C72",
         bg_1: "#FAFBFF",
