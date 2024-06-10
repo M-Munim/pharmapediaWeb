@@ -9,8 +9,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/bundle';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 import { FaStar } from "react-icons/fa";
-import { CiStar } from "react-icons/ci";
-
 
 export default function Home() {
 
