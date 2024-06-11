@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { blogs } from '../data'
+import { blogs, staticBlogs } from '../data'
 
 const Blogs = () => {
   return (
@@ -58,7 +58,7 @@ const Blogs = () => {
                     <div className="w-1 h-1 rounded-full bg-gray-400"></div>
 
                     <Image src={blogData.shareIcon}
-                      alt="ashareIconuthor Img"
+                      alt="shareIcon Img"
                       width={12}
                       height={12} />
 
@@ -80,37 +80,59 @@ const Blogs = () => {
         </div>
       </section>
 
-      <section className="m-auto w-10/12" style={{
-        background: "radial-gradient(circle , #ABDCFF 0%, #298ED6 100%)"
-      }}>
-        <div className="flex items-center justify-end w-11/12 ms-auto">
-          <div className="left text-white w-1/2 flex flex-col items-start justify-start gap-3">
-            <h1 className="text-3xl font-light uppercase tracking-wide">Learn More About <br /> our Products</h1>
-            <p className="text-lg tracking-wide">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
-            <button className="button-filled">
-              Learn More
-            </button>
-          </div>
-          <div className="right w-1/2">
-            <Image src="./blogPageiPhone12Pro.svg" width={1084} height={812} alt='blogPageImg' />
+      <section className="m-auto w-10/12" >
+        <div className="" style={{
+          background: "radial-gradient(circle , #ABDCFF 0%, #298ED6 100%)"
+        }}>
+
+          <div className="flex items-center justify-end w-11/12 ms-auto" >
+            <div className="left text-white w-1/2 flex flex-col items-start justify-start gap-3">
+              <h1 className="text-3xl font-light uppercase tracking-wide">Learn More About <br /> our Products</h1>
+              <p className="text-lg tracking-wide">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
+              <button className="button-filled">
+                Learn More
+              </button>
+            </div>
+            <div className="right w-1/2">
+              <Image src="./blogPageiPhone12Pro.svg" width={1084} height={812} alt='blogPageImg' />
+            </div>
           </div>
         </div>
 
+        <div className="mt-20">
+          <div className="flex items-center justify-center gap-10 border-t-1 pt-10">
+            <div className="left w-7/12 border ">
+              s
+            </div>
+            <div className="left border w-5/12 px-9 py-3">
+              <h3 className="font-bold text-sm">Manga reads</h3>
+              <div className="">
+                {
+                  staticBlogs.map((data) => (
+                    <div className="my-5 flex gap-6" key={data.id}>
+                      <div className="">
+                        <Image src={data.img} width={210} height={93} alt='staticBlogImg' />
+                      </div>
+                      <div className="flex flex-col items-start justify-between">
+                        <p className='mb-0 font-semibold leading-5'>{data.title}</p>
+                        <p className='mb-0 font-normal text-pClr text-[10px]'>{data.blogdate}</p>
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-
-
-
-
-
-
       <section className="m-auto overflow-hidden relative">
-        <div className="w-10/12 m-auto flex items-center justify-center gap-20 relative py-28">
-          <div className="left w-1/2 relative z-30">
+        <div className="w-10/12 m-auto flex flex-col md:flex-row items-center justify-center gap-20 relative py-28">
+          <div className="left w-full md:w-1/2 relative z-30">
             <form action="">
-              <div className="flex justify-between items-center gap-10 mb-4">
+              <div className="flex justify-between items-center gap-2 md:gap-10 mb-4">
                 <div className="flex flex-col items-start justify-center gap-1 w-6/12">
-                  <label htmlFor="firstName"  >First Name</label>
+                  <label htmlFor="firstName" >First Name</label>
                   <input type="text" name="firstName" id="firstName" placeholder='First Name' className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' required />
                 </div>
                 <div className="flex flex-col items-start justify-center gap-1 w-6/12">
@@ -131,7 +153,7 @@ const Blogs = () => {
                     <option value="PK">PK +92</option>
                     <option value="IND">IND +91</option>
                   </select>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 w-10/12 px-3 outline-none' />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-10/12 px-3 outline-none' />
                 </div>
               </div>
 
@@ -151,11 +173,11 @@ const Blogs = () => {
             </form>
           </div>
 
-          <div className="right w-1/2 relative z-30">
+          <div className="right w-full md:w-1/2 relative z-30">
             <div className="flex flex-col gap-4">
-              <h2 className="uppercase font-light text-5xl text-heading_blue tracking-wider">Get in Touch</h2>
+              <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Get in Touch</h2>
 
-              <p className="text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
+              <p className="text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
 
               <button className="button-filled">
                 Contact us

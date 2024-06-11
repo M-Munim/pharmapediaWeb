@@ -14,11 +14,11 @@ export default function Home() {
 
   return (
     <main className=''>
-      <section className="relative pb-40">
+      <section className="relative py-20">
         <div className="w-10/12 mx-auto relative flex justify-center items-center flex-col overflow-hidden">
-          <div className="text-center h-72 flex justify-center items-center flex-col gap-4 max-w-3xl relative z-30">
-            <h1 className="font-light text-6xl text-heading_blue  tracking-wide">Pharmapedia</h1>
-            <p className="text-t_grey text-xl px-4">
+          <div className="text-center flex justify-center items-center flex-col gap-4 max-w-3xl relative z-30">
+            <h1 className="font-light text-5xl md:text-6xl text-heading_blue tracking-wide">Pharmapedia</h1>
+            <p className="text-t_grey text-sm md:text-xl px-1 md:px-4">
               Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.
             </p>
             <div>
@@ -28,8 +28,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full relative z-10">
-            <Image src='/MainImg.svg' width={1728} height={698} layout="responsive" alt="Illustration of Pharmapedia's mobile application development" priority />
+          <div className="w-full mt-10 md:mt-0 relative z-10">
+            <Image src='/MainImg.svg' width={1728} height={698} layout="responsive" alt="Illustration of Pharmapedia's mobile application development" />
           </div>
 
           <div className="w-[1199px] h-[1199px] border-1 rounded-full border-grey opacity-65 absolute top-[98%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
@@ -40,27 +40,23 @@ export default function Home() {
       <section className="w-full mx-auto h-96 relative my-28" style={{
         background: "linear-gradient(#57A8D1 100%, #2980B9 100%)"
       }}>
-        <div className="left w-1/2 flex justify-center items-center left-16 absolute -top-12 z-50">
+        <div className="left w-1/2 lg:flex justify-center items-center left-16 absolute -top-12 z-50 hidden">
           <div className="circle bg-white rounded-full flex justify-center items-center relative overflow-visible" style={{ width: '500px', height: '500px' }}>
             <Image
-              // src="/aboutImg.svg"
               src="/Group1000011108.svg"
               width={304}
               height={624}
               alt="Illustration related to Pharmapedia"
-              // className="absolute"
               priority
             />
           </div>
         </div>
 
         <div className="overflow-hidden relative h-96">
-
-
           <div className="w-10/12 mx-auto flex justify-end items-center h-full z-20 relative">
-            <div className="right w-1/2 text-white flex flex-col justify-center items-start gap-6">
-              <h2 className="font-light text-5xl uppercase  tracking-wide">About us</h2>
-              <p className="text-lg">
+            <div className="right w-full md:w-1/2 text-white flex flex-col justify-center items-start gap-6">
+              <h2 className="font-light text-4xl md:text-5xl uppercase  tracking-wide">About us</h2>
+              <p className="text-sm md:text-lg">
                 Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra
                 vulputate amet nunc lectus non ac. Arcu diam nullam ultrices
                 consectetur. Gravida enim in sagittis mauris aliquam duis.
@@ -80,10 +76,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-10/12 mx-auto mb-28 mt-52">
+      <section className="w-10/12 mx-auto mt-20 mb-28 md:mt-52">
         <div className="flex flex-col items-start gap-4" style={{ maxWidth: "677px" }}>
-          <h2 className="text-5xl text-heading_blue font-light tracking-wide">OUR PRODUCTS</h2>
-          <p className="text-xl text-t_grey">
+          <h2 className="text-4xl md:text-5xl text-heading_blue font-light tracking-wide">OUR PRODUCTS</h2>
+          <p className="text-sm md:text-xl text-t_grey">
             Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.
           </p>
           <button className="button-filled" aria-label="Explore More">
@@ -91,13 +87,12 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Products */}
         <div className="flex flex-wrap items-center justify-center gap-3 mt-10 cursor-pointer">
           {products.map((data, i) => (
             <div key={i}>
               <Image
                 src={data.image}
-                width={646}
+                width={360}
                 height={362}
                 alt="Products Image"
                 className="h-auto hover:scale-95"
@@ -109,25 +104,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-28" style={{ height: "616px", background: "linear-gradient(#57A8D1 100%, #2980B9 100%)" }}>
+      <section className="my-20 h-[380px] lg:h-[710px]" style={{ background: "radial-gradient(circle, #57A8D1 0%, #2980B9 100%)" }}>
         <div className="flex h-full w-10/12 mx-auto">
-          <div className="left w-1/2 relative overflow-hidden">
-            <img src="/downloadapp.svg" alt="Download App Image 2" style={{ width: "511px" }} className='absolute bottom-[65%]'
+          <div className="left w-full md:w-1/2 relative overflow-hidden">
+            <img src="/downloadapp.svg" alt="Download App Image 2" style={{ width: "382px" }} className='absolute top-0 hidden'
             />
-            {/* <img src="./Downloadapp2.svg" alt="Download App Image" /> */}
 
-            <div className="txt w-10/12 mx-auto text-white flex flex-col gap-3 absolute bottom-[15%]">
-              <h2 className="font-medium text-5xl uppercase">Download App Now</h2>
-              <p className="leading-9 text-3xl">The content in this smartphone application is verified by qualified and registered healthcare professionals!</p>
+            <div className="txt w-full md:w-10/12 mx-auto text-white flex flex-col gap-3 absolute bottom-[17%]">
+              <h2 className="font-medium text-3xl md:text-5xl uppercase">Download App Now</h2>
+              <p className="md:leading-9 text-sm md:text-3xl">The content in this smartphone application is verified by qualified and registered healthcare professionals!</p>
 
-              <div className="download-imgs flex justify-start items-center gap-8">
-                <Image src='./download2.svg' width={202} height={60} alt="Download Image 1" />
-                <Image src='./download1.svg' width={202} height={60} alt="Download Image 2" />
+              <div className="download-imgs flex-col md:flex-row flex justify-start items-start md:items-center gap-2 md:gap-8">
+                <Image src='./download2.svg' width={202} height={60} alt="Download Image 1" className='cursor-pointer' />
+                <Image src='./download1.svg' width={202} height={60} alt="Download Image 2" className='cursor-pointer' />
               </div>
             </div>
           </div>
-          <div className="right w-1/2 flex justify-center items-end relative overflow-hidden">
-            <img src="/phone13.svg" alt="Download App Image 2" style={{ width: "511px" }} className='absolute top-1/4'
+          <div className="right w-1/2 md:flex justify-center items-end relative overflow-hidden hidden">
+            <img src="/phone13.svg" alt="Download App Image 2" style={{ width: "511px" }} className='absolute bottom-0'
             />
           </div>
         </div>
@@ -135,43 +129,42 @@ export default function Home() {
 
       <section className="w-10/12 m-auto">
         <div className="relative py-28">
-          <div className="w-7/12 text-center m-auto pb-12 ">
-            <h3 className="uppercase font-semibold text-xl tracking-widest">News& Events</h3>
-            <h1 className="uppercase font-light text-5xl text-heading_blue mb-5">Our Blogs</h1>
-            <p className="text-xl text-t_grey mb-5 leading-7">Lorem ipsum dolor sit amet consectetur. Morbi in vulputate id tellus. Et scelerisque consequat egestas volutpat semper pretium morbi amet.</p>
+          <div className="w-full md:w-7/12 text-center m-auto pb-12">
+            <h3 className="uppercase font-semibold text-base md:text-xl tracking-widest">News& Events</h3>
+            <h1 className="uppercase font-light text-4xl md:text-5xl text-heading_blue mb-5">Our Blogs</h1>
+            <p className="text-sm md:text-xl text-t_grey mb-5 md:leading-7">Lorem ipsum dolor sit amet consectetur. Morbi in vulputate id tellus. Et scelerisque consequat egestas volutpat semper pretium morbi amet.</p>
             <button className="button-filled">
               Explore More
             </button>
           </div>
 
-          <div className="flex items-center justify-center my-10 relative gap-5">
-            <div className="w-2/6 flex flex-col justify-end items-end gap-16">
-              <div className="text-end w-10/12">
-                <p className="text-lightBlue text-2xl font-medium mb-2 leading-8">Premium Book <br /> Marketing Services</p>
-                <p className="text-xl text-t_grey leading-7">Targeted advertising across platforms for maximum book visibility.</p>
+          <div className="flex flex-col md:flex-row items-center justify-center my-10 relative gap-10 md:gap-5">
+            <div className="w-full md:w-2/6 flex flex-col justify-start md:justify-end items-start md:items-end gap-6 md:gap-16">
+              <div className="text-start md:text-end  w-full md:w-10/12">
+                <p className="text-lightBlue text-lg md:text-2xl font-medium mb-2 md:leading-8 leading-tight">Premium Book <br /> Marketing Services</p>
+                <p className="text-base md:text-xl text-t_grey md:leading-7 leading-tight">Targeted advertising across platforms for maximum book visibility.</p>
               </div>
 
-              <div className="text-end w-10/12">
-                <p className="text-lightBlue text-2xl font-medium mb-2 leading-8">Certified <br />
+              <div className="text-start md:text-end w-full md:w-10/12">
+                <p className="text-lightBlue text-lg md:text-2xl font-medium mb-2 md:leading-8 leading-tight">Certified <br />
                   Marketing Experts</p>
-                <p className="text-xl text-t_grey leading-7">Experienced team employing diverse digital strategies for success.</p>
+                <p className="text-base md:text-xl text-t_grey md:leading-7 leading-tight">Experienced team employing diverse digital strategies for success.</p>
               </div>
             </div>
 
-            <div className="w-2/6">
+            <div className="w-2/6 hidden md:block">
               <img src='./BlogImgPhone.svg' alt="BlogImg" width={506} height={659} className='block' />
-              {/* <Image src='./Ellipse 45.svg' width={132} height={132} alt="Ellipse Image" className='' /> */}
             </div>
 
-            <div className="w-2/6 flex flex-col gap-16">
-              <div className="text-start w-10/12">
-                <p className="text-lightBlue text-2xl font-medium mb-2 leading-8">Innovative Approach</p>
-                <p className="text-xl text-t_grey leading-7">Utilizing technology and creativity to boost book sales.</p>
+            <div className="w-full md:w-2/6 flex flex-col justify-start md:justify-end items-start md:items-end gap-6 md:gap-16">
+              <div className="text-start  w-full md:w-10/12">
+                <p className="text-lightBlue text-lg md:text-2xl font-medium mb-2 md:leading-8 leading-tight">Innovative Approach</p>
+                <p className="text-base md:text-xl text-t_grey md:leading-7 leading-tight">Utilizing technology and creativity to boost book sales.</p>
               </div>
 
-              <div className="w-10/12 text-start">
-                <p className="text-lightBlue text-2xl font-medium mb-2">Next Bestseller Guarantee</p>
-                <p className="text-xl text-t_grey">Dedicated to making your book stand out in the market.</p>
+              <div className=" w-full md:w-10/12 text-start">
+                <p className="text-lightBlue text-lg md:text-2xl font-medium mb-2 md:leading-8 leading-tight">Next Bestseller Guarantee</p>
+                <p className="text-base md:text-xl text-t_grey md:leading-7 leading-tight">Dedicated to making your book stand out in the market.</p>
               </div>
             </div>
           </div>
@@ -179,32 +172,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mb-28 w-10/12 m-auto">
-        <div className="w-7/12 text-center m-auto pb-10">
-          <h2 className="uppercase font-semibold text-xl tracking-widest mb-2">Reviews</h2>
-          <h1 className="uppercase font-light text-5xl text-heading_blue mb-5">Testimonials</h1>
+      <section className="w-10/12 m-auto">
+        <div className="w-full md:w-7/12 text-center m-auto pb-12">
+          <h2 className="uppercase font-semibold text-base md:text-xl tracking-widest mb-0 md:mb-2">Reviews</h2>
+          <h1 className="uppercase font-light  text-4xl md:text-5xl text-heading_blue md:mb-5">Testimonials</h1>
         </div>
 
         <Swiper
-          className="swiper-container pt-40 mx-auto"
+          className="swiper-container pt-10 md:pt-40 mx-auto"
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={50}
           slidesPerView={1}
           navigation
-          // pagination={{ clickable: true }}
           onSlideChange={() => console.log('slide change')}
         >
           <SwiperSlide className='pb-10'>
-            <div className=" w-3/6 m-auto">
-              <div className="flex flex-col items-center justify-center gap-24">
-                <p className="text-center text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
+            <div className="w-full md:w-3/6 m-auto">
+              <div className="flex flex-col items-center justify-center gap-10 md:gap-24">
+                <p className="text-center text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
                 <div className="flex justify-center items-center gap-8">
-                  <div className="">
+                  <div className="w-3/12">
                     <Image src='./testimonialImg.svg' width={92} height={92} alt="Testimonial by Aliyan Baig" className='' />
                   </div>
-                  <div className="flex flex-col justify-start items-start gap-2">
-                    <h3 className="font-bold text-3xl leading-10 pl-1">Aliyan Baig</h3>
-                    <div className="icons text-4xl flex justify-center items-center gap-2">
+                  <div className="flex flex-col justify-start items-start gap-0 md:gap2 w-9/12">
+                    <h3 className="font-bold text-xl md:text-3xl leading-10 pl-1">Aliyan Baig</h3>
+                    <div className="icons text-xl md:text-4xl flex justify-center items-center gap-2">
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
@@ -218,16 +210,16 @@ export default function Home() {
           </SwiperSlide>
 
           <SwiperSlide className='pb-10'>
-            <div className=" w-3/6 m-auto">
-              <div className="flex flex-col items-center justify-center gap-24">
-                <p className="text-center text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
+            <div className="w-full md:w-3/6 m-auto">
+              <div className="flex flex-col items-center justify-center gap-10 md:gap-24">
+                <p className="text-center text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
                 <div className="flex justify-center items-center gap-8">
-                  <div className="">
+                  <div className="w-3/12">
                     <Image src='./testimonialImg.svg' width={92} height={92} alt="Testimonial by Aliyan Baig" className='' />
                   </div>
-                  <div className="flex flex-col justify-start items-start gap-2">
-                    <h3 className="font-bold text-3xl leading-10 pl-1">Aliyan Baig</h3>
-                    <div className="icons text-4xl flex justify-center items-center gap-2">
+                  <div className="flex flex-col justify-start items-start gap-0 md:gap2 w-9/12">
+                    <h3 className="font-bold text-xl md:text-3xl leading-10 pl-1">Aliyan Baig</h3>
+                    <div className="icons text-xl md:text-4xl flex justify-center items-center gap-2">
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
@@ -241,16 +233,16 @@ export default function Home() {
           </SwiperSlide>
 
           <SwiperSlide className='pb-10'>
-            <div className=" w-3/6 m-auto">
-              <div className="flex flex-col items-center justify-center gap-24">
-                <p className="text-center text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
+            <div className="w-full md:w-3/6 m-auto">
+              <div className="flex flex-col items-center justify-center gap-10 md:gap-24">
+                <p className="text-center text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
                 <div className="flex justify-center items-center gap-8">
-                  <div className="">
+                  <div className="w-3/12">
                     <Image src='./testimonialImg.svg' width={92} height={92} alt="Testimonial by Aliyan Baig" className='' />
                   </div>
-                  <div className="flex flex-col justify-start items-start gap-2">
-                    <h3 className="font-bold text-3xl leading-10 pl-1">Aliyan Baig</h3>
-                    <div className="icons text-4xl flex justify-center items-center gap-2">
+                  <div className="flex flex-col justify-start items-start gap-0 md:gap2 w-9/12">
+                    <h3 className="font-bold text-xl md:text-3xl leading-10 pl-1">Aliyan Baig</h3>
+                    <div className="icons text-xl md:text-4xl flex justify-center items-center gap-2">
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
@@ -264,16 +256,16 @@ export default function Home() {
           </SwiperSlide>
 
           <SwiperSlide className='pb-10'>
-            <div className=" w-3/6 m-auto">
-              <div className="flex flex-col items-center justify-center gap-24">
-                <p className="text-center text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
+            <div className="w-full md:w-3/6 m-auto">
+              <div className="flex flex-col items-center justify-center gap-10 md:gap-24">
+                <p className="text-center text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
                 <div className="flex justify-center items-center gap-8">
-                  <div className="">
+                  <div className="w-3/12">
                     <Image src='./testimonialImg.svg' width={92} height={92} alt="Testimonial by Aliyan Baig" className='' />
                   </div>
-                  <div className="flex flex-col justify-start items-start gap-2">
-                    <h3 className="font-bold text-3xl leading-10 pl-1">Aliyan Baig</h3>
-                    <div className="icons text-4xl flex justify-center items-center gap-2">
+                  <div className="flex flex-col justify-start items-start gap-0 md:gap2 w-9/12">
+                    <h3 className="font-bold text-xl md:text-3xl leading-10 pl-1">Aliyan Baig</h3>
+                    <div className="icons text-xl md:text-4xl flex justify-center items-center gap-2">
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
@@ -289,12 +281,12 @@ export default function Home() {
       </section>
 
       <section className="m-auto overflow-hidden relative">
-        <div className="w-10/12 m-auto flex items-center justify-center gap-20 relative py-28">
-          <div className="left w-1/2 relative z-30">
+        <div className="w-10/12 m-auto flex flex-col md:flex-row items-center justify-center gap-20 relative py-28">
+          <div className="left w-full md:w-1/2 relative z-30">
             <form action="">
-              <div className="flex justify-between items-center gap-10 mb-4">
+              <div className="flex justify-between items-center gap-2 md:gap-10 mb-4">
                 <div className="flex flex-col items-start justify-center gap-1 w-6/12">
-                  <label htmlFor="firstName"  >First Name</label>
+                  <label htmlFor="firstName" >First Name</label>
                   <input type="text" name="firstName" id="firstName" placeholder='First Name' className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' required />
                 </div>
                 <div className="flex flex-col items-start justify-center gap-1 w-6/12">
@@ -315,7 +307,7 @@ export default function Home() {
                     <option value="PK">PK +92</option>
                     <option value="IND">IND +91</option>
                   </select>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 w-10/12 px-3 outline-none' />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-10/12 px-3 outline-none' />
                 </div>
               </div>
 
@@ -335,11 +327,11 @@ export default function Home() {
             </form>
           </div>
 
-          <div className="right w-1/2 relative z-30">
+          <div className="right w-full md:w-1/2 relative z-30">
             <div className="flex flex-col gap-4">
-              <h2 className="uppercase font-light text-5xl text-heading_blue tracking-wider">Get in Touch</h2>
+              <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Get in Touch</h2>
 
-              <p className="text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
+              <p className="text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
 
               <button className="button-filled">
                 Contact us

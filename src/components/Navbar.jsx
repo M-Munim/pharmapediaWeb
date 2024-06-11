@@ -20,8 +20,8 @@ export default function Navbar() {
         <link rel="canonical" href="https://www.pharmapedia.pro" />
       </Head>
       <nav className="w-full">
-        <div className={`h-10  w-full flex items-center justify-center ${moveTo === "Home" ? "bg-blue text-white" : "bg-white text-black"}`}>
-          <div className="w-9/12 flex m-auto justify-between">
+        <div className={`h-10 w-full flex items-center justify-center ${moveTo === "Home" ? "bg-blue text-white" : "bg-white text-black"}`}>
+          <div className="w-11/12 sm:w-9/12 flex m-auto justify-between">
             <div className="flex items-center  gap-3 text-3xl">
               <a href="https://www.facebook.com" className='sm:text-base text-sm border-r border-borderBlue md:border-r-2 pr-3 py-1' aria-label="Facebook">
                 <FaFacebookF className='cursor-pointer' />
@@ -34,22 +34,24 @@ export default function Navbar() {
               </a>
             </div>
 
-            <div className="flex-row items-center justify-end gap-6 sm:flex">
-              <p className="font-semibold text-xs">SAHARBEGUM@PHARMAPEDIA.PRO</p>
-              <p className="font-semibold text-xs">+923494428783</p>
+            <div className="flex-row items-center justify-end gap-6 sm:flex font-semibold text-[9px] sm:text-sm">
+              <p className="">SAHARBEGUM@PHARMAPEDIA.PRO</p>
+              <p className="">+923494428783</p>
             </div>
           </div>
         </div>
-        <div className={`h-28 ${moveTo !== "Home" ? "absolute bg-transparent w-full top-12 z-50" : ""} `}>
-          <div className="w-10/12 flex justify-between items-center m-auto  ">
+        <div className={`h-20 md:h-28 ${moveTo !== "Home" ? "absolute bg-transparent w-full top-12 z-50" : "block"} `}>
+          <div className="w-10/12 flex justify-between items-center m-auto">
             <div className="flex-shrink-0">
-              <Image
-                src="/logo.svg"
-                alt="Pharmapedia Logo"
-                width={289}
-                height={87}
-                priority
-              />
+              <Link href="/" onClick={() => setMoveTo("Home")}>
+                <Image
+                  src="/logo.svg"
+                  alt="Pharmapedia Logo"
+                  width={289}
+                  height={87}
+                  priority
+                />
+              </Link>
             </div>
             <div className="flex-grow hidden lg:flex items-center justify-center">
               <ul className={`flex justify-center items-center gap-7 text-base xl:text-lg ${moveTo !== "Home" ? "text-white" : ""}`}>

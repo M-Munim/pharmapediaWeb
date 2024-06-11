@@ -113,3 +113,22 @@ export const blogs = [
     viewPostLink: '/blog5',
   },
 ]
+
+export const staticBlogs = [
+  {
+    id: 1,
+    img: "./staticBlog.svg",
+    title: 'Lorem ipsum dolor sit amet consectetur.',
+    blogdate: '21 March 2021',
+  }, {
+    id: 2,
+    img: "./staticBlog.svg",
+    title: 'Lorem ipsum dolor sit amet consectetur.',
+    blogdate: '21 March 2021',
+  }, {
+    id: 2,
+    img: "./staticBlog.svg",
+    title: 'Lorem ipsum dolor sit amet consectetur.',
+    blogdate: '21 March 2021',
+  },
+]
