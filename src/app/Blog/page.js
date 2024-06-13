@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
 import { blogs, staticBlogs } from '../data'
+import Link from 'next/link'
 
-const Blogs = () => {
+const Blog = () => {
   return (
     <main>
       <section className="flex justify-center items-center h-[597px] overflow-hidden relative z-30" style={{
         background: "radial-gradient(circle, #57A8D1 0%, #2980B9 100%)"
-        // background: "radial-gradient(circle , #ABDCFF 0%, #298ED6 100%)"
       }}>
         <div className="text-white w-3/6 text-center flex flex-col justify-center items-center gap-5">
           <h1 className="text-6xl font-light">Our Blogs</h1>
@@ -26,58 +26,125 @@ const Blogs = () => {
       </section>
 
       <section className="py-20 w-10/12 m-auto">
-        <div className="flex justify-center items-center flex-wrap gap-7">
+        {/* <div className="flex justify-center items-center flex-wrap gap-7">
           {blogs.map((blogData) => (
-            <div className="relative my-5" style={{ width: "400px" }} key={blogData.id}>
-              <Image src={blogData.BlogImg}
-                alt={blogData.alt}
-                width={468}
-                height={358} />
-              <div className="buttons flex absolute gap-1 top-4 left-4 text-white">
-                <p className="button-blog">{blogData.domain}</p>
-                <p className="button-blog">{blogData.subDomain}</p>
-              </div>
-              <div className="absolute top-4 right-4">
-                <Image src={blogData.blogVideoPlayImg} width={35} height={35} className='cursor-pointer' />
-              </div>
-              <div className="mt-8">
-                <h2 className="text-3xl font-semibold mb-3">{blogData.title}</h2>
+            <Link href="/Blog/Blogs" key={blogData.id}>
+              <div className="relative my-5" style={{ width: "400px" }} >
+                <Image src={blogData.BlogImg}
+                  alt={blogData.alt}
+                  width={468}
+                  height={358}
+                />
+                <div className="buttons flex absolute gap-1 top-4 left-4 text-white">
+                  <p className="button-blog">{blogData.domain}</p>
+                  <p className="button-blog">{blogData.subDomain}</p>
+                </div>
+                <div className="absolute top-4 right-4">
+                  <Image src={blogData.blogVideoPlayImg} width={35} height={35} className='cursor-pointer' alt='Blog Data' />
+                </div>
+                <div className="mt-8">
+                  <h2 className="text-3xl font-semibold mb-3">{blogData.title}</h2>
 
-                <div className="w-11/12">
+                  <div className="w-11/12">
 
-                  <div className="flex items-center justify-between">
-                    <Image src={blogData.authorImg}
-                      alt="author Img"
-                      width={31}
-                      height={31} />
+                    <div className="flex items-center justify-between">
+                      <Image src={blogData.authorImg}
+                        alt="author Img"
+                        width={31}
+                        height={31} />
 
-                    <p className="text-base font-bold">{blogData.authName}</p>
-                    <div className=" w-6 border-1 border-gray-300"></div>
+                      <p className="text-base font-bold">{blogData.authName}</p>
+                      <div className=" w-6 border-1 border-gray-300"></div>
 
-                    <p className="text-sm text-pClr">{blogData.blogDate}</p>
-                    <div className="w-1 h-1 rounded-full bg-gray-400"></div>
+                      <p className="text-sm text-pClr">{blogData.blogDate}</p>
+                      <div className="w-1 h-1 rounded-full bg-gray-400"></div>
 
-                    <Image src={blogData.shareIcon}
-                      alt="shareIcon Img"
-                      width={12}
-                      height={12} />
+                      <Image src={blogData.shareIcon}
+                        alt="shareIcon Img"
+                        width={12}
+                        height={12} />
 
-                    <p className="text-sm text-pClr">{blogData.shares}</p>
+                      <p className="text-sm text-pClr">{blogData.shares}</p>
+                    </div>
+
+                    <p className="my-5 text-pClr leading-6">{blogData.data}</p>
+
+                    <a className='text-lg font-semibold hover:border-b-2 border-black' href="">View Post</a>
                   </div>
 
-                  <p className="my-5 text-pClr leading-6">{blogData.data}</p>
-
-                  <a className='text-lg font-semibold hover:border-b-2 border-black' href="">View Post</a>
                 </div>
-
               </div>
-            </div>
+            </Link>
           ))}
 
           <button className="button-filled">
             Load more
           </button>
-        </div>
+        </div> */}
+
+        <div className="flex justify-center items-center flex-wrap gap-7">
+          {/* <Link href={`/Blog/${blogData.slug}`} key={blogData.id}> */}
+          {blogs.map((blogData) => (
+            <Link href="Blog/Blogs" key={blogData.id}>
+              <div className="relative my-5" style={{ width: "400px" }}>
+                <Image
+                  src={blogData.BlogImg}
+                  alt={blogData.alt}
+                  width={468}
+                  height={358}
+                />
+                <div className="buttons flex absolute gap-1 top-4 left-4 text-white">
+                  <p className="button-blog">{blogData.domain}</p>
+                  <p className="button-blog">{blogData.subDomain}</p>
+                </div>
+                <div className="absolute top-4 right-4">
+                  <Image
+                    src={blogData.blogVideoPlayImg}
+                    width={35}
+                    height={35}
+                    className="cursor-pointer"
+                    alt="Blog Data"
+                  />
+                </div>
+                <div className="mt-8">
+                  <h2 className="text-3xl font-semibold mb-3">{blogData.title}</h2>
+
+                  <div className="w-11/12">
+                    <div className="flex items-center justify-between">
+                      <Image
+                        src={blogData.authorImg}
+                        alt="author Img"
+                        width={31}
+                        height={31}
+                      />
+                      <p className="text-base font-bold">{blogData.authName}</p>
+                      <div className=" w-6 border-1 border-gray-300"></div>
+                      <p className="text-sm text-pClr">{blogData.blogDate}</p>
+                      <div className="w-1 h-1 rounded-full bg-gray-400"></div>
+                      <Image
+                        src={blogData.shareIcon}
+                        alt="shareIcon Img"
+                        width={12}
+                        height={12}
+                      />
+                      <p className="text-sm text-pClr">{blogData.shares}</p>
+                    </div>
+
+                    <p className="my-5 text-pClr leading-6">{blogData.data}</p>
+
+                    <a
+                      className="text-lg font-semibold hover:border-b-2 border-black"
+                      href={`/Blog/${blogData.slug}`} // Link to the individual blog post
+                    >
+                      View Post
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+          <button className="button-filled">Load more</button>
+        </div>;
       </section>
 
       <section className="m-auto w-10/12" >
@@ -198,4 +265,4 @@ const Blogs = () => {
   )
 }
 
-export default Blogs
+export default Blog

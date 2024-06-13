@@ -126,7 +126,7 @@ export const staticBlogs = [
     title: 'Lorem ipsum dolor sit amet consectetur.',
     blogdate: '21 March 2021',
   }, {
-    id: 2,
+    id: 3,
     img: "./staticBlog.svg",
     title: 'Lorem ipsum dolor sit amet consectetur.',
     blogdate: '21 March 2021',
