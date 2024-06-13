@@ -58,8 +58,9 @@ export default function Navbar() {
                 <li onClick={() => setMoveTo("Home")}>
                   <Link href="/" className={`${moveTo === "Home" ? "text-hover_blue font-bold" : ""}`}>Home</Link>
                 </li>
-                <li onClick={() => setMoveTo("About us")}>
-                  <a href="#about-us" className={`${moveTo === "About us" ? "text-hover_blue2 font-bold" : ""}`}>About us</a>
+                <li onClick={() => setMoveTo("About")}>
+                  {/* <a href="/About" className={`${moveTo === "About" ? "text-hover_blue2 font-bold" : ""}`}>About us</a> */}
+                  <Link href="/About" className={`${moveTo === "About" ? "text-hover_blue2 font-bold" : ""}`}>About us</Link>
                 </li>
                 <li onClick={() => setMoveTo("Blogs")}>
                   <Link href="/Blog" className={`${moveTo === "Blogs" ? "text-hover_blue2 font-bold" : ""}`}>Blogs</Link>

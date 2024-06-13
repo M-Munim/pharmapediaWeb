@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <main className=''>
-      <section className="relative py-20">
+      <section className="relative py-20 md:pb-36">
         <div className="w-10/12 mx-auto relative flex justify-center items-center flex-col overflow-hidden">
           <div className="text-center flex justify-center items-center flex-col gap-4 max-w-3xl relative z-30">
             <h1 className="font-light text-5xl md:text-6xl text-heading_blue tracking-wide">Pharmapedia</h1>
@@ -32,13 +32,13 @@ export default function Home() {
             <Image src='/MainImg.svg' width={1728} height={698} layout="responsive" alt="Illustration of Pharmapedia's mobile application development" />
           </div>
 
-          <div className="w-[1199px] h-[1199px] border-1 rounded-full border-grey opacity-65 absolute top-[98%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
+          <div className="w-[1199px] h-[1199px] border-1 rounded-full border-grey opacity-65 absolute top-[100%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
         </div>
         <Image src='./Ellipse 42.svg' width={116} height={116} alt="Ellipse Image" className='absolute -bottom-10 left-0' />
       </section>
 
       <section className="w-full mx-auto h-96 relative my-28" style={{
-        background: "linear-gradient(#57A8D1 100%, #2980B9 100%)"
+        background: "linear-gradient(#57A8D1, #2980B9)"
       }}>
         <div className="left w-1/2 lg:flex justify-center items-center left-16 absolute -top-12 z-50 hidden">
           <div className="circle bg-white rounded-full flex justify-center items-center relative overflow-visible" style={{ width: '500px', height: '500px' }}>
@@ -52,7 +52,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="overflow-hidden relative h-96">
+        <div className="overflow-hidden relative h-96 md:mt-20">
           <div className="w-10/12 mx-auto flex justify-end items-center h-full z-20 relative">
             <div className="right w-full md:w-1/2 text-white flex flex-col justify-center items-start gap-6">
               <h2 className="font-light text-4xl md:text-5xl uppercase  tracking-wide">About us</h2>
@@ -66,17 +66,17 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="w-52 h-52 border rounded-full border-white opacity-30 absolute -bottom-10 -right-10 z-10"></div>
-          <div className="w-72 h-72 border rounded-full border-white opacity-30 absolute -bottom-12 -right-12 z-10"></div>
-          <div className="border rounded-full border-white opacity-30 absolute top-20 -right-20 z-10" style={{ width: '406px', height: '406px' }}></div>
-          <div className="border rounded-full border-white opacity-30 absolute top-2 -right-24 z-10" style={{ width: '499px', height: '499px' }}></div>
+          <div className="w-52 h-52 border rounded-full border-white opacity-15 absolute -bottom-10 -right-10 z-10"></div>
+          <div className="w-72 h-72 border rounded-full border-white opacity-15 absolute -bottom-12 -right-12 z-10"></div>
+          <div className="border rounded-full border-white opacity-15 absolute top-20 -right-20 z-10" style={{ width: '406px', height: '406px' }}></div>
+          <div className="border rounded-full border-white opacity-15 absolute top-2 -right-24 z-10" style={{ width: '499px', height: '499px' }}></div>
 
-          <div className="border rounded-full border-white opacity-30 absolute -top-48 left-20 z-10" style={{ width: '761px', height: '761px' }}></div>
-          <div className="border rounded-full border-white opacity-30 absolute -top-28 left-36 z-10" style={{ width: '605px', height: '605px' }}></div>
+          <div className="border rounded-full border-white opacity-15 absolute -top-48 left-20 z-10" style={{ width: '761px', height: '761px' }}></div>
+          <div className="border rounded-full border-white opacity-15 absolute -top-28 left-36 z-10" style={{ width: '605px', height: '605px' }}></div>
         </div>
       </section>
 
-      <section className="w-10/12 mx-auto mt-20 mb-28 md:mt-52">
+      <section className="w-10/12 mx-auto mt-20 mb-28 md:mt-60">
         <div className="flex flex-col items-start gap-4" style={{ maxWidth: "677px" }}>
           <h2 className="text-4xl md:text-5xl text-heading_blue font-light tracking-wide">OUR PRODUCTS</h2>
           <p className="text-sm md:text-xl text-t_grey">
@@ -92,11 +92,11 @@ export default function Home() {
             <div key={i}>
               <Image
                 src={data.image}
-                width={360}
+                width={100}
                 height={362}
                 alt="Products Image"
                 className="h-auto hover:scale-95"
-                style={{ maxWidth: "627px", transition: ".2s ease-in" }}
+                style={{ width: "607px", transition: ".2s ease-in" }}
                 loading="lazy"
               />
             </div>
@@ -104,11 +104,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-20 h-[380px] lg:h-[710px]" style={{ background: "radial-gradient(circle, #57A8D1 0%, #2980B9 100%)" }}>
+      <section className="my-20 md:my-40 h-[380px] lg:h-[710px]" style={{ background: "radial-gradient(circle, #57A8D1 , #2980B9)" }}>
         <div className="flex h-full w-10/12 mx-auto">
           <div className="left w-full md:w-1/2 relative overflow-hidden">
-            <img src="/downloadapp.svg" alt="Download App Image 2" style={{ width: "382px" }} className='absolute top-0 hidden'
-            />
+            <img src="/downloadapp.svg" alt="Download App Image 2" style={{ width: "382px" }} className='absolute top-0 hidden md:block' />
 
             <div className="txt w-full md:w-10/12 mx-auto text-white flex flex-col gap-3 absolute bottom-[17%]">
               <h2 className="font-medium text-3xl md:text-5xl uppercase">Download App Now</h2>
@@ -172,7 +171,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-10/12 m-auto">
+      <section className="w-10/12 m-auto my-20">
         <div className="w-full md:w-7/12 text-center m-auto pb-12">
           <h2 className="uppercase font-semibold text-base md:text-xl tracking-widest mb-0 md:mb-2">Reviews</h2>
           <h1 className="uppercase font-light  text-4xl md:text-5xl text-heading_blue md:mb-5">Testimonials</h1>
