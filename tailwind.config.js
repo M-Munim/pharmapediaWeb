@@ -29,6 +29,9 @@ module.exports = {
         t_grey: "#707070",
         lightBlue: "#33ABFF",
         footerGrey: "#A0A0A0",
+        facebook: "#3B5998",
+        twitter: "#00ACED",
+        pintrest: "#CC232A",
       },
       gradients: {
       },
