@@ -113,6 +113,7 @@ input {
 }
 
 @media (max-width:730px) {
+
   .swiper-container .swiper-button-next,
   .swiper-container .swiper-button-prev {
     display: none;

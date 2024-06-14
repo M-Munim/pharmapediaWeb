@@ -85,63 +85,63 @@ const Blog = () => {
         <div className="flex justify-center items-center flex-wrap gap-7">
           {/* <Link href={`/Blog/${blogData.slug}`} key={blogData.id}> */}
           {blogs.map((blogData) => (
-            <Link href="Blog/Blogs" key={blogData.id}>
-              <div className="relative my-5" style={{ width: "400px" }}>
+
+            <div className="relative my-5" style={{ width: "400px" }} key={blogData.id}>
+              <Image
+                src={blogData.BlogImg}
+                alt={blogData.alt}
+                width={468}
+                height={358}
+              />
+              <div className="buttons flex absolute gap-1 top-4 left-4 text-white">
+                <p className="button-blog">{blogData.domain}</p>
+                <p className="button-blog">{blogData.subDomain}</p>
+              </div>
+              <div className="absolute top-4 right-4">
                 <Image
-                  src={blogData.BlogImg}
-                  alt={blogData.alt}
-                  width={468}
-                  height={358}
+                  src={blogData.blogVideoPlayImg}
+                  width={35}
+                  height={35}
+                  className="cursor-pointer"
+                  alt="Blog Data"
                 />
-                <div className="buttons flex absolute gap-1 top-4 left-4 text-white">
-                  <p className="button-blog">{blogData.domain}</p>
-                  <p className="button-blog">{blogData.subDomain}</p>
-                </div>
-                <div className="absolute top-4 right-4">
-                  <Image
-                    src={blogData.blogVideoPlayImg}
-                    width={35}
-                    height={35}
-                    className="cursor-pointer"
-                    alt="Blog Data"
-                  />
-                </div>
-                <div className="mt-8">
-                  <h2 className="text-3xl font-semibold mb-3">{blogData.title}</h2>
+              </div>
+              <div className="mt-8">
+                <h2 className="text-3xl font-semibold mb-3">{blogData.title}</h2>
 
-                  <div className="w-11/12">
-                    <div className="flex items-center justify-between">
-                      <Image
-                        src={blogData.authorImg}
-                        alt="author Img"
-                        width={31}
-                        height={31}
-                      />
-                      <p className="text-base font-bold">{blogData.authName}</p>
-                      <div className=" w-6 border-1 border-gray-300"></div>
-                      <p className="text-sm text-pClr">{blogData.blogDate}</p>
-                      <div className="w-1 h-1 rounded-full bg-gray-400"></div>
-                      <Image
-                        src={blogData.shareIcon}
-                        alt="shareIcon Img"
-                        width={12}
-                        height={12}
-                      />
-                      <p className="text-sm text-pClr">{blogData.shares}</p>
-                    </div>
-
-                    <p className="my-5 text-pClr leading-6">{blogData.data}</p>
-
-                    <a
-                      className="text-lg font-semibold hover:border-b-2 border-black"
-                      href={`/Blog/${blogData.slug}`} // Link to the individual blog post
-                    >
-                      View Post
-                    </a>
+                <div className="w-11/12">
+                  <div className="flex items-center justify-between">
+                    <Image
+                      src={blogData.authorImg}
+                      alt="author Img"
+                      width={31}
+                      height={31}
+                    />
+                    <p className="text-base font-bold">{blogData.authName}</p>
+                    <div className=" w-6 border-1 border-gray-300"></div>
+                    <p className="text-sm text-pClr">{blogData.blogDate}</p>
+                    <div className="w-1 h-1 rounded-full bg-gray-400"></div>
+                    <Image
+                      src={blogData.shareIcon}
+                      alt="shareIcon Img"
+                      width={12}
+                      height={12}
+                    />
+                    <p className="text-sm text-pClr">{blogData.shares}</p>
                   </div>
+
+                  <p className="my-5 text-pClr leading-6">{blogData.data}</p>
+
+                  {/* <Link href="Blog/Blogs/" */}
+                  <Link href={`Blog/Blogs/${blogData.id}`}
+                    className="text-lg font-semibold hover:border-b-2 border-black"
+                  >
+                    View Post
+                  </Link>
+
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
           <button className="button-filled">Load more</button>
         </div>;
