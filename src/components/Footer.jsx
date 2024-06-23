@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image';
 import { FaFacebookF } from "react-icons/fa";
@@ -6,6 +8,8 @@ import { FaYoutube } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
+  // const [moveTo, setMoveTo] = useState("Home");
+  // const [menuOpen, setMenuOpen] = useState(false);
   return (
     <section className='bg-black py-3'>
       <div className="w-10/12 m-auto mt-14">
@@ -27,7 +31,10 @@ const Footer = () => {
             <div className="w-1/2 pt-10">
               <div className="links flex flex-col items-start justify-start text-lg text-footerGrey gap-3">
                 <p className="font-bold text-lg md:text-xl text-white">Quick Links</p>
-                <a href="" className='text-sm md:text-lg'>About Us</a>
+                <a href="" className={`${moveTo === "Home" ? "text-hover_blue font-bold" : ""}`}>About us</a>
+                {/* <li onClick={() => setMoveTo("About")}>
+                  <Link href="/About" className={`${moveTo === "About" ? "text-hover_blue2 font-bold" : ""}`}>About us</Link>
+                </li> */}
                 <a href="" className='text-sm md:text-lg'>Our Products</a>
                 <a href="" className='text-sm md:text-lg'>Blogs</a>
               </div>
@@ -52,9 +59,9 @@ const Footer = () => {
         <div className="mt-4">
           <div className="flex justify-between items-center w-full md:w-7/12 ms-auto">
             <div className="">
-              <p className="text-xs md:text-base text-white">Copyright 2024. All Right Reserved.</p>
+              <p className="text-xs md:text-base text-white">&copy; Copyright 2024. All Right Reserved.</p>
             </div>
-            <div className="flex items-center text-white gap-2 md:gap-4">
+            <div className="flex items-center text-white gap-3 md:gap-4">
               <a href="#" className='text-xs md:text-base border-r border-white md:border-r-2 pr-2 md:pr-3 py-1' aria-label="Facebook">
                 <FaFacebookF className='cursor-pointer' />
               </a>

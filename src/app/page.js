@@ -104,12 +104,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-20 md:my-40 h-[380px] lg:h-[710px]" style={{ background: "radial-gradient(circle, #57A8D1 , #2980B9)" }}>
+      <section className="my-20 md:my-32 h-[380px] lg:h-[710px]" style={{ background: "radial-gradient(circle, #57A8D1 , #2980B9)" }}>
         <div className="flex h-full w-10/12 mx-auto">
-          <div className="left w-full md:w-1/2 relative overflow-hidden">
-            <img src="/downloadapp.svg" alt="Download App Image 2" style={{ width: "382px" }} className='absolute top-0 hidden md:block' />
+          <div className="left w-full md:w-1/2 relative">
+            {/* <img src="/downloadapp.svg" alt="Download App Image 2" style={{ width: "382px", boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" }} className='absolute top-0 hidden md:block' /> */}
+            <img src="/[Mockup] iPhone 15.svg" alt="Download App Image 2" style={{ width: "682px" }} className='absolute top-0 -left-36 hidden md:block' />
 
-            <div className="txt w-full md:w-10/12 mx-auto text-white flex flex-col gap-3 absolute bottom-[17%]">
+            <div className="txt w-full md:w-10/12 mx-auto text-white flex flex-col gap-3 absolute bottom-[20%]">
               <h2 className="font-medium text-3xl md:text-5xl uppercase">Download App Now</h2>
               <p className="md:leading-9 text-sm md:text-3xl">The content in this smartphone application is verified by qualified and registered healthcare professionals!</p>
 
@@ -127,7 +128,7 @@ export default function Home() {
       </section>
 
       <section className="w-10/12 m-auto">
-        <div className="relative py-28">
+        <div className="relative py-10">
           <div className="w-full md:w-7/12 text-center m-auto pb-12">
             <h3 className="uppercase font-semibold text-base md:text-xl tracking-widest">News& Events</h3>
             <h1 className="uppercase font-light text-4xl md:text-5xl text-heading_blue mb-5">Our Blogs</h1>

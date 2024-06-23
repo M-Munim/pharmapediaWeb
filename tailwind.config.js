@@ -25,7 +25,7 @@ module.exports = {
         darkblue: "#2980B9",
         pClr: "#6C6C72",
         bg_1: "#FAFBFF",
-        heading_blue: "#0A64B3",
+        heading_blue: "#0A64B3",  
         t_grey: "#707070",
         lightBlue: "#33ABFF",
         footerGrey: "#A0A0A0",

@@ -40,7 +40,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <div className={`h-20 md:h-28 ${moveTo !== "Home" ? "absolute bg-transparent w-full top-12 z-50" : "block"} `}>
+        <div className={`h-20 md:h-28 flex items-center justify-center ${moveTo !== "Home" ? "absolute bg-transparent w-full top-12 z-50" : "block"} `}>
           <div className="w-10/12 flex justify-between items-center m-auto">
             <div className="flex-shrink-0">
               <Link href="/" onClick={() => setMoveTo("Home")}>

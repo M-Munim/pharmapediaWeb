@@ -12,15 +12,15 @@ const page = () => {
           <p className="leading-7 text-xl">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
         </div>
         <Image src="/DownBtn.svg" alt="Scroll down button" width={40} height={40} className='absolute bottom-10 cursor-pointer' />
-        <div className="w-60 h-60 border-1 rounded-full border-white opacity-15 absolute -bottom-40 -left-14 z-10" aria-hidden="true"></div>
-        <div className="w-[350px] h-[350px] border-1 rounded-full border-white opacity-15 absolute -bottom-48 -left-24 z-10"></div>
-        <div className="w-[493px] h-[493px] border-1 rounded-full border-white opacity-15 absolute -bottom-60 -left-40 z-10"></div>
-        <div className="w-[606px] h-[606px] border-1 rounded-full border-white opacity-15 absolute -bottom-64 -left-44 z-10"></div>
+        <div className="w-60 h-60 border-1 rounded-full border-white opacity-15 absolute -bottom-20 -left-44 z-10" aria-hidden="true"></div>
+        <div className="w-[350px] h-[350px] border-1 rounded-full border-white opacity-15 absolute -bottom-24 -left-48 z-10"></div>
+        <div className="w-[493px] h-[493px] border-1 rounded-full border-white opacity-15 absolute -bottom-28 -left-56 z-10"></div>
+        <div className="w-[606px] h-[606px] border-1 rounded-full border-white opacity-15 absolute -bottom-32 -left-60 z-10"></div>
 
-        <div className="w-80 h-80 border-1 rounded-full border-white opacity-15 absolute -bottom-32 -right-44 z-10"></div>
-        <div className="w-[452px] h-[452px] border-1 rounded-full border-white opacity-15 absolute -bottom-40 -right-52 z-10"></div>
-        <div className="w-[637px] h-[637px] border-1 rounded-full border-white opacity-15 absolute -bottom-48 -right-60 z-10"></div>
-        <div className="w-[783px] h-[783px] border-1 rounded-full border-white opacity-15 absolute -bottom-56 -right-64 z-10"></div>
+        <div className="w-80 h-80 border-1 rounded-full border-white opacity-15 absolute -top-40 right-10 z-10"></div>
+        <div className="w-[452px] h-[452px] border-1 rounded-full border-white opacity-15 absolute -top-48 -right-12 z-10"></div>
+        <div className="w-[637px] h-[637px] border-1 rounded-full border-white opacity-15 absolute -top-60 -right-36 z-10"></div>
+        <div className="w-[783px] h-[783px] border-1 rounded-full border-white opacity-15 absolute -top-64 -right-56 z-10"></div>
       </section>
 
       <section className="w-10/12 m-auto">
@@ -40,7 +40,7 @@ const page = () => {
 
       <section className="w-10/12 m-auto bg-yellow-200 bg-cover bg-center h-[429px] rounded-xl relative"
         style={{ backgroundImage: "url('./productsBg.svg')" }} >
-        <h2 className="text-4xl text-white font-light tracking-wider uppercase text-center pt-14">Our Products</h2>
+        <h2 className="text-4xl text-white font-light tracking-wider uppercase text-center pt-14">Learn More About us</h2>
 
         <div className="pt-3">
           <div className="flex items-center justify-between absolute w-full">
