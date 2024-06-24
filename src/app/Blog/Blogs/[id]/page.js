@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import { CiClock2 } from "react-icons/ci";
 import { PiRanking } from "react-icons/pi";
 import { FaFacebook } from "react-icons/fa";
@@ -16,38 +16,38 @@ const page = ({ params }) => {
   // const { id } = router.query;
 
   // FORM SUBSCRIPTION
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    if (!email) {
-      setMessage('Please enter a valid email.');
-      return;
-    }
+  //   if (!email) {
+  //     setMessage('Please enter a valid email.');
+  //     return;
+  //   }
 
-    try {
-      const response = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
+  //   try {
+  //     const response = await fetch('/api/subscribe', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ email }),
+  //     });
 
-      const data = await response.json();
+  //     const data = await response.json();
 
-      if (response.ok) {
-        setEmail('');
-        setMessage('Thank you for subscribing!');
-      } else {
-        setMessage(data.error || 'Something went wrong.');
-      }
-    } catch (error) {
-      setMessage('An error occurred. Please try again.');
-    }
-  };
+  //     if (response.ok) {
+  //       setEmail('');
+  //       setMessage('Thank you for subscribing!');
+  //     } else {
+  //       setMessage(data.error || 'Something went wrong.');
+  //     }
+  //   } catch (error) {
+  //     setMessage('An error occurred. Please try again.');
+  //   }
+  // };
 
 
   return (
@@ -194,18 +194,19 @@ const page = ({ params }) => {
               <p className="mb-4"><span className='font-semibold'>Subscription</span> Subscribe to our newsletter and receive a selection of cool articles every weeks
               </p>
 
-              <form onSubmit={handleSubmit}>
+              {/* <form onSubmit={handleSubmit}> */}
+              <form>
                 <input
                   type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  // value={email}
+                  // onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
                   className='h-16 w-full rounded-sm bg-transparent p-3 outline-none border-slate-400 border-1'
                 />
                 <button type="submit" className='block button-filledext2 mt-2 '>Subscribe</button>
               </form>
-              {message && <p>{message}</p>}
+              {/* {message && <p>{message}</p>} */}
 
               <div className="flex mb-8 gap-3 items-center justify-start my-6">
                 <input type="checkbox" id="myCheckbox" className="form-checkbox h-5 w-5 text-blue-600 border-gray-300 rounded outline-none " />
