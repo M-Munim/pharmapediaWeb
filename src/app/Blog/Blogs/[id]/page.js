@@ -205,6 +205,7 @@ const page = ({ params }) => {
                 />
                 <button type="submit" className='block button-filledext2 mt-2 '>Subscribe</button>
               </form>
+              {message && <p>{message}</p>}
 
               <div className="flex mb-8 gap-3 items-center justify-start my-6">
                 <input type="checkbox" id="myCheckbox" className="form-checkbox h-5 w-5 text-blue-600 border-gray-300 rounded outline-none " />
