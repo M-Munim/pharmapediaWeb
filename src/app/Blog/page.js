@@ -1,9 +1,14 @@
+"use client"
+
 import Image from 'next/image'
 import React from 'react'
 import { blogs, staticBlogs } from '../data'
 import Link from 'next/link'
 
 const Blog = () => {
+  const scrollToSchools = () => {
+    document.getElementById('drop').scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <main>
       <section className="flex justify-center items-center h-[597px] overflow-hidden relative z-30" style={{
@@ -13,7 +18,7 @@ const Blog = () => {
           <h1 className="text-6xl font-light">Our Blogs</h1>
           <p className="leading-7 text-xl">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
         </div>
-        <Image src="/DownBtn.svg" alt="Scroll down button" width={40} height={40} className='absolute bottom-10 cursor-pointer' />
+        <Image src="/DownBtn.svg" alt="Scroll down button" width={40} height={40} className='absolute bottom-10 cursor-pointer' onClick={scrollToSchools} />
         <div className="w-60 h-60 border-1 rounded-full border-white opacity-30 absolute -bottom-40 -left-14 z-10" aria-hidden="true"></div>
         <div className="w-[350px] h-[350px] border-1 rounded-full border-white opacity-30 absolute -bottom-48 -left-24 z-10"></div>
         <div className="w-[493px] h-[493px] border-1 rounded-full border-white opacity-30 absolute -bottom-60 -left-40 z-10"></div>
@@ -25,12 +30,25 @@ const Blog = () => {
         <div className="w-[783px] h-[783px] border-1 rounded-full border-white opacity-30 absolute -bottom-56 -right-64 z-10"></div>
       </section>
 
-      <section className="py-20 w-10/12 m-auto">
-        {/* <div className="flex justify-center items-center flex-wrap gap-7">
-          {blogs.map((blogData) => (
-            <Link href="/Blog/Blogs" key={blogData.id}>
-              <div className="relative my-5" style={{ width: "400px" }} >
-                <Image src={blogData.BlogImg}
+      <section className="py-20  relative overflow-hidden" id='drop'>
+        <div className="w-96 h-96 border-3 rounded-full opacity-30 absolute top-36 -right-60" aria-hidden="true"></div>
+        <div className="w-[452px] h-[452px] border-3 rounded-full opacity-30 absolute top-28 -right-56" aria-hidden="true"></div>
+        <div className="w-[597px] h-[597px] border-3 rounded-full opacity-30 absolute top-10 -right-60" aria-hidden="true"></div>
+        <div className="w-[697px] h-[697px] border-3 rounded-full opacity-30 absolute -top-5 -right-60" aria-hidden="true"></div>
+
+        <div className="w-96 h-96 border-3 rounded-full opacity-30 absolute bottom-36 -left-60" aria-hidden="true"></div>
+        <div className="w-[452px] h-[452px] border-3 rounded-full opacity-30 absolute bottom-28 -left-56" aria-hidden="true"></div>
+        <div className="w-[597px] h-[597px] border-3 rounded-full opacity-30 absolute bottom-10 -left-60" aria-hidden="true"></div>
+        <div className="w-[697px] h-[697px] border-3 rounded-full opacity-30 absolute -bottom-5 -left-60" aria-hidden="true"></div>
+
+        <div className="w-10/12 m-auto">
+          <div className="flex justify-center items-center flex-wrap gap-7">
+            {/* <Link href={`/Blog/${blogData.slug}`} key={blogData.id}> */}
+            {blogs.map((blogData) => (
+
+              <div className="relative my-5" style={{ width: "400px" }} key={blogData.id}>
+                <Image
+                  src={blogData.BlogImg}
                   alt={blogData.alt}
                   width={468}
                   height={358}
@@ -40,111 +58,54 @@ const Blog = () => {
                   <p className="button-blog">{blogData.subDomain}</p>
                 </div>
                 <div className="absolute top-4 right-4">
-                  <Image src={blogData.blogVideoPlayImg} width={35} height={35} className='cursor-pointer' alt='Blog Data' />
+                  <Image
+                    src={blogData.blogVideoPlayImg}
+                    width={35}
+                    height={35}
+                    className="cursor-pointer"
+                    alt="Blog Data"
+                  />
                 </div>
                 <div className="mt-8">
                   <h2 className="text-3xl font-semibold mb-3">{blogData.title}</h2>
 
                   <div className="w-11/12">
-
                     <div className="flex items-center justify-between">
-                      <Image src={blogData.authorImg}
+                      <Image
+                        src={blogData.authorImg}
                         alt="author Img"
                         width={31}
-                        height={31} />
-
+                        height={31}
+                      />
                       <p className="text-base font-bold">{blogData.authName}</p>
                       <div className=" w-6 border-1 border-gray-300"></div>
-
                       <p className="text-sm text-pClr">{blogData.blogDate}</p>
                       <div className="w-1 h-1 rounded-full bg-gray-400"></div>
-
-                      <Image src={blogData.shareIcon}
+                      <Image
+                        src={blogData.shareIcon}
                         alt="shareIcon Img"
                         width={12}
-                        height={12} />
-
+                        height={12}
+                      />
                       <p className="text-sm text-pClr">{blogData.shares}</p>
                     </div>
 
                     <p className="my-5 text-pClr leading-6">{blogData.data}</p>
 
-                    <a className='text-lg font-semibold hover:border-b-2 border-black' href="">View Post</a>
-                  </div>
+                    {/* <Link href="Blog/Blogs/" */}
+                    <Link href={`Blog/Blogs/${blogData.id}`}
+                      className="text-lg font-semibold hover:border-b-2 border-black"
+                    >
+                      View Post
+                    </Link>
 
+                  </div>
                 </div>
               </div>
-            </Link>
-          ))}
-
-          <button className="button-filled">
-            Load more
-          </button>
-        </div> */}
-
-        <div className="flex justify-center items-center flex-wrap gap-7">
-          {/* <Link href={`/Blog/${blogData.slug}`} key={blogData.id}> */}
-          {blogs.map((blogData) => (
-
-            <div className="relative my-5" style={{ width: "400px" }} key={blogData.id}>
-              <Image
-                src={blogData.BlogImg}
-                alt={blogData.alt}
-                width={468}
-                height={358}
-              />
-              <div className="buttons flex absolute gap-1 top-4 left-4 text-white">
-                <p className="button-blog">{blogData.domain}</p>
-                <p className="button-blog">{blogData.subDomain}</p>
-              </div>
-              <div className="absolute top-4 right-4">
-                <Image
-                  src={blogData.blogVideoPlayImg}
-                  width={35}
-                  height={35}
-                  className="cursor-pointer"
-                  alt="Blog Data"
-                />
-              </div>
-              <div className="mt-8">
-                <h2 className="text-3xl font-semibold mb-3">{blogData.title}</h2>
-
-                <div className="w-11/12">
-                  <div className="flex items-center justify-between">
-                    <Image
-                      src={blogData.authorImg}
-                      alt="author Img"
-                      width={31}
-                      height={31}
-                    />
-                    <p className="text-base font-bold">{blogData.authName}</p>
-                    <div className=" w-6 border-1 border-gray-300"></div>
-                    <p className="text-sm text-pClr">{blogData.blogDate}</p>
-                    <div className="w-1 h-1 rounded-full bg-gray-400"></div>
-                    <Image
-                      src={blogData.shareIcon}
-                      alt="shareIcon Img"
-                      width={12}
-                      height={12}
-                    />
-                    <p className="text-sm text-pClr">{blogData.shares}</p>
-                  </div>
-
-                  <p className="my-5 text-pClr leading-6">{blogData.data}</p>
-
-                  {/* <Link href="Blog/Blogs/" */}
-                  <Link href={`Blog/Blogs/${blogData.id}`}
-                    className="text-lg font-semibold hover:border-b-2 border-black"
-                  >
-                    View Post
-                  </Link>
-
-                </div>
-              </div>
-            </div>
-          ))}
-          <button className="button-filled">Load more</button>
-        </div>;
+            ))}
+            <button className="button-filled">Load more</button>
+          </div>
+        </div>
       </section>
 
       <section className="m-auto w-10/12" >

@@ -6,6 +6,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaYoutube } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+// import Link from 'next/link';
 
 const Footer = () => {
   // const [moveTo, setMoveTo] = useState("Home");
@@ -32,8 +33,9 @@ const Footer = () => {
               <div className="links flex flex-col items-start justify-start text-lg text-footerGrey gap-3">
                 <p className="font-bold text-lg md:text-xl text-white">Quick Links</p>
                 <a href="" className='text-sm md:text-lg'>About us</a>
+                {/* <Link></Link> */}
                 {/* <li onClick={() => setMoveTo("About")}>
-                  <Link href="/About" className={`${moveTo === "About" ? "text-hover_blue2 font-bold" : ""}`}>About us</Link>
+                  /About className={`${moveTo === "About" ? "text-hover_blue2 font-bold" : ""}`}>About us</Link>
                 </li> */}
                 <a href="" className='text-sm md:text-lg'>Our Products</a>
                 <a href="" className='text-sm md:text-lg'>Blogs</a>
@@ -46,6 +48,7 @@ const Footer = () => {
                 <a href="" className='text-sm md:text-lg'>FAQs</a>
               </div>
             </div>
+           
           </div>
           <div className="w-4/12 pt-10">
             <div className="links flex flex-col items-start justify-start text-lg gap-1 md:gap-3 text-white">

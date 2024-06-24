@@ -5,10 +5,29 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaBars, FaTimes } from "react-icon
 import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+// import Footer from './Footer';
+import { IoIosSearch } from "react-icons/io";
 
 export default function Navbar() {
   const [moveTo, setMoveTo] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const [query, setQuery] = useState('');
+  const [showSearchBox, setShowSearchBox] = useState(false);
+
+  const handleInputChange = (event) => {
+    setQuery(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Implement the search logic or API call here
+    console.log('Search query:', query);
+  };
+
+  const toggleSearchBox = () => {
+    setShowSearchBox(!showSearchBox);
+  };
 
   return (
     <>
@@ -73,7 +92,26 @@ export default function Navbar() {
                 </li>
               </ul>
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex items-center justify-center gap-5">
+              <div>
+                {!showSearchBox && <IoIosSearch onClick={toggleSearchBox} style={{ cursor: 'pointer', fontSize: '34px' }} />}
+                {showSearchBox && (
+                  <form onSubmit={handleSubmit} className='flex justify-center items-center'>
+                    <IoIosSearch onClick={toggleSearchBox} style={{ cursor: 'pointer', fontSize: '30px' }} />
+                    {/* <label htmlFor="search" style={{ display: 'none' }}>Search:</label> */}
+                    <input
+                      type="text"
+                      id="search"
+                      name="q"
+                      value={query}
+                      onChange={handleInputChange}
+                      placeholder="Search"
+                      className='outline-none border-1 border-black rounded-md p-1'
+                      autoFocus
+                    />
+                  </form>
+                )}
+              </div>
               <button className={` ${moveTo !== "Home" ? "button-outlined2" : "button-outlined"} `}>Contact Us</button>
             </div>
             <div className="lg:hidden text-2xl">
@@ -111,3 +149,5 @@ export default function Navbar() {
     </>
   );
 }
+
+

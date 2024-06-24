@@ -1,7 +1,12 @@
+"use client"
+
 import Image from 'next/image'
 import React from 'react'
 
 const page = () => {
+  const scrollToSchools = () => {
+    document.getElementById('drop').scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <main>
       <section className="flex justify-center items-center h-[597px] overflow-hidden relative z-30" style={{
@@ -11,7 +16,7 @@ const page = () => {
           <h1 className="text-6xl font-light">About us</h1>
           <p className="leading-7 text-xl">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
         </div>
-        <Image src="/DownBtn.svg" alt="Scroll down button" width={40} height={40} className='absolute bottom-10 cursor-pointer' />
+        <Image src="/DownBtn.svg" alt="Scroll down button" width={40} height={40} className='absolute bottom-10 cursor-pointer' onClick={scrollToSchools} />
         <div className="w-60 h-60 border-1 rounded-full border-white opacity-15 absolute -bottom-20 -left-44 z-10" aria-hidden="true"></div>
         <div className="w-[350px] h-[350px] border-1 rounded-full border-white opacity-15 absolute -bottom-24 -left-48 z-10"></div>
         <div className="w-[493px] h-[493px] border-1 rounded-full border-white opacity-15 absolute -bottom-28 -left-56 z-10"></div>
@@ -38,7 +43,7 @@ const page = () => {
         </div>
       </section>
 
-      <section className="w-10/12 m-auto bg-yellow-200 bg-cover bg-center h-[429px] rounded-xl relative"
+      <section className="w-10/12 m-auto bg-yellow-200 bg-cover bg-center h-[429px] rounded-xl relative" id='drop'
         style={{ backgroundImage: "url('./productsBg.svg')" }} >
         <h2 className="text-4xl text-white font-light tracking-wider uppercase text-center pt-14">Learn More About us</h2>
 
