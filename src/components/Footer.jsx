@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="w-1/2 pt-10">
               <div className="links flex flex-col items-start justify-start text-lg text-footerGrey gap-3">
                 <p className="font-bold text-lg md:text-xl text-white">Quick Links</p>
-                <a href="" className={`${moveTo === "Home" ? "text-hover_blue font-bold" : ""}`}>About us</a>
+                <a href="" className='text-sm md:text-lg'>About us</a>
                 {/* <li onClick={() => setMoveTo("About")}>
                   <Link href="/About" className={`${moveTo === "About" ? "text-hover_blue2 font-bold" : ""}`}>About us</Link>
                 </li> */}
