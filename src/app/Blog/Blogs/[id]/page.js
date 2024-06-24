@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { CiClock2 } from "react-icons/ci";
 import { PiRanking } from "react-icons/pi";
 import { FaFacebook } from "react-icons/fa";
@@ -15,10 +15,45 @@ const page = ({ params }) => {
   // const router = useRouter();
   // const { id } = router.query;
 
+  // FORM SUBSCRIPTION
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      setMessage('Please enter a valid email.');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setEmail('');
+        setMessage('Thank you for subscribing!');
+      } else {
+        setMessage(data.error || 'Something went wrong.');
+      }
+    } catch (error) {
+      setMessage('An error occurred. Please try again.');
+    }
+  };
+
+
   return (
     <main>
       {/* <h1>{params.id}</h1> */}
-      <section className='h-[577px] flex justify-center items-center' style={{ backgroundImage: "url('./SubBlogMain.svg')" }}>
+      <section className='h-[577px] flex justify-center items-center' style={{ backgroundImage: "url('/SubBlogMain.svg')" }}>
         <div className="w-10/12 m-auto">
           <div className="text-white mb-3">
             <h2 className="text-6xl font-medium tracking-wider mb-3 mt-20 w-11/12">{params.id} Efficient Rules How to Organize Your Working Place</h2>
@@ -42,8 +77,8 @@ const page = ({ params }) => {
       </section>
 
       <section className=''>
-        <div className="flex justify-between items-start gap-4 my-20">
-          <div className="bg-green-100 h-96 w-1/12">
+        <div className="flex justify-between items-start my-20">
+          <div className="h-96 w-1/12">
             <div className="flex flex-col justify-center items-center gap-12" style={{
               color: '#121416'
             }}>
@@ -59,7 +94,7 @@ const page = ({ params }) => {
                   996K</p>
               </div>
 
-              <div className="flex flex-col justify-center items-center gap-1">
+              <div className="flex flex-col justify-center items-center gap-2">
                 <FaFacebook />
                 <p className="">125</p>
                 <FaTwitter />
@@ -68,7 +103,7 @@ const page = ({ params }) => {
               </div>
             </div>
           </div>
-          <div className="w-9/12">
+          <div className="w-8/12">
             <div className="">
               <p className="text-lg leading-8 mb-4">Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button detail cotton blend cute functional. Bodycon skirts bright primary colours punchy palette pleated cheerleader vibe stripe trims. Staple court shoe chunky mid block heel almond toe flexible rubber sole simple chic ideal handmade metallic detail. Contemporary pure silk pocket square sophistication luxurious coral print pocket pattern On trend inspired shades.</p>
               <p className="text-lg leading-8 mb-3">Striking pewter studded epaulettes silver zips inner drawstring waist channel urban edge single-breasted jacket. Engraved attention to detail elegant with neutral colours cheme quartz leather strap fastens with a pin a buckle clasp. Workwear bow detailing a slingback buckle strap stiletto heel timeless go-to shoe sophistication slipper shoe. Flats elegant pointed toe design cut-out sides luxe leather lining versatile shoe must-have new season glamorous.</p>
@@ -125,34 +160,56 @@ const page = ({ params }) => {
               <button className="button-filledext my-20">VIEW COMMENTS (0)</button>
             </div>
           </div>
-          <div className="bg-orange-300 h-96 w-2/12">
-            <h2 className="">Follow Us</h2>
+          <div className="bg-orange-300 w-3/12 px-6">
+            <h2 className="font-medium text-2xl mb-6">Follow Us</h2>
 
-            <div className="">
+            <div className="flex items-center justify-center gap-12  mb-6">
               <div className="">
-                <FaFacebook />
+                <FaFacebook className='text-2xl' />
                 <p className="">10</p>
               </div>
 
               <div className="">
-                <FaTwitter />
+                <FaTwitter className='text-2xl' />
                 <p className="">69k</p>
               </div>
 
               <div className="">
-                <FaSquareInstagram />
-                <p className="">69`</p>
+                <FaSquareInstagram className='text-2xl' />
+                <p className="">45</p>
               </div>
 
               <div className="">
-                <FaPinterest />
+                <FaPinterest className='text-2xl' />
                 <p className="">69k</p>
               </div>
 
-
               <div className="">
-                <FaYoutube />
+                <FaYoutube className='text-2xl' />
                 <p className="">69k</p>
+              </div>
+            </div>
+
+            <div className="">
+              <p className="mb-4"><span className='font-semibold'>Subscription</span> Subscribe to our newsletter and receive a selection of cool articles every weeks
+              </p>
+
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className='h-16 w-full rounded-sm bg-transparent p-3 outline-none border-slate-400 border-1'
+                />
+                <button type="submit" className='block button-filledext2 mt-2 '>Subscribe</button>
+              </form>
+
+              <div className="flex mb-8 gap-3 items-center justify-start my-6">
+                <input type="checkbox" id="myCheckbox" className="form-checkbox h-5 w-5 text-blue-600 border-gray-300 rounded outline-none " />
+                <p className="font-medium text-pClr">By checking this box, you confirm that you have read and are agreeing to our terms of use regarding the storage of the data submitted through this form.
+                </p>
               </div>
             </div>
           </div>
