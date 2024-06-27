@@ -1,3 +1,5 @@
+import { MdCancel, MdAnalytics } from "react-icons/md";
+
 export const products = [
   {
     image: "./product1.svg"
@@ -131,4 +133,36 @@ export const staticBlogs = [
     title: 'Lorem ipsum dolor sit amet consectetur.',
     blogdate: '21 March 2021',
   },
+]
+
+export const faqs = [
+  {
+    id: 1,
+    num: "01",
+    icon: <MdCancel />,
+    question: "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
+    ans: "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.Id placerat dui habitasse quisque nisl tincidunt facilisi mi id.Dictum elit velit."
+
+  },
+  {
+    id: 2,
+    num: "02",
+    icon: <MdCancel />,
+    question: "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
+    ans: "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.Id placerat dui habitasse quisque nisl tincidunt facilisi mi id.Dictum elit velit."
+  },
+  {
+    id: 3,
+    num: "03",
+    icon: <MdAnalytics />,
+    question: "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
+    ans: "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.Id placerat dui habitasse quisque nisl tincidunt facilisi mi id.Dictum elit velit."
+  }
+  ,
+  {
+    id: 4,
+    num: "04",
+    question: "Lorem ipsum dolor sit amet consectetur. Sagittis id.",
+    ans: "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac. Ornare amet ligula ornare lacus aliquam aenean. Eu lacus imperdiet urna amet congue adipiscing. Faucibus magna nisl ullamcorper in facilisis consequat aliquam.Id placerat dui habitasse quisque nisl tincidunt facilisi mi id.Dictum elit velit."
+  }
 ]
