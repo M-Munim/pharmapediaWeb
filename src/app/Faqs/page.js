@@ -27,7 +27,7 @@ const Page = () => {
       }}>
         <div className="text-white w-3/6 text-center flex flex-col justify-center items-center gap-5">
           <h1 className="text-6xl font-light">Ask Us Anything</h1>
-          <p className="leading-7 text-xl uppercase tracking-wide">Have any questions? We're here to assist you..</p>
+          <p className="leading-7 text-xl uppercase tracking-wide">Have any questions? We&apos;re here to assist you..</p>
         </div>
         <Image src="/DownBtn.svg" alt="Scroll down button" width={40} height={40} className='absolute bottom-10 cursor-pointer' onClick={scrollToSchools} />
         <div className="w-60 h-60 border-1 rounded-full border-white opacity-30 absolute -bottom-40 -left-14 z-10" aria-hidden="true"></div>
