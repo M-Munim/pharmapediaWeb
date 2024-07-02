@@ -88,6 +88,7 @@ input {
   background: transparent;
   transition: .2s ease-out;
   border: 1px solid #33ABFF;
+  color: #15B2F5;
 }
 
 .button-filledext2 {
@@ -104,6 +105,7 @@ input {
   background: transparent;
   transition: .2s ease-out;
   border: 1px solid #33ABFF;
+  color: #15B2F5;
 }
 
 .button-blog {

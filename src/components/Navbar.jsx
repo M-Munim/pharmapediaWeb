@@ -97,7 +97,7 @@ export default function Navbar() {
                 {!showSearchBox && <IoIosSearch onClick={toggleSearchBox} style={{ cursor: 'pointer', fontSize: '34px' }} />}
                 {showSearchBox && (
                   <form onSubmit={handleSubmit} className='flex justify-center items-center'>
-                    <IoIosSearch onClick={toggleSearchBox} style={{ cursor: 'pointer', fontSize: '30px' }} />
+                    <IoIosSearch className='text-white' onClick={toggleSearchBox} style={{ cursor: 'pointer', fontSize: '30px' }} />
                     {/* <label htmlFor="search" style={{ display: 'none' }}>Search:</label> */}
                     <input
                       type="text"

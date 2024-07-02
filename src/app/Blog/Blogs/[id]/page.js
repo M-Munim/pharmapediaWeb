@@ -8,10 +8,19 @@ import { FaPinterest } from "react-icons/fa";
 import { CiShare2 } from "react-icons/ci";
 import { FaYoutube } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
-
+// import { blogs } from '@/app/data';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { blogs } from '@/app/data';
+
 const page = ({ params }) => {
+  // if (params.id === blogs.id) {
+  //   console.log("same");
+
+  // } else {
+  //   console.log("not same");
+  // }
   // const router = useRouter();
   // const { id } = router.query;
 
@@ -109,12 +118,12 @@ const page = ({ params }) => {
 
             <div className="flex justify-center items-start gap-5 mt-16 mb-10">
               <Image src="/comma.svg" width={41} height={38} alt='Commas' className='mt-5' />
-              <h1 className="text-5xl font-bold leading-tight uppercase">Knicker lining concealed back zip fasten swing style high waisted double layer full pattern floral.
+              <h1 className="text-[46px] font-bold leading-tight uppercase">Knicker lining concealed back zip fasten swing style high waisted double layer full pattern floral.
               </h1>
             </div>
 
             <div className="">
-              <p className="text-lg leading-8 mb-4">Foam padding in the insoles leather finest quality staple flat slip-on design pointed toe off-duty shoe. Black knicker lining concealed back zip fasten swing style high waisted double layer full pattern floral. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design
+              <p className="text-lg leading-8 mb-4">Foam padding in the insoles leather fines5 quality staple flat slip-on design pointed toe off-duty shoe. Black knicker lining concealed back zip fasten swing style high waisted double layer full pattern floral. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design
               </p>
               <p className="text-lg leading-8 mb-3"> Eget aenean tellus venenatis. Donec odio tempus. Felis arcu pretium metus nullam quam aenean sociis quis sem neque vici libero. Venenatis nullam fringilla pretium magnis aliquam nunc vulputate integer augue ultricies cras. Eget viverra feugiat cras ut. Sit natoque montes tempus ligula eget vitae pede rhoncus maecenas consectetuer commodo condimentum aenean.</p>
             </div>
@@ -155,13 +164,13 @@ const page = ({ params }) => {
                   <p className="">694</p>
                 </div>
               </div>
-              <button className="button-filledext my-20">VIEW COMMENTS (0)</button>
+              <button className="button-filledext my-20 tracking-widest">VIEW COMMENTS (0)</button>
             </div>
 
-            <div className=" bg-red-200">
-              <div className="uppercase">
-                <h1 className="">Sign Up for Our Newsletters</h1>
-                <h1 className="">Get notified of the best deals on our WordPress themes.</h1>
+            <div className="">
+              <div className="uppercase mb-5">
+                <h1 className="text-4xl font-bold leading-tight uppercase">Sign Up for Our Newsletters</h1>
+                <h1 className="text-[33px] font-bold leading-tight uppercase text-[#A9A9A9]">Get notified of the best deals on our WordPress themes.</h1>
               </div>
 
               <form className='flex justify-center items-center gap-7'>
@@ -169,26 +178,26 @@ const page = ({ params }) => {
                   type="text"
                   placeholder="Enter your name"
                   required
-                  className='h-16 w-full rounded-sm bg-transparent p-3 outline-none border-slate-400 border-1'
+                  className='h-16 w-full rounded-sm bg-transparent p-3 outline-none border-slate-200 border-1'
                 />
                 <input
                   type="email"
                   placeholder="Enter your email"
                   required
-                  className='h-16 w-full rounded-sm bg-transparent p-3 outline-none border-slate-400 border-1'
+                  className='h-16 w-full rounded-sm bg-transparent p-3 outline-none border-slate-200 border-1'
                 />
-                <button type="submit" className='button-filledext2'>Subscribe</button>
+                <button type="submit" className='button-filledext2 tracking-widest'>Subscribe</button>
               </form>
 
               <div className="flex mb-8 gap-3 items-center justify-start my-6">
-                <input type="checkbox" id="myCheckbox" className="form-checkbox h-5 w-5 text-blue-600 border-gray-300 rounded outline-none " />
-                <p className="font-medium text-pClr">By checking this box, you confirm that you have read and are agreeing to our terms of use regarding the storage of the data submitted through this form.
+                <input type="checkbox" id="myCheckbox" className="form-checkbox h-5 w-5 text-blue-600 border-gray-500 rounded outline-none " />
+                <p className="font-medium text-[#A9A9A9]">By checking this box, you confirm that you have read and are agreeing to our terms of use regarding the storage of the data submitted through this form.
                 </p>
               </div>
             </div>
           </div>
           <div className="w-3/12 px-6">
-            <h2 className="font-medium text-2xl mb-6">Follow Us</h2>
+            <h2 className="font-semibold text-2xl mb-6">Follow Us</h2>
 
             <div className="flex items-center justify-center gap-12  mb-6">
               <div className="">
@@ -217,8 +226,8 @@ const page = ({ params }) => {
               </div>
             </div>
 
-            <div className="">
-              <p className="mb-4"><span className='font-semibold'>Subscription</span> Subscribe to our newsletter and receive a selection of cool articles every weeks
+            <div className="pb-3">
+              <p className="mb-4 text-xl"><span className='font-semibold'>Subscription</span> Subscribe to our newsletter and receive a selection of cool articles every weeks
               </p>
 
               {/* <form onSubmit={handleSubmit}> */}
@@ -231,35 +240,23 @@ const page = ({ params }) => {
                   required
                   className='h-16 w-full rounded-sm bg-transparent p-3 outline-none border-slate-400 border-1'
                 />
-                <button type="submit" className='block button-filledext2 mt-2 '>Subscribe</button>
+                <button type="submit" className='block button-filledext2 mt-2'>Subscribe</button>
               </form>
               {/* {message && <p>{message}</p>} */}
 
               <div className="flex mb-8 gap-3 items-center justify-start my-6">
-                <input type="checkbox" id="myCheckbox" className="form-checkbox h-5 w-5 text-blue-600 border-gray-300 rounded outline-none " />
-                <p className="font-medium text-pClr">By checking this box, you confirm that you have read and are agreeing to our terms of use regarding the storage of the data submitted through this form.
+                <input type="checkbox" id="myCheckbox" className="form-checkbox h-5 w-5 text-blue-600 border-gray-300 rounded outline-none" />
+                <p className="text-sm text-[#A9A9A9]">By checking this box, you confirm that you have read and are agreeing to our terms of use regarding the storage of the data submitted through this form.
                 </p>
               </div>
             </div>
 
-            <h2 className="font-medium text-2xl mb-4">The Latest</h2>
+            <h2 className="font-semibold text-2xl mt-10 mb-4">The Latest</h2>
 
-            <div className="bg-red-300 text-white mb-4">
+            <div className="text-white mb-4 p-4" style={{ backgroundImage: "url('/Group 237624.svg')" }}>
               <p className="">10 Habits That Will Change Your Live for the Better If envy and jealousy are impacting your friendships</p>
 
-              <div className="flex justify-center items-center">
-                <p className="text-base">June 21,2022</p>
-                <div className="w-6 border-1 border-white"></div>
-                <CiClock2 />
-                <p className="text-sm">2 minute read</p>
-              </div>
-
-            </div>
-
-            <div className="mb-8">
-              <p className="">10 Habits That Will Change Your Live for the Better If envy and jealousy are impacting your friendships</p>
-
-              <div className="flex justify-center items-center gap-5">
+              <div className="flex justify-center items-center gap-3 mt-3">
                 <p className="text-base">June 21,2022</p>
                 <div className="w-6 border-1 border-white"></div>
                 <CiClock2 />
@@ -267,30 +264,170 @@ const page = ({ params }) => {
               </div>
             </div>
 
-            <div className="mb-8">
-              <p className="">10 Habits That Will Change Your Live for the Better If envy and jealousy are impacting your friendships</p>
+            <div className="mb-12 mt-3">
+              <p className="font-semibold leading-tight">10 Habits That Will Change Your Live for the Better If envy and jealousy are impacting your friendships</p>
 
-              <div className="flex justify-center items-center gap-5">
-                <p className="text-base">June 21,2022</p>
-                <div className="w-6 border-1 border-white"></div>
+              <div className="flex justify-center items-center gap-5 my-3">
+                <p className="text-base font-semibold">June 21,2022</p>
+                <div className="w-6 border-1 border-t_grey"></div>
                 <CiClock2 />
-                <p className="text-sm">2 minute read</p>
+                <p className="text-sm font-semibold">2 minute read</p>
               </div>
             </div>
 
-            <div className="mb-8">
-              <p className="">10 Habits That Will Change Your Live for the Better If envy and jealousy are impacting your friendships</p>
+            <div className="mb-12 mt-3">
+              <p className="font-semibold leading-tight">10 Habits That Will Change Your Live for the Better If envy and jealousy are impacting your friendships</p>
 
-              <div className="flex justify-center items-center gap-5">
-                <p className="text-base">June 21,2022</p>
-                <div className="w-6 border-1 border-white"></div>
+              <div className="flex justify-center items-center gap-5 my-3">
+                <p className="text-base font-semibold">June 21,2022</p>
+                <div className="w-6 border-1 border-t_grey"></div>
                 <CiClock2 />
-                <p className="text-sm">2 minute read</p>
+                <p className="text-sm font-semibold">2 minute read</p>
+              </div>
+            </div>
+
+            <div className="mb-12 mt-3">
+              <p className="font-semibold leading-tight">10 Habits That Will Change Your Live for the Better If envy and jealousy are impacting your friendships</p>
+
+              <div className="flex justify-center items-center gap-5 my-3">
+                <p className="text-base font-semibold">June 21,2022</p>
+                <div className="w-6 border-1 border-t_grey"></div>
+                <CiClock2 />
+                <p className="text-sm font-semibold">2 minute read</p>
               </div>
             </div>
           </div>
         </div>
       </section >
+
+      <section className="">
+        <div className="">
+          <div className="flex justify-center items-center flex-wrap gap-7">
+
+            {/* <Link href={`/Blog/${blogData.slug}`} key={blogData.id}> */}
+            {blogs.slice(3, 6).map((blogData) => (
+
+
+              <div className="relative my-5" style={{ width: "400px" }} key={blogData.id}>
+                <Image
+                  src={blogData.BlogImg}
+                  alt={blogData.alt}
+                  width={468}
+                  height={358}
+                />
+                <div className="buttons flex absolute gap-1 top-4 left-4 text-white">
+                  <p className="button-blog">{blogData.domain}</p>
+                  <p className="button-blog">{blogData.subDomain}</p>
+                </div>
+                <div className="absolute top-4 right-4">
+                  <Image
+                    src={blogData.blogVideoPlayImg}
+                    width={35}
+                    height={35}
+                    className="cursor-pointer"
+                    alt="Blog Data"
+                  />
+                </div>
+                <div className="mt-8">
+                  <h2 className="text-3xl font-semibold mb-3">{blogData.title}</h2>
+
+                  <div className="w-11/12">
+                    <div className="flex items-center justify-between">
+                      <Image
+                        src={blogData.authorImg}
+                        alt="author Img"
+                        width={31}
+                        height={31}
+                      />
+                      <p className="text-base font-bold">{blogData.authName}</p>
+                      <div className=" w-6 border-1 border-gray-300"></div>
+                      <p className="text-sm text-pClr">{blogData.blogDate}</p>
+                      <div className="w-1 h-1 rounded-full bg-gray-400"></div>
+                      <Image
+                        src={blogData.shareIcon}
+                        alt="shareIcon Img"
+                        width={12}
+                        height={12}
+                      />
+                      <p className="text-sm text-pClr">{blogData.shares}</p>
+                    </div>
+
+                    <p className="my-5 text-pClr leading-6">{blogData.data}</p>
+
+                    {/* <Link href="Blog/Blogs/" */}
+                    <Link href={`Blog/Blogs/${blogData.id}`}
+                      className="text-lg font-semibold hover:border-b-2 border-black"
+                    >
+                      View Post
+                    </Link>
+
+                  </div>
+                </div>
+              </div>
+            ))}
+            {/* {blogs.map((blogData) => {
+              console.log(params.id)
+              if (params.id == blogData._id) {
+                return (
+                  <div className="relative my-5" style={{ width: "400px" }} key={blogData._id}>
+                    <Image
+                      src={blogData.BlogImg}
+                      alt={blogData.alt}
+                      width={468}
+                      height={358}
+                    />
+                    <div className="buttons flex absolute gap-1 top-4 left-4 text-white">
+                      <p className="button-blog">{blogData.domain}</p>
+                      <p className="button-blog">{blogData.subDomain}</p>
+                    </div>
+                    <div className="absolute top-4 right-4">
+                      <Image
+                        src={blogData.blogVideoPlayImg}
+                        width={35}
+                        height={35}
+                        className="cursor-pointer"
+                        alt="Blog Data"
+                      />
+                    </div>
+                    <div className="mt-8">
+                      <h2 className="text-3xl font-semibold mb-3">{blogData.title}</h2>
+                      <div className="w-11/12">
+                        <div className="flex items-center justify-between">
+                          <Image
+                            src={blogData.authorImg}
+                            alt="author Img"
+                            width={31}
+                            height={31}
+                          />
+                          <p className="text-base font-bold">{blogData.authName}</p>
+                          <div className="w-6 border-1 border-gray-300"></div>
+                          <p className="text-sm text-pClr">{blogData.blogDate}</p>
+                          <div className="w-1 h-1 rounded-full bg-gray-400"></div>
+                          <Image
+                            src={blogData.shareIcon}
+                            alt="shareIcon Img"
+                            width={12}
+                            height={12}
+                          />
+                          <p className="text-sm text-pClr">{blogData.shares}</p>
+                        </div>
+                        <p className="my-5 text-pClr leading-6">{blogData.data}</p>
+                        <Link href={`Blog/Blogs/${blogData._id}`} className="text-lg font-semibold hover:border-b-2 border-black">
+                          View Post
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+
+              } else {
+                return null;
+              }
+            })} */}
+
+          </div>
+        </div>
+      </section>
 
       <section className="m-auto overflow-hidden relative">
         <div className="w-10/12 m-auto flex flex-col md:flex-row items-center justify-center gap-20 relative py-28">
