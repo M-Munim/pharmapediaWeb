@@ -164,9 +164,9 @@ import { IoIosSearch } from "react-icons/io";
 
 export default function Navbar() {
   // Assuming you are in a component or function
-const currentUrl = typeof window !== 'undefined' ? window.location.pathname : '';
+  const currentUrl = typeof window !== 'undefined' ? window.location.pathname : '';
 
-console.log('Current URL:', currentUrl);
+  // console.log('Current URL:', currentUrl);
 
   const [moveTo, setMoveTo] = useState(currentUrl);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -183,6 +183,8 @@ console.log('Current URL:', currentUrl);
       setMoveTo("About");
     } else if (path === "/Blog") {
       setMoveTo("Blog");
+    } else if (path === "/Products") {
+      setMoveTo("Products");
     } else if (path === "/Faqs") {
       setMoveTo("FAQs");
     } else {
@@ -191,7 +193,7 @@ console.log('Current URL:', currentUrl);
 
     // Cleanup function to prevent memory leaks
     // return () => {
-      
+
     // };
   }, []);
 
@@ -234,7 +236,7 @@ console.log('Current URL:', currentUrl);
             </div>
 
             <div className="flex-row items-center justify-end gap-6 sm:flex font-semibold text-[9px] sm:text-sm">
-              <p classname="">saharbegum@pharmapedia.pro</p>
+              <p className="">saharbegum@pharmapedia.pro</p>
               <p className="">+923494428783</p>
             </div>
           </div>
@@ -263,8 +265,11 @@ console.log('Current URL:', currentUrl);
                 <li onClick={() => setMoveTo("Blog")}>
                   <Link href="/Blog" className={`${moveTo === "Blog" ? "text-hover_blue2 font-bold" : ""}`}>Blogs</Link>
                 </li>
-                <li onClick={() => setMoveTo("Our Products")}>
-                  <a href="#our-products" className={`${moveTo === "Our Products" ? "text-hover_blue2 font-bold" : ""}`}>Our Products</a>
+                {/* <li onClick={() => setMoveTo("Products")}>
+                  <a href="/Products" className={`${moveTo === "Products" ? "text-hover_blue2 font-bold" : ""}`}>Our Products</a>
+                </li> */}
+                <li onClick={() => setMoveTo("Products")}>
+                  <Link href="/Products" className={`${moveTo === "Products" ? "text-hover_blue2 font-bold" : ""}`}>Products</Link>
                 </li>
                 <li onClick={() => setMoveTo("FAQs")}>
                   <Link href="/Faqs" className={`${moveTo === "FAQs" ? "text-hover_blue2 font-bold" : ""}`}>FAQs</Link>
