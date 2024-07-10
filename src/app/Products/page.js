@@ -1,6 +1,7 @@
 "use client"
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Page = () => {
@@ -43,14 +44,16 @@ const Page = () => {
               <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Pharmapedia</h2>
               <p className="text-sm md:text-xl text-t_grey mt-2 ">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
               <button className="button-filled mt-3">
-                Explore More
+                <Link href='Products/Pharmapedia'>
+                  Explore More
+                </Link>
               </button>
             </div>
           </div>
           <div className="right w-[50%] relative h-[659px]" style={{ backgroundImage: "url('/Rectangle1332.svg')", backgroundRepeat: "no-repeat" }}>
             <Image
               src="/productImg1.svg"
-              alt=""
+              alt="productImg1"
               width={365}
               height={751}
               className="absolute top-24 left-1/2 transform -translate-x-1/2 z-20"
@@ -78,7 +81,9 @@ const Page = () => {
               <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Pog calculator</h2>
               <p className="text-sm md:text-xl text-t_grey mt-2 ">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
               <button className="button-filled mt-3">
-                Explore More
+                <Link href='Products/PogCalculator'>
+                  Explore More
+                </Link>
               </button>
             </div>
           </div>
