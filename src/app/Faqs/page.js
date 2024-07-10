@@ -207,7 +207,7 @@ const Page = () => {
         <div className="w-80 h-80 border-1 rounded-full border-white opacity-15 absolute -top-40 right-10 z-10"></div>
         <div className="w-[452px] h-[452px] border-1 rounded-full border-white opacity-15 absolute -top-48 -right-12 z-10"></div>
         <div className="w-[637px] h-[637px] border-1 rounded-full border-white opacity-15 absolute -top-60 -right-36 z-10"></div>
-        <div className="w-[783px] h-[783px] border-1 rounded-full border-white opacity-15 absolute -top-64 -right-56 z-10"></div>
+        <div className="w-[783px] h-[783px] border-1 rounded-full border-white opacity-15 absolute -top-64 -right-56 z-10"></div> 
       </section>
 
 

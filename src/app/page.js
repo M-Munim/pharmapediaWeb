@@ -107,7 +107,6 @@ export default function Home() {
       <section className="my-20 md:my-32 h-[380px] lg:h-[710px]" style={{ background: "radial-gradient(circle, #57A8D1 , #2980B9)" }}>
         <div className="flex h-full w-10/12 mx-auto">
           <div className="left w-full md:w-1/2 relative">
-            {/* <img src="/downloadapp.svg" alt="Download App Image 2" style={{ width: "382px", boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" }} className='absolute top-0 hidden md:block' /> */}
             <img src="/[Mockup] iPhone 15.svg" alt="Download App Image 2" style={{ width: "682px" }} className='absolute top-0 -left-36 hidden md:block' />
 
             <div className="txt w-full md:w-10/12 mx-auto text-white flex flex-col gap-3 absolute bottom-[20%]">
