@@ -11,26 +11,41 @@ const Page = () => {
 
   return (
     <main>
-      <section className="flex justify-center items-center h-[627px] relative z-30" style={{
+      <section className="flex justify-center items-center h-[577px] relative z-30" style={{
         background: "radial-gradient(circle, #57A8D1 0%, #2980B9 100%)"
       }}>
 
-        <div className="text-white w-9/12 text-center flex bg-red-300 justify-center items-center gap-5 h-[500px] z-40 absolute mt-48">
+        <div className="w-9/12 text-center flex justify-center items-center h-[500px] z-40 absolute mt-72">
 
-          <div className="bg-green-200 w-1/2 h-96">POG</div>
-          <div className="bg-green-500 w-1/2 h-96"></div>
+          <div className="w-7/12 pt-44">
+            <h1 className="outlined-text m-0 p-0 text-white">POG CAL <br />
+              CULATOR</h1>
+            <p className="text-t_grey text-xl w-10/12 text-left mt-5">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
+          </div>
+
+          <div className="bg-transparent w-5/12 relative">
+            <Image
+              src="/productImg2.svg"
+              alt="productImg1"
+              width={365}
+              height={751}
+              className="absolute right-10 z-20 -top-40"
+            />
+            <Image src="/Ellipse 40.svg" alt="" width={186} height={186} className='absolute -right-40 -top-20' />
+            <Image src="/Ellipse 41.svg" alt="" width={100} height={100} className='absolute -bottom-[510px] -left-10' />
+          </div>
         </div>
-        <Image src="/DownBtn.svg" alt="Scroll down button" width={40} height={40} className='absolute bottom-10 cursor-pointer' onClick={scrollToSchools} />
+        {/* <Image src="/DownBtn.svg" alt="Scroll down button" width={40} height={40} className='absolute bottom-10 cursor-pointer z-50' onClick={scrollToSchools} /> */}
         <div className="overflow-hidden relative h-[627px] z-30 w-full">
-          <div className="w-60 h-60 border-1 rounded-full border-white opacity-15 absolute -bottom-20 -left-44 z-10" aria-hidden="true"></div>
-          <div className="w-[350px] h-[350px] border-1 rounded-full border-white opacity-15 absolute -bottom-24 -left-48 z-10"></div>
-          <div className="w-[493px] h-[493px] border-1 rounded-full border-white opacity-15 absolute -bottom-28 -left-56 z-10"></div>
-          <div className="w-[606px] h-[606px] border-1 rounded-full border-white opacity-15 absolute -bottom-32 -left-60 z-10"></div>
+          <div className="w-64 h-64 border-1 rounded-full border-white opacity-25 absolute -bottom-12 -left-44 z-10" aria-hidden="true"></div>
+          <div className="w-[360px] h-[360px] border-1 rounded-full border-white opacity-25 absolute -bottom-20 -left-44 z-10"></div>
+          <div className="w-[510px] h-[510px] border-1 rounded-full border-white opacity-25 absolute -bottom-36 -left-56 z-10"></div>
+          <div className="w-[606px] h-[606px] border-1 rounded-full border-white opacity-25 absolute -bottom-36 -left-52 z-10"></div>
 
-          <div className="w-80 h-80 border-1 rounded-full border-white opacity-15 absolute -top-40 right-10 z-10"></div>
-          <div className="w-[452px] h-[452px] border-1 rounded-full border-white opacity-15 absolute -top-48 -right-12 z-10"></div>
-          <div className="w-[637px] h-[637px] border-1 rounded-full border-white opacity-15 absolute -top-60 -right-36 z-10"></div>
-          <div className="w-[783px] h-[783px] border-1 rounded-full border-white opacity-15 absolute -top-64 -right-56 z-10"></div>
+          <div className="w-80 h-80 border-1 rounded-full border-white opacity-25 absolute -top-40 right-10 z-10"></div>
+          <div className="w-[452px] h-[452px] border-1 rounded-full border-white opacity-25 absolute -top-48 -right-12 z-10"></div>
+          <div className="w-[637px] h-[637px] border-1 rounded-full border-white opacity-25 absolute -top-60 -right-36 z-10"></div>
+          <div className="w-[783px] h-[783px] border-1 rounded-full border-white opacity-25 absolute -top-64 -right-56 z-10"></div>
         </div>
       </section>
 
