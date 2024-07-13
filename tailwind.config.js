@@ -34,6 +34,7 @@ module.exports = {
         pintrest: "#CC232A",
         prodclr1: "#5C5E6E",
         prodclr2: "#756F6F",
+        greyBg: "#F2F2F2"
       },
       gradients: {
       },

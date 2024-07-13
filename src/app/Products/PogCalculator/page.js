@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import './styles.css'
 
 const Page = () => {
   const scrollToSchools = () => {
@@ -49,19 +50,79 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="relative">
+      <section className="relative flex items-center justify-center mt-[230px]">
         <Image
           src="/Group1.svg"
           alt=""
           width={2947.91}
           height={1989.84}
-          className="absolute bottom-32 z-10"
+          className="absolute top-0 z-10"
         />
 
+        <div className="left w-6/12 relative z-30">
+          <Image
+            src="/prodpage2.svg"
+            alt=""
+            width={999.91}
+            height={989.84}
+            className=""
+          />
+        </div>
+        <div className="right w-6/12 text-start relative z-30">
+          <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Pharmapedia</h2>
+          <p className="text-sm md:text-xl text-t_grey mt-2 w-9/12">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
+        </div>
+      </section>
+
+      <section className="bg-greyBg flex items-center justify-center relative z-30">
+        <div className="w-6/12">
+          <Image
+            src="/prodpage2Img2.svg"
+            alt=""
+            width={947.91}
+            height={989.84}
+            className=""
+          />
+        </div>
+        <div className="w-6/12 flex items-start justify-center tracking-wider">
+          <div className="left relative z-30">
+            <div className="w-80 h-56 bg-white shadow-xl border-l-5 border-[#2AA7FF] rounded-md flex flex-col items-center justify-center mt-20">
+              <div className="text-left">
+                <Image src="/accessibility1.svg" alt="" width={32} height={32} className='mb-2' />
+                <p className="text-2xl font-bold text-prodclr1 leading-6">40 top Companies <br /> data updated</p>
+                <p className="text-xl text-prodclr2 mt-2">Our Data is Updated</p>
+              </div>
+            </div>
+            <div className="w-80 h-56 flex flex-col items-center justify-center">
+              <div className="text-left">
+                <Image src="/accessibility3.svg" alt="" width={32} height={32} className='mb-2' />
+                <p className="text-2xl font-bold text-prodclr1 leading-6">UI enhanced</p>
+                <p className="text-xl text-prodclr2 mt-2">Our Application User <br /> Interface Design is <br /> more User Friendly</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="right">
+            <div className="w-80 h-56 flex flex-col items-center justify-center">
+              <div className="">
+                <Image src="/accessibility2.svg" alt="" width={32} height={32} className='mb-2' />
+                <p className="text-2xl font-bold text-prodclr1 leading-6">Bug in prescription <br /> fixed</p>
+                <p className="text-xl text-prodclr2 mt-2">Our Application Bugs <br />are Been Solved If Any</p>
+              </div>
+            </div>
+            <div className="w-80 h-56 flex flex-col items-center justify-center">
+              <div className="">
+                <Image src="/accessibility4.svg" alt="" width={32} height={32} className='mb-2' />
+                <p className="text-2xl font-bold text-prodclr1 leading-6">Best Ux Design</p>
+                <p className="text-xl text-prodclr2 mt-2">We have Best User <br />Experience Design</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* FORM */}
-      <section className="m-auto overflow-hidden relative">
+      <section className="m-auto overflow-hidden relative mt-36 z-30">
         <div className="w-10/12 m-auto flex flex-col md:flex-row items-center justify-center gap-20 relative py-28">
           <div className="left w-full md:w-1/2 relative z-30">
             <form action="">
@@ -126,7 +187,7 @@ const Page = () => {
         <div className="border-2 rounded-full border-grey opacity-65 absolute -bottom-60 -right-36 z-10" style={{ width: '526px', height: '526px' }}></div>
         <div className="border-2 rounded-full border-grey opacity-65 absolute -bottom-60 -right-36 z-10" style={{ width: '599px', height: '599px' }}></div>
 
-        <Image src='./Ellipse 45.svg' width={116} height={116} alt="Ellipse Image" className='absolute top-1/3 right-0' />
+        <Image src='/Ellipse 45.svg' width={116} height={116} alt="Ellipse Image" className='absolute top-1/3 right-0' />
       </section>
     </main>
   )

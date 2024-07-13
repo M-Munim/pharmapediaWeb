@@ -12,8 +12,8 @@ const Footer = () => {
   // const [moveTo, setMoveTo] = useState("Home");
   // const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <section className='bg-black py-3'>
-      <div className="w-10/12 m-auto mt-14">
+    <section className='bg-black py-3 '>
+      <div className="w-10/12 m-auto mt-14  relative z-30 bg-transparent">
         <div className="flex flex-col md:flex-row justify-center items-start gap-3 md:gap-16">
           <div className="w-full md:w-4/12">
             <Image
@@ -48,7 +48,7 @@ const Footer = () => {
                 <a href="" className='text-sm md:text-lg'>FAQs</a>
               </div>
             </div>
-           
+
           </div>
           <div className="w-4/12 pt-10">
             <div className="links flex flex-col items-start justify-start text-lg gap-1 md:gap-3 text-white">
