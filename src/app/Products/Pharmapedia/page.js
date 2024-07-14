@@ -48,7 +48,7 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="relative mt-[480px]">
+      <section className="relative mt-[480px]" id='drop'>
         <Image
           src="/Group1.svg"
           alt=""

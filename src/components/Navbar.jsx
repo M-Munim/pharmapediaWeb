@@ -237,7 +237,7 @@ export default function Navbar() {
 
             <div className="flex-row items-center justify-end gap-6 sm:flex font-semibold text-[9px] sm:text-sm">
               <p className="">saharbegum@pharmapedia.pro</p>
-              <p className="">+923494428783</p>
+              <p className="">+92&nbsp;3494428783</p>
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ const Blog = () => {
         <div className="w-[783px] h-[783px] border-1 rounded-full border-white opacity-30 absolute -bottom-56 -right-64 z-10"></div>
       </section>
 
-      <section className="py-20  relative overflow-hidden" id='drop'>
+      <section className="py-20 relative overflow-hidden" id='drop'>
         <div className="w-96 h-96 border-3 rounded-full opacity-30 absolute top-36 -right-60" aria-hidden="true"></div>
         <div className="w-[452px] h-[452px] border-3 rounded-full opacity-30 absolute top-28 -right-56" aria-hidden="true"></div>
         <div className="w-[597px] h-[597px] border-3 rounded-full opacity-30 absolute top-10 -right-60" aria-hidden="true"></div>
@@ -108,14 +108,14 @@ const Blog = () => {
         </div>
       </section>
 
-      <section className="m-auto w-10/12" >
-        <div className="" style={{
+      <section className="m-auto w-11/12" >
+        <div className="h-[448px] flex items-end justify-center" style={{
           background: "radial-gradient(circle , #ABDCFF 0%, #298ED6 100%)"
         }}>
 
           <div className="flex items-center justify-end w-11/12 ms-auto" >
             <div className="left text-white w-1/2 flex flex-col items-start justify-start gap-3">
-              <h1 className="text-3xl font-light uppercase tracking-wide">Learn More About <br /> our Products</h1>
+              <h1 className="text-3xl font-light uppercase tracking-wider">Learn More About <br /> our Products</h1>
               <p className="text-lg tracking-wide">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
               <button className="button-filled">
                 Learn More
@@ -187,7 +187,7 @@ const Blog = () => {
 
               <div className="flex flex-col mb-5">
                 <label htmlFor="message" className='text-sm font-medium leading-6'>Message</label>
-                <textarea name="message" id="message" className='h-32 w-full rounded-lg p-3 outline-none border-slate-400 border'></textarea>
+                <textarea name="message" id="message" className='h-32 w-full rounded-lg p-3 outline-none border-slate-400 border resize-none'></textarea>
               </div>
 
               <div className="flex mb-8 gap-3 items-center justify-start">

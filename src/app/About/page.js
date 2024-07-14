@@ -17,15 +17,15 @@ const page = () => {
           <p className="leading-7 text-xl">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
         </div>
         <Image src="/DownBtn.svg" alt="Scroll down button" width={40} height={40} className='absolute bottom-10 cursor-pointer' onClick={scrollToSchools} />
-        <div className="w-60 h-60 border-1 rounded-full border-white opacity-15 absolute -bottom-20 -left-44 z-10" aria-hidden="true"></div>
-        <div className="w-[350px] h-[350px] border-1 rounded-full border-white opacity-15 absolute -bottom-24 -left-48 z-10"></div>
-        <div className="w-[493px] h-[493px] border-1 rounded-full border-white opacity-15 absolute -bottom-28 -left-56 z-10"></div>
-        <div className="w-[606px] h-[606px] border-1 rounded-full border-white opacity-15 absolute -bottom-32 -left-60 z-10"></div>
+        <div className="w-60 h-60 border-1 rounded-full border-white opacity-25 absolute -bottom-20 -left-44 z-10" aria-hidden="true"></div>
+        <div className="w-[350px] h-[350px] border-1 rounded-full border-white opacity-25 absolute -bottom-24 -left-48 z-10"></div>
+        <div className="w-[493px] h-[493px] border-1 rounded-full border-white opacity-25 absolute -bottom-28 -left-56 z-10"></div>
+        <div className="w-[606px] h-[606px] border-1 rounded-full border-white opacity-25 absolute -bottom-32 -left-60 z-10"></div>
 
-        <div className="w-80 h-80 border-1 rounded-full border-white opacity-15 absolute -top-40 right-10 z-10"></div>
-        <div className="w-[452px] h-[452px] border-1 rounded-full border-white opacity-15 absolute -top-48 -right-12 z-10"></div>
-        <div className="w-[637px] h-[637px] border-1 rounded-full border-white opacity-15 absolute -top-60 -right-36 z-10"></div>
-        <div className="w-[783px] h-[783px] border-1 rounded-full border-white opacity-15 absolute -top-64 -right-56 z-10"></div>
+        <div className="w-80 h-80 border-1 rounded-full border-white opacity-25 absolute -top-40 right-10 z-10"></div>
+        <div className="w-[452px] h-[452px] border-1 rounded-full border-white opacity-25 absolute -top-48 -right-12 z-10"></div>
+        <div className="w-[637px] h-[637px] border-1 rounded-full border-white opacity-25 absolute -top-60 -right-36 z-10"></div>
+        <div className="w-[783px] h-[783px] border-1 rounded-full border-white opacity-25 absolute -top-64 -right-56 z-10"></div>
       </section>
 
       <section className="w-10/12 m-auto">
@@ -38,7 +38,7 @@ const page = () => {
             </button>
           </div>
           <div className="right w-1/2">
-            <Image src="/AboutImg1.svg" alt="Our Mission Img" width={530} height={620} className='' />
+            <Image src="/AboutImg1.svg" alt="Img" width={530} height={620} loading='lazy' />
           </div>
         </div>
       </section>
@@ -49,9 +49,9 @@ const page = () => {
 
         <div className="pt-3">
           <div className="flex items-center justify-between absolute w-full">
-            <Image src="/aboutProduct3.svg" alt="Our Mission Img" width={415} height={526} className='' />
-            <Image src="/aboutProduct2.svg" alt="Our Mission Img" width={415} height={526} className='' />
-            <Image src="/aboutProduct1.svg" alt="Our Mission Img" width={415} height={526} className='' />
+            <Image src="/aboutProduct3.svg" alt="Our-Mission" width={415} height={526} loading='lazy' />
+            <Image src="/aboutProduct2.svg" alt="Our-Mission" width={415} height={526} loading='lazy' />
+            <Image src="/aboutProduct1.svg" alt="Our-Mission" width={415} height={526} loading='lazy' />
           </div>
         </div>
       </section>
@@ -68,7 +68,7 @@ const page = () => {
             </button>
           </div>
           <div className="right w-1/2">
-            <Image src="/aboutVision.png" alt="Our Mission Img" width={530} height={620} className='ms-auto' />
+            <Image src="/aboutVision.png" alt="Our Mission" width={850} height={620} className='ms-auto' loading='lazy' />
           </div>
         </div>
       </section>
@@ -106,7 +106,7 @@ const page = () => {
 
               <div className="flex flex-col mb-5">
                 <label htmlFor="message" className='text-sm font-medium leading-6'>Message</label>
-                <textarea name="message" id="message" className='h-32 w-full rounded-lg p-3 outline-none border-slate-400 border'></textarea>
+                <textarea name="message" id="message" className='h-32 w-full rounded-lg p-3 outline-none border-slate-400 border resize-none'></textarea>
               </div>
 
               <div className="flex mb-8 gap-3 items-center justify-start">

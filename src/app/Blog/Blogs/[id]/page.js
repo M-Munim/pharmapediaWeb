@@ -75,17 +75,26 @@ const page = ({ params }) => {
             <PiRanking />
             <p className="text-sm">1.6K views</p>
             <div className="w-6 border-1 border-white"></div>
-            <FaFacebook />
-            <FaTwitter />
-            <FaPinterest />
+            <FaFacebook className='cursor-pointer' />
+            <FaTwitter className='cursor-pointer' />
+            <FaPinterest className='cursor-pointer' />
             <p className="text-sm">1.2K shares</p>
           </div>
         </div>
       </section>
 
-      <section className=''>
+      <section className='relative overflow-hidden'>
+        <div className="w-96 h-96 border-3 rounded-full opacity-30 absolute top-36 -right-60" aria-hidden="true"></div>
+        <div className="w-[452px] h-[452px] border-3 rounded-full opacity-30 absolute top-28 -right-56" aria-hidden="true"></div>
+        <div className="w-[597px] h-[597px] border-3 rounded-full opacity-30 absolute top-10 -right-60" aria-hidden="true"></div>
+        <div className="w-[697px] h-[697px] border-3 rounded-full opacity-30 absolute -top-5 -right-60" aria-hidden="true"></div>
+
+        <div className="w-96 h-96 border-3 rounded-full opacity-30 absolute bottom-36 -left-60" aria-hidden="true"></div>
+        <div className="w-[452px] h-[452px] border-3 rounded-full opacity-30 absolute bottom-28 -left-56" aria-hidden="true"></div>
+        <div className="w-[597px] h-[597px] border-3 rounded-full opacity-30 absolute bottom-10 -left-60" aria-hidden="true"></div>
+        <div className="w-[697px] h-[697px] border-3 rounded-full opacity-30 absolute -bottom-5 -left-60" aria-hidden="true"></div>
         <div className="flex justify-between items-start mt-20">
-          <div className="h-96 w-1/12">
+          <div className="w-1/12 relative z-40">
             <div className="flex flex-col justify-center items-center gap-12" style={{
               color: '#121416'
             }}>
@@ -102,28 +111,29 @@ const page = ({ params }) => {
               </div>
 
               <div className="flex flex-col justify-center items-center gap-2">
-                <FaFacebook />
+                <FaFacebook className='cursor-pointer' />
                 <p className="">125</p>
-                <FaTwitter />
-                <FaPinterest />
+                <FaTwitter className='cursor-pointer' />
+                <FaPinterest className='cursor-pointer' />
                 <p className="">425</p>
               </div>
             </div>
           </div>
-          <div className="w-8/12">
+
+          <div className="w-8/12 relative z-40">
             <div className="">
               <p className="text-lg leading-8 mb-4">Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button detail cotton blend cute functional. Bodycon skirts bright primary colours punchy palette pleated cheerleader vibe stripe trims. Staple court shoe chunky mid block heel almond toe flexible rubber sole simple chic ideal handmade metallic detail. Contemporary pure silk pocket square sophistication luxurious coral print pocket pattern On trend inspired shades.</p>
               <p className="text-lg leading-8 mb-3">Striking pewter studded epaulettes silver zips inner drawstring waist channel urban edge single-breasted jacket. Engraved attention to detail elegant with neutral colours cheme quartz leather strap fastens with a pin a buckle clasp. Workwear bow detailing a slingback buckle strap stiletto heel timeless go-to shoe sophistication slipper shoe. Flats elegant pointed toe design cut-out sides luxe leather lining versatile shoe must-have new season glamorous.</p>
             </div>
 
             <div className="flex justify-center items-start gap-5 mt-16 mb-10">
-              <Image src="/comma.svg" width={41} height={38} alt='Commas' className='mt-5' />
+              <Image src="/comma.svg" width={41} height={38} alt='Commas' className='mt-5' loading='lazy' />
               <h1 className="text-[46px] font-bold leading-tight uppercase">Knicker lining concealed back zip fasten swing style high waisted double layer full pattern floral.
               </h1>
             </div>
 
             <div className="">
-              <p className="text-lg leading-8 mb-4">Foam padding in the insoles leather fines5 quality staple flat slip-on design pointed toe off-duty shoe. Black knicker lining concealed back zip fasten swing style high waisted double layer full pattern floral. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design
+              <p className="text-lg leading-8 mb-4">Foam padding in the insoles leather fines5 quality staple flat slip-on design pointed toe off-duty shoe. Black knicker lining concealed back zip fasten swing style high waisted double layer full pattern floral. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design.
               </p>
               <p className="text-lg leading-8 mb-3"> Eget aenean tellus venenatis. Donec odio tempus. Felis arcu pretium metus nullam quam aenean sociis quis sem neque vici libero. Venenatis nullam fringilla pretium magnis aliquam nunc vulputate integer augue ultricies cras. Eget viverra feugiat cras ut. Sit natoque montes tempus ligula eget vitae pede rhoncus maecenas consectetuer commodo condimentum aenean.</p>
             </div>
@@ -196,32 +206,33 @@ const page = ({ params }) => {
               </div>
             </div>
           </div>
-          <div className="w-3/12 px-6">
+
+          <div className="w-3/12 px-6 relative z-40">
             <h2 className="font-semibold text-2xl mb-6">Follow Us</h2>
 
             <div className="flex items-center justify-center gap-12  mb-6">
               <div className="">
-                <FaFacebook className='text-2xl' />
+                <FaFacebook className='text-2xl cursor-pointer' />
                 <p className="">10</p>
               </div>
 
               <div className="">
-                <FaTwitter className='text-2xl' />
+                <FaTwitter className='text-2xl cursor-pointer' />
                 <p className="">69k</p>
               </div>
 
               <div className="">
-                <FaSquareInstagram className='text-2xl' />
+                <FaSquareInstagram className='text-2xl cursor-pointer' />
                 <p className="">45</p>
               </div>
 
               <div className="">
-                <FaPinterest className='text-2xl' />
+                <FaPinterest className='text-2xl cursor-pointer' />
                 <p className="">69k</p>
               </div>
 
               <div className="">
-                <FaYoutube className='text-2xl' />
+                <FaYoutube className='text-2xl cursor-pointer' />
                 <p className="">69k</p>
               </div>
             </div>
@@ -264,7 +275,7 @@ const page = ({ params }) => {
               </div>
             </div>
 
-            <div className="mb-12 mt-3">
+            <div className="mb-12 mt-14 w-11/12 m-auto">
               <p className="font-semibold leading-tight">10 Habits That Will Change Your Live for the Better If envy and jealousy are impacting your friendships</p>
 
               <div className="flex justify-center items-center gap-5 my-3">
@@ -275,7 +286,7 @@ const page = ({ params }) => {
               </div>
             </div>
 
-            <div className="mb-12 mt-3">
+            <div className="mb-12 mt-3 w-11/12 m-auto">
               <p className="font-semibold leading-tight">10 Habits That Will Change Your Live for the Better If envy and jealousy are impacting your friendships</p>
 
               <div className="flex justify-center items-center gap-5 my-3">
@@ -286,7 +297,7 @@ const page = ({ params }) => {
               </div>
             </div>
 
-            <div className="mb-12 mt-3">
+            <div className="mb-12 mt-3 w-11/12 m-auto">
               <p className="font-semibold leading-tight">10 Habits That Will Change Your Live for the Better If envy and jealousy are impacting your friendships</p>
 
               <div className="flex justify-center items-center gap-5 my-3">
@@ -462,7 +473,7 @@ const page = ({ params }) => {
 
               <div className="flex flex-col mb-5">
                 <label htmlFor="message" className='text-sm font-medium leading-6'>Message</label>
-                <textarea name="message" id="message" className='h-32 w-full rounded-lg p-3 outline-none border-slate-400 border'></textarea>
+                <textarea name="message" id="message" className='h-32 w-full rounded-lg p-3 outline-none border-slate-400 border resize-none'></textarea>
               </div>
 
               <div className="flex mb-8 gap-3 items-center justify-start">

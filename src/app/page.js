@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/bundle';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 import { FaStar } from "react-icons/fa";
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -23,18 +24,20 @@ export default function Home() {
             </p>
             <div>
               <button className="button-filled">
-                About us
+                <Link href='/About'>
+                  About us
+                </Link>
               </button>
             </div>
           </div>
 
           <div className="w-full mt-10 md:mt-0 relative z-10">
-            <Image src='/MainImg.svg' width={1728} height={698} layout="responsive" alt="Illustration of Pharmapedia's mobile application development" />
+            <Image src='/MainImg.svg' width={1728} height={698} layout="responsive" alt="Pharmapedia" />
           </div>
 
           <div className="w-[1199px] h-[1199px] border-1 rounded-full border-grey opacity-65 absolute top-[100%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
         </div>
-        <Image src='./Ellipse 42.svg' width={116} height={116} alt="Ellipse Image" className='absolute -bottom-10 left-0' />
+        <Image src='/Ellipse 42.svg' width={116} height={116} alt="Ellipse" className='absolute -bottom-10 left-0' />
       </section>
 
       <section className="w-full mx-auto h-96 relative my-28" style={{
@@ -46,7 +49,7 @@ export default function Home() {
               src="/Group1000011108.svg"
               width={304}
               height={624}
-              alt="Illustration related to Pharmapedia"
+              alt="Illustration of Pharmapedia"
               priority
             />
           </div>
@@ -107,20 +110,20 @@ export default function Home() {
       <section className="my-20 md:my-32 h-[380px] lg:h-[710px]" style={{ background: "radial-gradient(circle, #57A8D1 , #2980B9)" }}>
         <div className="flex h-full w-10/12 mx-auto">
           <div className="left w-full md:w-1/2 relative">
-            <img src="/[Mockup] iPhone 15.svg" alt="Download App Image 2" style={{ width: "682px" }} className='absolute top-0 -left-36 hidden md:block' />
+            <img src="/[Mockup] iPhone 15.svg" loading="lazy" alt="Download App" style={{ width: "682px" }} className='absolute top-0 -left-36 hidden md:block' />
 
             <div className="txt w-full md:w-10/12 mx-auto text-white flex flex-col gap-3 absolute bottom-[20%]">
               <h2 className="font-medium text-3xl md:text-5xl uppercase">Download App Now</h2>
               <p className="md:leading-9 text-sm md:text-3xl">The content in this smartphone application is verified by qualified and registered healthcare professionals!</p>
 
               <div className="download-imgs flex-col md:flex-row flex justify-start items-start md:items-center gap-2 md:gap-8">
-                <Image src='./download2.svg' width={202} height={60} alt="Download Image 1" className='cursor-pointer' />
-                <Image src='./download1.svg' width={202} height={60} alt="Download Image 2" className='cursor-pointer' />
+                <Image src='./download2.svg' width={202} height={60} alt="Download Image 1" className='cursor-pointer' loading="lazy" />
+                <Image src='./download1.svg' width={202} height={60} alt="Download Image 2" className='cursor-pointer' loading="lazy" />
               </div>
             </div>
           </div>
           <div className="right w-1/2 md:flex justify-center items-end relative overflow-hidden hidden">
-            <img src="/phone13.svg" alt="Download App Image 2" style={{ width: "511px" }} className='absolute bottom-0'
+            <img src="/phone13.svg" alt="Download App" loading="lazy" style={{ width: "511px" }} className='absolute bottom-0'
             />
           </div>
         </div>
@@ -129,7 +132,7 @@ export default function Home() {
       <section className="w-10/12 m-auto">
         <div className="relative py-10">
           <div className="w-full md:w-7/12 text-center m-auto pb-12">
-            <h3 className="uppercase font-semibold text-base md:text-xl tracking-widest">News& Events</h3>
+            <h3 className="uppercase font-semibold text-base md:text-xl tracking-widest  mb-0 md:mb-2">News& Events</h3>
             <h1 className="uppercase font-light text-4xl md:text-5xl text-heading_blue mb-5">Our Blogs</h1>
             <p className="text-sm md:text-xl text-t_grey mb-5 md:leading-7">Lorem ipsum dolor sit amet consectetur. Morbi in vulputate id tellus. Et scelerisque consequat egestas volutpat semper pretium morbi amet.</p>
             <button className="button-filled">
@@ -312,7 +315,7 @@ export default function Home() {
 
               <div className="flex flex-col mb-5">
                 <label htmlFor="message" className='text-sm font-medium leading-6'>Message</label>
-                <textarea name="message" id="message" className='h-32 w-full rounded-lg p-3 outline-none border-slate-400 border'></textarea>
+                <textarea name="message" id="message" className='h-32 w-full rounded-lg p-3 outline-none border-slate-400 border resize-none'></textarea>
               </div>
 
               <div className="flex mb-8 gap-3 items-center justify-start">
