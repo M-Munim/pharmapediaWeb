@@ -37,7 +37,7 @@ export default function Home() {
 
           <div className="w-[1199px] h-[1199px] border-1 rounded-full border-grey opacity-65 absolute top-[100%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
         </div>
-        <Image src='/Ellipse 42.svg' width={116} height={116} alt="Ellipse" className='absolute -bottom-10 left-0' />
+        <Image src='/Ellipse 42.svg' width={116} height={116} alt="Ellipse" className='absolute -bottom-10 left-0 z-50' />
       </section>
 
       <section className="w-full mx-auto h-96 relative my-28" style={{
@@ -74,8 +74,8 @@ export default function Home() {
           <div className="border rounded-full border-white opacity-15 absolute top-20 -right-20 z-10" style={{ width: '406px', height: '406px' }}></div>
           <div className="border rounded-full border-white opacity-15 absolute top-2 -right-24 z-10" style={{ width: '499px', height: '499px' }}></div>
 
-          <div className="border rounded-full border-white opacity-15 absolute -top-48 left-20 z-10" style={{ width: '761px', height: '761px' }}></div>
-          <div className="border rounded-full border-white opacity-15 absolute -top-28 left-36 z-10" style={{ width: '605px', height: '605px' }}></div>
+          <div className="border rounded-full border-white opacity-15 absolute -top-48 left-20 z-10 hidden md:block" style={{ width: '761px', height: '761px' }}></div>
+          <div className="border rounded-full border-white opacity-15 absolute -top-28 left-36 z-10 hidden md:block" style={{ width: '605px', height: '605px' }}></div>
         </div>
       </section>
 
@@ -92,14 +92,14 @@ export default function Home() {
 
         <div className="flex flex-wrap items-center justify-center gap-3 mt-10 cursor-pointer">
           {products.map((data, i) => (
-            <div key={i}>
+            <div key={i} className='w-[307px] lg:w-[415px] xl:w-[520px]'>
+
               <Image
                 src={data.image}
                 width={100}
                 height={362}
                 alt="Products Image"
-                className="h-auto hover:scale-95"
-                style={{ width: "607px", transition: ".2s ease-in" }}
+                className="h-auto hover:scale-95 w-full transition-all"
                 loading="lazy"
               />
             </div>
@@ -116,7 +116,8 @@ export default function Home() {
               <h2 className="font-medium text-3xl md:text-5xl uppercase">Download App Now</h2>
               <p className="md:leading-9 text-sm md:text-3xl">The content in this smartphone application is verified by qualified and registered healthcare professionals!</p>
 
-              <div className="download-imgs flex-col md:flex-row flex justify-start items-start md:items-center gap-2 md:gap-8">
+              {/* <div className="download-imgs flex-col md:flex-row flex justify-start items-start md:items-center gap-2 md:gap-8"> */}
+              <div className="download-imgs flex justify-start items-start md:items-center gap-2 md:gap-8">
                 <Image src='./download2.svg' width={202} height={60} alt="Download Image 1" className='cursor-pointer' loading="lazy" />
                 <Image src='./download1.svg' width={202} height={60} alt="Download Image 2" className='cursor-pointer' loading="lazy" />
               </div>
@@ -140,7 +141,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center my-10 relative gap-10 md:gap-5">
+          <div className="flex flex-col md:flex-row items-center justify-center my-10 relative gap-10 md:gap-5 z-20">
             <div className="w-full md:w-2/6 flex flex-col justify-start md:justify-end items-start md:items-end gap-6 md:gap-16">
               <div className="text-start md:text-end  w-full md:w-10/12">
                 <p className="text-lightBlue text-lg md:text-2xl font-medium mb-2 md:leading-8 leading-tight">Premium Book <br /> Marketing Services</p>
@@ -170,7 +171,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Image src='./Ellipse 45.svg' width={132} height={132} alt="Ellipse Image" className='absolute bottom-0 left-0' />
+          <Image src='./Ellipse 45.svg' width={132} height={132} alt="Ellipse Image" className='absolute bottom-0 left-0 z-10' />
         </div>
       </section>
 
@@ -282,8 +283,8 @@ export default function Home() {
         </Swiper>
       </section>
 
-      <section className="m-auto overflow-hidden relative">
-        <div className="w-10/12 m-auto flex flex-col md:flex-row items-center justify-center gap-20 relative py-28">
+      <section className="m-auto overflow-hidden relative" id='contact'>
+        <div className="w-10/12 m-auto flex flex-col-reverse md:flex-row items-center justify-center gap-20 relative py-28">
           <div className="left w-full md:w-1/2 relative z-30">
             <form action="">
               <div className="flex justify-between items-center gap-2 md:gap-10 mb-4">
