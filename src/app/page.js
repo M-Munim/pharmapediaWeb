@@ -43,12 +43,13 @@ export default function Home() {
       <section className="w-full mx-auto h-96 relative my-28" style={{
         background: "linear-gradient(#57A8D1, #2980B9)"
       }}>
-        <div className="left w-1/2 lg:flex justify-center items-center left-16 absolute -top-12 z-50 hidden">
+        <div className="left w-1/2 xl:flex justify-center items-center left-16 absolute -top-12 z-50 hidden">
           <div className="circle bg-white rounded-full flex justify-center items-center relative overflow-visible" style={{ width: '500px', height: '500px' }}>
             <Image
               src="/Group1000011108.svg"
-              width={304}
+              width={100}
               height={624}
+              className='xl:w-[304px] w-[260px]'
               alt="Illustration of Pharmapedia"
               priority
             />
@@ -56,7 +57,7 @@ export default function Home() {
         </div>
 
         <div className="overflow-hidden relative h-96 md:mt-20">
-          <div className="w-10/12 mx-auto flex justify-end items-center h-full z-20 relative">
+          <div className="w-10/12 mx-auto flex justify-center xl:justify-end items-center h-full z-20 relative">
             <div className="right w-full md:w-1/2 text-white flex flex-col justify-center items-start gap-6">
               <h2 className="font-light text-4xl md:text-5xl uppercase  tracking-wide">About us</h2>
               <p className="text-sm md:text-lg">
@@ -74,8 +75,8 @@ export default function Home() {
           <div className="border rounded-full border-white opacity-15 absolute top-20 -right-20 z-10" style={{ width: '406px', height: '406px' }}></div>
           <div className="border rounded-full border-white opacity-15 absolute top-2 -right-24 z-10" style={{ width: '499px', height: '499px' }}></div>
 
-          <div className="border rounded-full border-white opacity-15 absolute -top-48 left-20 z-10 hidden md:block" style={{ width: '761px', height: '761px' }}></div>
-          <div className="border rounded-full border-white opacity-15 absolute -top-28 left-36 z-10 hidden md:block" style={{ width: '605px', height: '605px' }}></div>
+          <div className="border rounded-full border-white opacity-15 absolute -top-48 left-20 z-10 hidden xl:block" style={{ width: '761px', height: '761px' }}></div>
+          <div className="border rounded-full border-white opacity-15 absolute -top-28 left-36 z-10 hidden xl:block" style={{ width: '605px', height: '605px' }}></div>
         </div>
       </section>
 
@@ -303,14 +304,14 @@ export default function Home() {
                 <input type="email" name="email" id="email" placeholder='Example@company.com' required className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' />
               </div>
 
-              <div className=" mb-4">
+              <div className="mb-4">
                 <label htmlFor="phone" className='text-sm font-medium leading-6'>Phone number</label>
-                <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input'>
+                <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input '>
                   <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none'>
                     <option value="PK">PK +92</option>
                     <option value="IND">IND +91</option>
                   </select>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-10/12 px-3 outline-none' />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-8/12 px-3 outline-none' />
                 </div>
               </div>
 

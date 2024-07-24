@@ -405,14 +405,14 @@ const page = ({ params }) => {
                 <input type="email" name="email" id="email" placeholder='Example@company.com' required className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' />
               </div>
 
-              <div className=" mb-4">
+              <div className="mb-4">
                 <label htmlFor="phone" className='text-sm font-medium leading-6'>Phone number</label>
-                <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input'>
+                <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input '>
                   <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none'>
                     <option value="PK">PK +92</option>
                     <option value="IND">IND +91</option>
                   </select>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-10/12 px-3 outline-none' />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-8/12 px-3 outline-none' />
                 </div>
               </div>
 
@@ -450,7 +450,7 @@ const page = ({ params }) => {
         <div className="border-2 rounded-full border-grey opacity-65 absolute -bottom-60 -right-36 z-10" style={{ width: '526px', height: '526px' }}></div>
         <div className="border-2 rounded-full border-grey opacity-65 absolute -bottom-60 -right-36 z-10" style={{ width: '599px', height: '599px' }}></div>
 
-        <Image src='/Ellipse 45.svg' width={116} height={116} alt="Ellipse" className='absolute top-1/3 right-0' />
+        <Image src='./Ellipse 45.svg' width={116} height={116} alt="Ellipse Image" className='absolute top-1/3 right-0' />
       </section>
     </main >
   )

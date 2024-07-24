@@ -5,7 +5,8 @@ import Link from 'next/link';
 import React from 'react';
 
 const Page = () => {
-  const scrollToSchools = () => {0
+  const scrollToSchools = () => {
+    0
     document.getElementById('drop').scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -160,14 +161,14 @@ const Page = () => {
                 <input type="email" name="email" id="email" placeholder='Example@company.com' required className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' />
               </div>
 
-              <div className=" mb-4">
+              <div className="mb-4">
                 <label htmlFor="phone" className='text-sm font-medium leading-6'>Phone number</label>
-                <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input'>
+                <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input '>
                   <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none'>
                     <option value="PK">PK +92</option>
                     <option value="IND">IND +91</option>
                   </select>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-10/12 px-3 outline-none' />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-8/12 px-3 outline-none' />
                 </div>
               </div>
 
