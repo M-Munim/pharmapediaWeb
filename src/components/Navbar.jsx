@@ -64,13 +64,13 @@ export default function Navbar() {
         <div className={`h-10 w-full flex items-center justify-center ${moveTo === "Home" ? "bg-blue text-white" : "bg-white text-black"}`}>
           <div className="w-11/12 sm:w-9/12 flex m-auto justify-between">
             <div className="flex items-center  gap-3 text-3xl">
-              <a href="https://www.facebook.com" className='sm:text-base text-sm border-r border-borderBlue md:border-r-2 pr-3 py-1' aria-label="Facebook">
+              <a href="https://www.facebook.com/Pharmapedia01" className='sm:text-base text-sm border-r border-borderBlue md:border-r-2 pr-3 py-1' aria-label="Facebook">
                 <FaFacebookF className='cursor-pointer' />
               </a>
               <a href="https://www.youtube.com" className='sm:text-base text-sm border-r border-borderBlue md:border-r-2 pr-3 py-1' aria-label="YouTube">
                 <FaYoutube className='cursor-pointer' />
               </a>
-              <a href="https://www.instagram.com" className='sm:text-base text-sm' aria-label="Instagram">
+              <a href="https://www.instagram.com/pharmapedia01/?hl=en" className='sm:text-base text-sm' aria-label="Instagram">
                 <FaInstagram className='cursor-pointer' />
               </a>
             </div>
@@ -132,11 +132,17 @@ export default function Navbar() {
                   </form>
                 )}
               </div>
-              <button className={` ${moveTo !== "Home" ? "button-outlined2" : "button-outlined"} `}>
-                <a href="#contact"  >
+              <a href="#contact">
+                <button className={` ${moveTo !== "Home" ? "button-outlined2" : "button-outlined"} `}>
                   Contact Us
-                </a>
-              </button>
+                </button>
+              </a>
+
+              {/* <Link href="/About">
+                <button className="button-filled">
+                  About us
+                </button>
+              </Link> */}
             </div>
             <div className="lg:hidden text-2xl">
               <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">

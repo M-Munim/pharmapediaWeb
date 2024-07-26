@@ -23,11 +23,12 @@ export default function Home() {
               Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.
             </p>
             <div>
-              <button className="button-filled">
-                <Link href='/About'>
+              <Link href="/About">
+                <button className="button-filled">
                   About us
-                </Link>
-              </button>
+                </button>
+              </Link>
+
             </div>
           </div>
 
@@ -59,7 +60,7 @@ export default function Home() {
         <div className="overflow-hidden relative h-96 md:mt-20">
           <div className="w-10/12 mx-auto flex justify-center xl:justify-end items-center h-full z-20 relative">
             <div className="right w-full md:w-1/2 text-white flex flex-col justify-center items-start gap-6">
-              <h2 className="font-light text-4xl md:text-5xl uppercase  tracking-wide">About us</h2>
+              <h2 className="font-light text-4xl md:text-5xl uppercase tracking-wide">About us</h2>
               <p className="text-sm md:text-lg">
                 Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra
                 vulputate amet nunc lectus non ac. Arcu diam nullam ultrices
@@ -114,11 +115,11 @@ export default function Home() {
             <img src="/[Mockup] iPhone 15.svg" loading="lazy" alt="Download App" style={{ width: "682px" }} className='absolute top-0 -left-36 hidden md:block' />
 
             <div className="txt w-full md:w-10/12 mx-auto text-white flex flex-col gap-3 absolute bottom-[20%]">
-              <h2 className="font-medium text-3xl md:text-5xl uppercase">Download App Now</h2>
-              <p className="md:leading-9 text-sm md:text-3xl">The content in this smartphone application is verified by qualified and registered healthcare professionals!</p>
 
-              {/* <div className="download-imgs flex-col md:flex-row flex justify-start items-start md:items-center gap-2 md:gap-8"> */}
-              <div className="download-imgs flex justify-start items-start md:items-center gap-2 md:gap-8">
+              <h2 className="font-medium text-3xl md:text-4xl lg:text-5xl uppercase">Download App Now</h2>
+              <p className="lg:leading-9 text-sm lg:text-3xl">The content in this smartphone application is verified by qualified and registered healthcare professionals!</p>
+
+              <div className="download-imgs flex justify-start items-start md:items-center gap-2 md:gap-3 lg:gap-8">
                 <Image src='./download2.svg' width={202} height={60} alt="Download Image 1" className='cursor-pointer' loading="lazy" />
                 <Image src='./download1.svg' width={202} height={60} alt="Download Image 2" className='cursor-pointer' loading="lazy" />
               </div>
