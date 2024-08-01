@@ -43,7 +43,7 @@ const Page = () => {
         <div className='w-11/12 ms-auto my-10 md:my-28 flex flex-col-reverse md:flex-row items-center justify-center' id='drop'>
           <div className="flex items-start justify-end md:justify-center flex-col w-full md:w-1/2 h-[409px] md:h-[659px]">
             <div className="w-11/12 md:w-10/12 z-20">
-              <h2 className="uppercase font-light text-3xl md:text-5xl text-heading_blue md:tracking-wider">Pharmapedia</h2>
+              <h2 className="uppercase font-light text-3xl sm:text-4xl md:text-5xl text-heading_blue md:tracking-wider">Pharmapedia</h2>
               <p className="text-sm md:text-xl text-t_grey mt-2 text-justify">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
               <Link href='Products/Pharmapedia'>
                 <button className="button-filled mt-3">
@@ -75,13 +75,13 @@ const Page = () => {
               height={751}
               className="absolute top-24 left-1/2 transform -translate-x-1/2 z-20"
             />
-            <Image src="/Ellipse 40.svg" alt="" width={186} height={186} className='absolute top-14 md:top-24 right-0 md:-right-20 z-20' />
+            <Image src="/Ellipse 40.svg" alt="" width={186} height={186} className='absolute top-14 md:top-24 right-0 md:-right-20 z-20 hidden sm:inline-block' />
             <Image src="/Ellipse 41.svg" alt="" width={100} height={100} className='absolute -bottom-20 left-36' />
           </div>
 
           <div className="flex items-end justify-end md:justify-center flex-col w-full md:w-[47.2%] h-[409px] md:h-[659px]">
             <div className="w-11/12 md:w-10/12 z-20">
-              <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Pog calculator</h2>
+              <h2 className="uppercase font-light text-3xl sm:text-4xl md:text-5xl text-heading_blue tracking-wider">Pog calculator</h2>
               <p className="text-sm md:text-xl text-t_grey mt-2 ">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
               <Link href='Products/PogCalculator'>
                 <button className="button-filled mt-3">
@@ -95,7 +95,7 @@ const Page = () => {
         <div className='w-11/12 ms-auto my-10 md:my-36 flex flex-col-reverse md:flex-row items-center justify-center' id='drop'>
           <div className="flex items-start justify-end md:justify-center flex-col w-full md:w-1/2 h-[409px] md:h-[659px]">
             <div className="w-11/12 md:w-10/12 z-20">
-              <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Gynae Guide</h2>
+              <h2 className="uppercase font-light text-3xl sm:text-4xl md:text-5xl text-heading_blue tracking-wider">Gynae Guide</h2>
               <p className="text-sm md:text-xl text-t_grey mt-2 ">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
               <button className="button-filled mt-3">
                 Explore More
@@ -124,13 +124,13 @@ const Page = () => {
               height={751}
               className="absolute top-24 left-1/2 transform -translate-x-1/2 z-20"
             />
-            <Image src="/Ellipse 40.svg" alt="" width={186} height={186} className='absolute top-14 md:top-24 right-0 md:-right-20 z-20' />
+            <Image src="/Ellipse 40.svg" alt="" width={186} height={186} className='absolute top-14 md:top-24 right-0 md:-right-20 z-20 hidden sm:inline-block' />
             <Image src="/Ellipse 41.svg" alt="" width={100} height={100} className='absolute -bottom-20 left-36' />
           </div>
 
           <div className="flex items-end justify-end md:justify-center flex-col w-full md:w-[47.2%] h-[409px] md:h-[659px] bg-red-40">
             <div className="w-11/12 md:w-10/12 z-20">
-              <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Fourth Product</h2>
+              <h2 className="uppercase font-light text-3xl sm:text-4xl md:text-5xl text-heading_blue tracking-wider">Fourth Product</h2>
               <p className="text-sm md:text-xl text-t_grey mt-2">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
               <button className="button-filled mt-3">
                 Explore More

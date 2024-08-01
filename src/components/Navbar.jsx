@@ -61,6 +61,7 @@ export default function Navbar() {
         <link rel="canonical" href="https://www.pharmapedia.pro" />
       </Head>
       <nav className="w-full relative">
+        {/* top */}
         <div className={`h-10 w-full flex items-center justify-center ${moveTo === "Home" ? "bg-blue text-white" : "bg-white text-black"}`}>
           <div className="w-11/12 sm:w-9/12 flex m-auto justify-between">
             <div className="flex items-center  gap-3 text-3xl">
@@ -81,6 +82,8 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+
+        {/* bottom */}
         <div className={`h-20 md:h-28 flex items-center justify-center ${moveTo !== "Home" ? "absolute w-full top-12 z-50" : "block"} `}>
           <div className="w-10/12 flex justify-between items-center m-auto">
             <div className="flex-shrink-0">
@@ -88,8 +91,9 @@ export default function Navbar() {
                 <Image
                   src="/logo.svg"
                   alt="Pharmapedia Logo"
-                  width={289}
+                  width={100}
                   height={87}
+                  className='w-48 md:w-72'
                   priority
                 />
               </Link>
@@ -153,7 +157,7 @@ export default function Navbar() {
           </div>
         </div>
         {menuOpen && (
-          <div className="lg:hidden bg-slate-100 w-5/12 ms-auto absolute z-50 top-32 right-10 rounded-xl">
+          <div className="lg:hidden bg-slate-100 w-6/12 md:w-5/6 ms-auto absolute z-50 top-32 right-10 rounded-xl">
             <ul className='flex flex-col items-center gap-4 py-4 text-lg'>
               <li onClick={() => { setMoveTo("Home"); setMenuOpen(false); }}>
                 <Link href="/" className={`${moveTo === "Home" ? "text-hover_blue font-bold" : ""}`}>Home</Link>

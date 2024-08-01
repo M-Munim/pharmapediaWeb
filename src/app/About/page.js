@@ -60,7 +60,7 @@ const page = () => {
       <section className='mt-64' style={{
         background: "linear-gradient(to bottom, #926B80, #936B80, #9C758A, #A88196, #B891A6, #DAB3C8, #E8C1D6 ,#F0C9DE ,#F2CBE0, #EEC7DC, #EAC5D8)"
       }}>
-        <div className="flex flex-col md:flex-row items-center justify-between w-10/12 m-auto h-[541px]">
+        <div className="flex flex-col md:flex-row items-center justify-between w-11/12 md:w-10/12 m-auto h-[541px]">
           <div className="left w-full md:w-1/2 mt-10 md:mt-0 flex flex-col gap-4 pl-2">
             <h2 className="uppercase font-light text-4xl md:text-5xl text-white tracking-wider">Vision</h2>
             <p className="text-sm md:text-xl text-white">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>

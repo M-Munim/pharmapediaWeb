@@ -120,8 +120,8 @@ export default function Home() {
               <p className="lg:leading-9 text-sm lg:text-3xl">The content in this smartphone application is verified by qualified and registered healthcare professionals!</p>
 
               <div className="download-imgs flex justify-start items-start md:items-center gap-2 md:gap-3 lg:gap-8">
-                <Image src='./download2.svg' width={202} height={60} alt="Download Image 1" className='cursor-pointer' loading="lazy" />
-                <Image src='./download1.svg' width={202} height={60} alt="Download Image 2" className='cursor-pointer' loading="lazy" />
+                <Image src='./download2.svg' width={100} height={60} alt="Download Image 1" className='cursor-pointer w-40 md:w-52' loading="lazy" />
+                <Image src='./download1.svg' width={100} height={60} alt="Download Image 2" className='cursor-pointer w-40 md:w-52' loading="lazy" />
               </div>
             </div>
           </div>
@@ -197,11 +197,11 @@ export default function Home() {
                 <p className="text-center text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
                 <div className="flex justify-center items-center gap-8">
                   <div className="w-3/12">
-                    <Image src='./testimonialImg.svg' width={92} height={92} alt="Testimonial by Aliyan Baig" className='' />
+                    <Image src='./testimonialImg.svg' width={100} height={92} alt="Testimonial by Aliyan Baig" className='w-16 md:w-92' />
                   </div>
                   <div className="flex flex-col justify-start items-start gap-0 md:gap2 w-9/12">
-                    <h3 className="font-bold text-xl md:text-3xl leading-10 pl-1">Aliyan Baig</h3>
-                    <div className="icons text-xl md:text-4xl flex justify-center items-center gap-2">
+                    <h3 className="font-bold text-lg md:text-3xl leading-10 pl-1">Aliyan Baig</h3>
+                    <div className="icons text-lg md:text-4xl flex justify-center items-center gap-2">
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
@@ -220,11 +220,11 @@ export default function Home() {
                 <p className="text-center text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
                 <div className="flex justify-center items-center gap-8">
                   <div className="w-3/12">
-                    <Image src='./testimonialImg.svg' width={92} height={92} alt="Testimonial by Aliyan Baig" className='' />
+                    <Image src='./testimonialImg.svg' width={100} height={92} alt="Testimonial by Aliyan Baig" className='w-16 md:w-92' />
                   </div>
                   <div className="flex flex-col justify-start items-start gap-0 md:gap2 w-9/12">
-                    <h3 className="font-bold text-xl md:text-3xl leading-10 pl-1">Aliyan Baig</h3>
-                    <div className="icons text-xl md:text-4xl flex justify-center items-center gap-2">
+                    <h3 className="font-bold text-lg md:text-3xl leading-10 pl-1">Aliyan Baig</h3>
+                    <div className="icons text-lg md:text-4xl flex justify-center items-center gap-2">
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
@@ -243,11 +243,11 @@ export default function Home() {
                 <p className="text-center text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
                 <div className="flex justify-center items-center gap-8">
                   <div className="w-3/12">
-                    <Image src='./testimonialImg.svg' width={92} height={92} alt="Testimonial by Aliyan Baig" className='' />
+                    <Image src='./testimonialImg.svg' width={100} height={92} alt="Testimonial by Aliyan Baig" className='w-16 md:w-92' />
                   </div>
                   <div className="flex flex-col justify-start items-start gap-0 md:gap2 w-9/12">
-                    <h3 className="font-bold text-xl md:text-3xl leading-10 pl-1">Aliyan Baig</h3>
-                    <div className="icons text-xl md:text-4xl flex justify-center items-center gap-2">
+                    <h3 className="font-bold text-lg md:text-3xl leading-10 pl-1">Aliyan Baig</h3>
+                    <div className="icons text-lg md:text-4xl flex justify-center items-center gap-2">
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
@@ -266,11 +266,11 @@ export default function Home() {
                 <p className="text-center text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Laoreet pharetra vitae diam porttitor. Sit id vel vitae leo nunc vitae tellus lacus.</p>
                 <div className="flex justify-center items-center gap-8">
                   <div className="w-3/12">
-                    <Image src='./testimonialImg.svg' width={92} height={92} alt="Testimonial by Aliyan Baig" className='' />
+                    <Image src='./testimonialImg.svg' width={100} height={92} alt="Testimonial by Aliyan Baig" className='w-16 md:w-92' />
                   </div>
                   <div className="flex flex-col justify-start items-start gap-0 md:gap2 w-9/12">
-                    <h3 className="font-bold text-xl md:text-3xl leading-10 pl-1">Aliyan Baig</h3>
-                    <div className="icons text-xl md:text-4xl flex justify-center items-center gap-2">
+                    <h3 className="font-bold text-lg md:text-3xl leading-10 pl-1">Aliyan Baig</h3>
+                    <div className="icons text-lg md:text-4xl flex justify-center items-center gap-2">
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
                       <FaStar style={{ color: "#FFA928" }} />
@@ -283,6 +283,7 @@ export default function Home() {
             </div>
           </SwiperSlide>
         </Swiper>
+
       </section>
 
       <section className="m-auto overflow-hidden relative" id='contact'>

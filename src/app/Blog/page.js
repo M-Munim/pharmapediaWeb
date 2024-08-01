@@ -67,34 +67,36 @@ const Blog = () => {
                   />
                 </div>
                 <div className="mt-8">
-                  <h2 className="text-3xl font-semibold mb-3">{blogData.title}</h2>
+                  <h2 className="text-xl md:text-3xl font-semibold mb-3">{blogData.title}</h2>
 
                   <div className="w-11/12">
                     <div className="flex items-center justify-between">
                       <Image
                         src={blogData.authorImg}
                         alt="author Img"
-                        width={31}
-                        height={31}
+                        width={100}
+                        height={100}
+                        className='w-8 md:w-8'
                       />
-                      <p className="text-base font-bold">{blogData.authName}</p>
-                      <div className=" w-6 border-1 border-gray-300"></div>
-                      <p className="text-sm text-pClr">{blogData.blogDate}</p>
+                      <p className="text-xs md:text-base font-bold">{blogData.authName}</p>
+                      <div className="w-3 md:w-6 border-1 border-gray-300"></div>
+                      <p className="text-xs md:text-sm lg:text-base text-pClr">{blogData.blogDate}</p>
                       <div className="w-1 h-1 rounded-full bg-gray-400"></div>
                       <Image
                         src={blogData.shareIcon}
                         alt="shareIcon Img"
-                        width={12}
-                        height={12}
+                        width={100}
+                        height={100}
+                        className='w-2 md:w-3'
                       />
-                      <p className="text-sm text-pClr">{blogData.shares}</p>
+                      <p className="text-xs md:text-sm lg:text-base text-pClr">{blogData.shares}</p>
                     </div>
 
                     <p className="my-5 text-pClr leading-6">{blogData.data}</p>
 
                     {/* <Link href="Blog/Blogs/" */}
                     <Link href={`Blog/Blogs/${blogData.id}`}
-                      className="text-lg font-semibold hover:border-b-2 border-black"
+                      className="text-base md:text-lg font-semibold hover:border-b-2 border-black"
                     >
                       View Post
                     </Link>
@@ -108,15 +110,15 @@ const Blog = () => {
         </div>
       </section>
 
-      <section className="m-auto w-11/12" >
+      <section className="m-auto w-full md:w-11/12" >
         <div className="md:h-[448px] h-auto flex items-end justify-center" style={{
           background: "radial-gradient(circle , #ABDCFF 0%, #298ED6 100%)"
         }}>
 
-          <div className="flex items-center flex-col md:flex-row justify-end w-11/12 ms-auto md:mb-0 mt-5" >
-            <div className="left text-white w-full md:w-1/2 flex flex-col items-start justify-start gap-3">
-              <h1 className="text-3xl font-light uppercase tracking-wider">Learn More About <br /> our Products</h1>
-              <p className="text-lg tracking-wide leading-6 md:leading-7">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
+          <div className="flex items-center flex-col md:flex-row justify-end  w-full md:w-11/12 m-auto md:ms-auto md:mb-0 mt-5" >
+            <div className="left text-white w-full md:w-1/2 flex flex-col items-start justify-start gap-3 p-3 md:p-0">
+              <h1 className="text-2xl md:text-3xl font-light uppercase tracking-wider">Learn More About <br /> our Products</h1>
+              <p className="text-sm md:text-lg tracking-wide leading-5 md:leading-7">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
               <button className="button-filled">
                 Learn More
               </button>

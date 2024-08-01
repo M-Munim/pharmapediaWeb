@@ -49,7 +49,7 @@ const Page = () => {
 
         <div className="right w-full md:w-1/2">
           <div className="">
-            <h1 className="text-4xl md:text-5xl uppercase pt-14">Frequently <br /> <span className='text-heading_blue'>Asked Questions</span></h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl uppercase pt-14">Frequently <br /> <span className='text-heading_blue'>Asked Questions</span></h1>
 
             <Accordion className='mt-10' allowMultipleExpanded={false} preExpanded={[0]}>
               {
@@ -64,7 +64,7 @@ const Page = () => {
                               <div className="w-11/12 md:w-10/12 p-2">
                                 <p className='question ms-0 ml-3 font-semibold text-base md:text-xl leading-5'>{item.question}</p>
                               </div>
-                              <div className={`w-1/12 rounded-tr-md flex p-[14px] justify-center items-center ${expanded ? 'bg-[#85D0FF]' : "bg-[#D8D8D8]"}`}>
+                              <div className={`w-1/12 rounded-tr-md flex text-2xl p-[14px] justify-center items-center ${expanded ? 'bg-[#85D0FF]' : "bg-[#D8D8D8]"}`}>
                                 {expanded ? <FaMinus /> : <FaPlus />}
                               </div>
                             </div>
