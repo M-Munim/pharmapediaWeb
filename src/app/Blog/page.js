@@ -26,8 +26,8 @@ const Blog = () => {
 
         <div className="md:w-80 md:h-80 border-1 rounded-full border-white opacity-25 absolute -top-40 right-10 z-10 hidden md:block"></div>
         <div className="md:w-[452px] md:h-[452px] border-1 rounded-full border-white opacity-25 absolute -top-48 -right-12 z-10 hidden md:block"></div>
-        <div className="md:w-[637px] md:h-[637px] border-1 rounded-full border-white opacity-25 absolute -top-60 -right-36 z-10 hidden md:block"></div>
-        <div className="md:w-[783px] md:h-[783px] border-1 rounded-full border-white opacity-25 absolute -top-64 -right-56 z-10 hidden md:block"></div>
+        <div className="md:w-[637px] md:h-[637px] border-1 rounded-full border-white opacity-25 absolute -top-60 -right-36 z-10 hidden lg:block"></div>
+        <div className="md:w-[783px] md:h-[783px] border-1 rounded-full border-white opacity-25 absolute -top-64 -right-56 z-10 hidden lg:block"></div>
       </section>
 
       <section className="py-20 relative overflow-hidden" id='drop'>
@@ -41,74 +41,73 @@ const Blog = () => {
         <div className="w-[597px] h-[597px] border-3 rounded-full opacity-30 absolute bottom-10 -left-60" aria-hidden="true"></div>
         <div className="w-[697px] h-[697px] border-3 rounded-full opacity-30 absolute -bottom-5 -left-60" aria-hidden="true"></div>
 
-        <div className="w-10/12 m-auto">
-          <div className="flex justify-center items-center flex-wrap gap-7">
+        <div className="w-11/12 m-auto">
+          <div className="flex justify-center items-center flex-wrap gap-2 xl:gap-5">
             {/* <Link href={`/Blog/${blogData.slug}`} key={blogData.id}> */}
             {blogs.map((blogData) => (
 
-              <div className="relative my-5" style={{ width: "400px" }} key={blogData.id}>
+              <div className="relative my-5 w-[360px] md:w-[325px] lg:w-[395px] xl:w-[400px]" key={blogData.id}>
+          <Image
+            src={blogData.BlogImg}
+            alt={blogData.alt}
+            width={468}
+            height={358}
+          />
+          <div className="buttons flex absolute gap-1 top-4 left-4 text-white">
+            <p className="button-blog">{blogData.domain}</p>
+            <p className="button-blog">{blogData.subDomain}</p>
+          </div>
+          <div className="absolute top-4 right-4">
+            <Image
+              src={blogData.blogVideoPlayImg}
+              width={35}
+              height={35}
+              className="cursor-pointer"
+              alt="Blog Data"
+            />
+          </div>
+          <div className="mt-8">
+            <h2 className="text-xl md:text-3xl font-semibold mb-3">{blogData.title}</h2>
+
+            <div className="w-11/12">
+              <div className="flex items-center justify-between">
                 <Image
-                  src={blogData.BlogImg}
-                  alt={blogData.alt}
-                  width={468}
-                  height={358}
+                  src={blogData.authorImg}
+                  alt="author Img"
+                  width={100}
+                  height={100}
+                  className='w-8 md:w-8'
                 />
-                <div className="buttons flex absolute gap-1 top-4 left-4 text-white">
-                  <p className="button-blog">{blogData.domain}</p>
-                  <p className="button-blog">{blogData.subDomain}</p>
-                </div>
-                <div className="absolute top-4 right-4">
-                  <Image
-                    src={blogData.blogVideoPlayImg}
-                    width={35}
-                    height={35}
-                    className="cursor-pointer"
-                    alt="Blog Data"
-                  />
-                </div>
-                <div className="mt-8">
-                  <h2 className="text-xl md:text-3xl font-semibold mb-3">{blogData.title}</h2>
-
-                  <div className="w-11/12">
-                    <div className="flex items-center justify-between">
-                      <Image
-                        src={blogData.authorImg}
-                        alt="author Img"
-                        width={100}
-                        height={100}
-                        className='w-8 md:w-8'
-                      />
-                      <p className="text-xs md:text-base font-bold">{blogData.authName}</p>
-                      <div className="w-3 md:w-6 border-1 border-gray-300"></div>
-                      <p className="text-xs md:text-sm lg:text-base text-pClr">{blogData.blogDate}</p>
-                      <div className="w-1 h-1 rounded-full bg-gray-400"></div>
-                      <Image
-                        src={blogData.shareIcon}
-                        alt="shareIcon Img"
-                        width={100}
-                        height={100}
-                        className='w-2 md:w-3'
-                      />
-                      <p className="text-xs md:text-sm lg:text-base text-pClr">{blogData.shares}</p>
-                    </div>
-
-                    <p className="my-5 text-pClr leading-6">{blogData.data}</p>
-
-                    {/* <Link href="Blog/Blogs/" */}
-                    <Link href={`Blog/Blogs/${blogData.id}`}
-                      className="text-base md:text-lg font-semibold hover:border-b-2 border-black"
-                    >
-                      View Post
-                    </Link>
-
-                  </div>
-                </div>
+                <p className="text-xs md:text-base font-bold">{blogData.authName}</p>
+                <div className="w-3 md:w-6 border-1 border-gray-300"></div>
+                <p className="text-xs md:text-sm lg:text-base text-pClr">{blogData.blogDate}</p>
+                <div className="w-1 h-1 rounded-full bg-gray-400"></div>
+                <Image
+                  src={blogData.shareIcon}
+                  alt="shareIcon Img"
+                  width={100}
+                  height={100}
+                  className='w-2 md:w-3'
+                />
+                <p className="text-xs md:text-sm lg:text-base text-pClr hidden lg:block">{blogData.shares}</p>
               </div>
-            ))}
-            <button className="button-filled z-50">Load more</button>
+
+              <p className="my-5 text-pClr leading-6">{blogData.data}</p>
+
+              {/* <Link href="Blog/Blogs/" */}
+              <Link href={`Blog/Blogs/${blogData.id}`}
+                className="text-base md:text-lg font-semibold hover:border-b-2 border-black">
+                View Post
+              </Link>
+
+            </div>
           </div>
         </div>
-      </section>
+            ))}
+      </div>
+      <button className="button-filled z-50 block m-auto">Load more</button>
+    </div>
+      </section >
 
       <section className="m-auto w-full md:w-11/12" >
         <div className="md:h-[448px] h-auto flex items-end justify-center" style={{
@@ -129,7 +128,7 @@ const Blog = () => {
           </div>
         </div>
 
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <div className="flex items-center justify-center gap-10 border-t-1 pt-10">
             <div className="left w-7/12 border ">
               s
@@ -153,14 +152,14 @@ const Blog = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
-      <section className="m-auto overflow-hidden relative" id='contact'>
-        <div className="w-10/12 m-auto flex flex-col-reverse md:flex-row items-center justify-center gap-20 relative py-28">
+      <section className="m-auto overflow-hidden relative" id='contact' >
+        <div className="w-10/12 m-auto flex flex-col-reverse md:flex-row items-center justify-center gap-20 relative py-20">
           <div className="left w-full md:w-1/2 relative z-30">
             <form action="">
-              <div className="flex justify-between items-center gap-2 md:gap-10 mb-4">
+              <div className="flex justify-between items-center gap-2 lg:gap-7 xl:gap-10 mb-4">
                 <div className="flex flex-col items-start justify-center gap-1 w-6/12">
                   <label htmlFor="firstName" >First Name</label>
                   <input type="text" name="firstName" id="firstName" placeholder='First Name' className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' required />
@@ -179,11 +178,11 @@ const Blog = () => {
               <div className="mb-4">
                 <label htmlFor="phone" className='text-sm font-medium leading-6'>Phone number</label>
                 <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input '>
-                  <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none'>
-                    <option value="PK">PK +92</option>
-                    <option value="IND">IND +91</option>
+                  <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none w-3/12 sm:w-2/12 md:w-3/12 lg:w-3/12 xl:w-2/12'>
+                    <option value="PK">+92</option>
+                    <option value="IND">+91</option>
                   </select>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-8/12 px-3 outline-none' />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 w-9/12 sm:w-10/12 md:w-9/12 lg:w-9/12 xl:w-10/12 px-3 outline-none rounded-2xl' />
                 </div>
               </div>
 
@@ -205,9 +204,9 @@ const Blog = () => {
 
           <div className="right w-full md:w-1/2 relative z-30">
             <div className="flex flex-col gap-4">
-              <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Get in Touch</h2>
+              <h2 className="uppercase font-light text-4xl lg:text-5xl text-heading_blue tracking-wider">Get in Touch</h2>
 
-              <p className="text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
+              <p className="text-sm md:text-base lg:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
 
               <button className="button-filled">
                 Contact us

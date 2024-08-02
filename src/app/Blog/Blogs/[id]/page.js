@@ -59,7 +59,11 @@ const page = ({ params }) => {
   return (
     <main>
       {/* <h1>{params.id}</h1> */}
-      <section className='h-[577px] flex justify-center items-center' style={{ backgroundImage: "url('/SubBlogMain.svg')" }}>
+      <section className='h-[577px] flex justify-center items-center' style={{
+        backgroundImage: "url('/SubBlogMain.svg')", backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover"
+      }}>
         <div className="w-11/12 md:w-10/12 m-auto">
           <div className="text-white mb-3">
             <h2 className="text-2xl md:text-6xl font-medium tracking-wider mb-3 mt-20 w-11/12">Efficient Rules How to Organize Your Working Place</h2>
@@ -93,7 +97,7 @@ const page = ({ params }) => {
         <div className="w-[597px] h-[597px] border-3 rounded-full opacity-30 absolute bottom-10 -left-60" aria-hidden="true"></div>
         <div className="w-[697px] h-[697px] border-3 rounded-full opacity-30 absolute -bottom-5 -left-60" aria-hidden="true"></div>
 
-        <div className="flex justify-start md:justify-between items-start mt-20">
+        <div className="flex justify-start lg:justify-between items-start mt-20">
           <div className="w-[12%] lg:w-1/12 relative z-40">
             <div className="flex flex-col justify-center items-center gap-12 text-xs" style={{
               color: '#121416'
@@ -210,26 +214,26 @@ const page = ({ params }) => {
           <div className="lg:block hidden w-3/12 px-6 relative z-40">
             <h2 className="font-semibold text-2xl mb-6">Follow Us</h2>
 
-            <div className="flex items-center justify-center gap-12  mb-6">
+            <div className="flex items-center justify-start gap-12  mb-6">
               <div className="">
                 <FaFacebook className='text-2xl cursor-pointer' />
                 <p className="">10</p>
               </div>
 
-              <div className="">
+              {/* <div className="">
                 <FaTwitter className='text-2xl cursor-pointer' />
                 <p className="">69k</p>
-              </div>
+              </div> */}
 
               <div className="">
                 <FaSquareInstagram className='text-2xl cursor-pointer' />
                 <p className="">45</p>
               </div>
 
-              <div className="">
+              {/* <div className="">
                 <FaPinterest className='text-2xl cursor-pointer' />
                 <p className="">69k</p>
-              </div>
+              </div> */}
 
               <div className="">
                 <FaYoutube className='text-2xl cursor-pointer' />
@@ -237,30 +241,30 @@ const page = ({ params }) => {
               </div>
             </div>
 
-            <div className="pb-3">
+            {/* <div className="pb-3">
               <p className="mb-4 text-xl"><span className='font-semibold'>Subscription</span> Subscribe to our newsletter and receive a selection of cool articles every weeks
               </p>
 
-              {/* <form onSubmit={handleSubmit}>123 */}
+              <form onSubmit={handleSubmit}>123
               <form>
                 <input
                   type="email"
-                  // value={email}123
-                  // onChange={(e) => setEmail(e.target.value)}123
+                  value={email}123
+                  onChange={(e) => setEmail(e.target.value)}123
                   placeholder="Enter your email"
                   required
                   className='h-16 w-full rounded-sm bg-transparent p-3 outline-none border-slate-400 border-1'
                 />
                 <button type="submit" className='block button-filledext2 mt-2'>Subscribe</button>
               </form>
-              {/* {message && <p>{message}</p>}123 */}
+              {message && <p>{message}</p>}123
 
               <div className="flex mb-8 gap-3 items-center justify-start my-6">
                 <input type="checkbox" id="myCheckbox" className="form-checkbox h-5 w-5 text-blue-600 border-gray-300 rounded outline-none" />
                 <p className="text-sm text-[#A9A9A9]">By checking this box, you confirm that you have read and are agreeing to our terms of use regarding the storage of the data submitted through this form.
                 </p>
               </div>
-            </div>
+            </div> */}
 
             <h2 className="font-semibold text-2xl mt-10 mb-4">The Latest</h2>
 
@@ -381,11 +385,11 @@ const page = ({ params }) => {
       </section>
 
       {/* FORM */}
-      <section className="m-auto overflow-hidden relative" id='contact'>
-        <div className="w-10/12 m-auto flex flex-col-reverse md:flex-row items-center justify-center gap-20 relative py-28">
+      <section className="m-auto overflow-hidden relative" id='contact' >
+        <div className="w-10/12 m-auto flex flex-col-reverse md:flex-row items-center justify-center gap-20 relative py-20">
           <div className="left w-full md:w-1/2 relative z-30">
             <form action="">
-              <div className="flex justify-between items-center gap-2 md:gap-10 mb-4">
+              <div className="flex justify-between items-center gap-2 lg:gap-7 xl:gap-10 mb-4">
                 <div className="flex flex-col items-start justify-center gap-1 w-6/12">
                   <label htmlFor="firstName" >First Name</label>
                   <input type="text" name="firstName" id="firstName" placeholder='First Name' className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' required />
@@ -404,11 +408,11 @@ const page = ({ params }) => {
               <div className="mb-4">
                 <label htmlFor="phone" className='text-sm font-medium leading-6'>Phone number</label>
                 <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input '>
-                  <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none'>
-                    <option value="PK">PK +92</option>
-                    <option value="IND">IND +91</option>
+                  <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none w-3/12 sm:w-2/12 md:w-3/12 lg:w-3/12 xl:w-2/12'>
+                    <option value="PK">+92</option>
+                    <option value="IND">+91</option>
                   </select>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-8/12 px-3 outline-none' />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 w-9/12 sm:w-10/12 md:w-9/12 lg:w-9/12 xl:w-10/12 px-3 outline-none rounded-2xl' />
                 </div>
               </div>
 
@@ -430,9 +434,9 @@ const page = ({ params }) => {
 
           <div className="right w-full md:w-1/2 relative z-30">
             <div className="flex flex-col gap-4">
-              <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Get in Touch</h2>
+              <h2 className="uppercase font-light text-4xl lg:text-5xl text-heading_blue tracking-wider">Get in Touch</h2>
 
-              <p className="text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
+              <p className="text-sm md:text-base lg:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
 
               <button className="button-filled">
                 Contact us

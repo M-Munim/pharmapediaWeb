@@ -14,8 +14,8 @@ const Footer = () => {
   return (
     <section className='bg-black py-3 '>
       <div className="w-10/12 m-auto mt-14  relative z-30 bg-transparent">
-        <div className="flex flex-col md:flex-row justify-center items-start gap-3 md:gap-16">
-          <div className="w-full md:w-4/12">
+        <div className="flex flex-col lg:flex-row justify-center items-start gap-3 md:gap-5 lg:gap-14">
+          <div className="w-full lg:w-4/12">
             <Image
               src="/logo.svg"
               alt="Pharmapedia Logo"
@@ -28,7 +28,8 @@ const Footer = () => {
               Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.
             </p>
           </div>
-          <div className="flex w-full md:w-4/12 items-start justify-between">
+
+          <div className="flex w-full lg:w-4/12 items-start justify-between">
             <div className="w-1/2 pt-10">
               <div className="links flex flex-col items-start justify-start text-lg text-footerGrey gap-3">
                 <p className="font-bold text-lg md:text-xl text-white">Quick Links</p>
@@ -46,7 +47,8 @@ const Footer = () => {
             </div>
 
           </div>
-          <div className="w-4/12 pt-10">
+
+          <div className="w-full lg:w-4/12 pt-10 ">
             <div className="links flex flex-col items-start justify-start text-lg gap-1 md:gap-3 text-white">
               <p className="font-bold text-lg md:text-xl">Address</p>
               <a href="" className='text-sm lg:text-lg'>SAHARBEGUM@PHARMAPEDIA.PRO</a>
@@ -67,9 +69,9 @@ const Footer = () => {
               <a href="https://www.instagram.com/pharmapedia01/?hl=en" target='_blank' className='text-xs md:text-base border-r border-white md:border-r-2 pr-2 md:pr-3 py-1' aria-label="Instagram">
                 <AiFillInstagram className='cursor-pointer' />
               </a>
-              <a href="#" className='text-xs md:text-base border-r border-white md:border-r-2 pr-2 md:pr-3 py-1' aria-label="Twitter">
+              {/* <a href="#" className='text-xs md:text-base border-r border-white md:border-r-2 pr-2 md:pr-3 py-1' aria-label="Twitter">
                 <FaTwitter className='cursor-pointer' />
-              </a>
+              </a> */}
 
               <a href="#" className='text-xs md:text-base' aria-label="YouTube">
                 <FaYoutube className='cursor-pointer' />

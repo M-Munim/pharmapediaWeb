@@ -99,7 +99,7 @@ export default function Navbar() {
               </Link>
             </div>
             <div className="flex-grow hidden lg:flex items-center justify-center">
-              <ul className={`flex justify-center items-center gap-7 text-base xl:text-lg ${moveTo !== "Home" ? "text-white" : ""}`}>
+              <ul className={`flex justify-center items-center gap-6 text-base xl:text-lg ${moveTo !== "Home" ? "text-white" : ""}`}>
                 <li onClick={() => setMoveTo("Home")}>
                   <Link href="/" className={`${moveTo === "Home" ? "text-hover_blue font-bold" : ""}`}>Home</Link>
                 </li>
@@ -156,8 +156,10 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+
+        {/* mobile */}
         {menuOpen && (
-          <div className="lg:hidden bg-slate-100 w-6/12 md:w-5/6 ms-auto absolute z-50 top-32 right-10 rounded-xl">
+          <div className="lg:hidden bg-slate-100 w-6/12 md:w-4/12 ms-auto absolute z-50 top-32 right-10 rounded-xl">
             <ul className='flex flex-col items-center gap-4 py-4 text-lg'>
               <li onClick={() => { setMoveTo("Home"); setMenuOpen(false); }}>
                 <Link href="/" className={`${moveTo === "Home" ? "text-hover_blue font-bold" : ""}`}>Home</Link>
