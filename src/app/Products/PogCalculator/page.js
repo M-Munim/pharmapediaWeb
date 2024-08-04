@@ -148,12 +148,12 @@ const Page = () => {
 
               <div className="mb-4">
                 <label htmlFor="phone" className='text-sm font-medium leading-6'>Phone number</label>
-                <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input '>
-                  <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none w-3/12 sm:w-2/12 md:w-3/12 lg:w-3/12 xl:w-2/12'>
+                <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input p-0'>
+                  <select id="country-code" name="country-code" className='m-0 p-0 h-[46px] bg-white rounded-l-lg outline-none w-3/12 sm:w-2/12 md:w-3/12 lg:w-3/12 xl:w-2/12'>
                     <option value="PK">+92</option>
                     <option value="IND">+91</option>
                   </select>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 w-9/12 sm:w-10/12 md:w-9/12 lg:w-9/12 xl:w-10/12 px-3 outline-none rounded-2xl' />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className=' bg-white h-11 w-9/12 sm:w-10/12 md:w-9/12 lg:w-9/12 xl:w-10/12 px-3 outline-none rounded-r-xl' />
                 </div>
               </div>
 

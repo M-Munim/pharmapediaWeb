@@ -142,7 +142,7 @@ const Page = () => {
 
       {/* FORM */}
       <section className="m-auto overflow-hidden relative" id='contact' >
-        <div className="w-10/12 m-auto flex flex-col-reverse md:flex-row items-center justify-center gap-20 relative py-20">
+        <div className="w-10/12 m-auto flex flex-col-reverse md:flex-row items-center justify-center gap-20 relative py-28">
           <div className="left w-full md:w-1/2 relative z-30">
             <form action="">
               <div className="flex justify-between items-center gap-2 lg:gap-7 xl:gap-10 mb-4">
@@ -163,12 +163,12 @@ const Page = () => {
 
               <div className="mb-4">
                 <label htmlFor="phone" className='text-sm font-medium leading-6'>Phone number</label>
-                <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input '>
-                  <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none w-3/12 sm:w-2/12 md:w-3/12 lg:w-3/12 xl:w-2/12'>
+                <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input p-0'>
+                  <select id="country-code" name="country-code" className='m-0 p-0 h-[46px] bg-white rounded-l-lg outline-none w-3/12 sm:w-2/12 md:w-3/12 lg:w-3/12 xl:w-2/12'>
                     <option value="PK">+92</option>
                     <option value="IND">+91</option>
                   </select>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 w-9/12 sm:w-10/12 md:w-9/12 lg:w-9/12 xl:w-10/12 px-3 outline-none rounded-2xl' />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className=' bg-white h-11 w-9/12 sm:w-10/12 md:w-9/12 lg:w-9/12 xl:w-10/12 px-3 outline-none rounded-r-xl' />
                 </div>
               </div>
 
@@ -206,7 +206,7 @@ const Page = () => {
         <div className="border-2 rounded-full border-grey opacity-65 absolute -bottom-60 -right-36 z-10" style={{ width: '526px', height: '526px' }}></div>
         <div className="border-2 rounded-full border-grey opacity-65 absolute -bottom-60 -right-36 z-10" style={{ width: '599px', height: '599px' }}></div>
 
-        <Image src='./Ellipse 45.svg' width={116} height={116} alt="Ellipse Image" className='absolute top-1/3 right-0' />
+        <Image src='/Ellipse 45.svg' width={116} height={116} alt="Ellipse Image" className='absolute top-1/3 right-0' />
       </section>
     </main>
   )
