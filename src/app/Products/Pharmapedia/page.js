@@ -22,7 +22,7 @@ const Page = () => {
             <p className="text-t_grey text-sm sm:text-base md:text-xl w-full  md:w-10/12 text-left md:mt-5">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
           </div>
 
-          <div className="w-full md:w-5/12 flex items-center lg:items-start justify-center mt-5 md:mt-0">
+          <div className="w-full md:w-5/12 flex items-center lg:items-start justify-center mt-5 md:mt-16">
             {/* <Image src="/Ellipse 40.svg" alt="" width={100} height={186} className='' /> */}
             <Image
               src="/productImg1.svg"

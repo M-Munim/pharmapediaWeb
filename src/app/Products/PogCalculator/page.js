@@ -16,25 +16,27 @@ const Page = () => {
         background: "radial-gradient(circle, #57A8D1 0%, #2980B9 100%)"
       }}>
 
-        <div className="w-11/12 sm:w-9/12 text-center flex flex-col md:flex-row justify-center items-center md:h-[500px] z-40 absolute md:mt-72">
-          <div className="w-full md:w-7/12 md:pt-44">
-            <h1 className="outlined-text m-0 p-0 text-white text-5xl sm:text-8xl md:text-[140px]">POG CALCULATOR</h1>
-            <p className="text-t_grey text-sm sm:text-base md:text-xl w-full  md:w-10/12 text-left md:mt-5">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
+        <div className="w-11/12 sm:w-9/12 text-center flex flex-col md:flex-row justify-center items-center md:h-[500px] z-40 absolute  lg:mt-40 xl:mt-72">
+
+          <div className="w-full md:pt-20 xl:pt-36 mt-20 lg:mt-0">
+
+            <h1 className="outlined-text m-0 p-0 text-white text-5xl lg:text-8xl xl:text-[140px]">POG&nbsp;CAL<span className='block'>CULATOR</span></h1>
+
+            <p className="text-t_grey text-sm sm:text-base md:text-xl w-full  md:w-10/12 text-left mt-5 xl:mt-1">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
           </div>
 
-          <div className="w-full md:w-5/12 relative bg-gray-800 flex items-center justify-center mt-5 md:mt-0">
+          <div className="w-full md:w-5/12 flex items-center lg:items-start justify-center mt-5 md:mt-16">
+            {/* <Image src="/Ellipse 40.svg" alt="" width={100} height={186} className='' /> */}
             <Image
               src="/productImg2.svg"
               alt="productImg2"
               width={100}
               height={751}
-              className="absolute right-14 z-20 top-1/2  md:-top-40 w-[250px] md:w-[365px]"
+              className="z-20 w-[250px] md:w-[365px]"
             />
-            <Image src="/Ellipse 40.svg" alt="" width={100} height={186} className='absolute right-1 md:-right-40 top-0 md:-top-20 w-20 sm:w-28 md:w-[186px]' />
-            <Image src="/Ellipse 41.svg" alt="" width={100} height={100} className='absolute -bottom-[510px] -left-10' />
+            <Image src="/Ellipse 41.svg" alt="" width={100} height={100} className='' />
           </div>
         </div>
-        {/* <Image src="/DownBtn.svg" alt="Scroll down button" width={40} height={40} className='absolute bottom-10 cursor-pointer z-50' onClick={scrollToSchools} /> */}
 
         <div className="overflow-hidden relative h-[577px] md:h-[627px] z-30 w-full">
           <div className="md:w-60 md:h-60 w-40 h-40 border-1 rounded-full border-white opacity-25 absolute md:-bottom-20 md:-left-44 -bottom-10 -left-20 z-10" aria-hidden="true"></div>
@@ -44,8 +46,8 @@ const Page = () => {
 
           <div className="md:w-80 md:h-80 border-1 rounded-full border-white opacity-25 absolute -top-40 right-10 z-10 hidden md:block"></div>
           <div className="md:w-[452px] md:h-[452px] border-1 rounded-full border-white opacity-25 absolute -top-48 -right-12 z-10 hidden md:block"></div>
-          <div className="md:w-[637px] md:h-[637px] border-1 rounded-full border-white opacity-25 absolute -top-60 -right-36 z-10 hidden md:block"></div>
-          <div className="md:w-[783px] md:h-[783px] border-1 rounded-full border-white opacity-25 absolute -top-64 -right-56 z-10 hidden md:block"></div>
+          <div className="md:w-[637px] md:h-[637px] border-1 rounded-full border-white opacity-25 absolute -top-60 -right-36 z-10 hidden lg:block"></div>
+          <div className="md:w-[783px] md:h-[783px] border-1 rounded-full border-white opacity-25 absolute -top-64 -right-56 z-10 hidden lg:block"></div>
         </div>
       </section>
 
@@ -64,17 +66,17 @@ const Page = () => {
             alt="prodpage2"
             width={999.91}
             height={989.84}
-            className=""
+            className="mt-24"
           />
         </div>
         <div className="right w-11/12 md:w-6/12 text-start relative z-30">
           <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Pharmapedia</h2>
-          <p className="text-sm md:text-xl text-t_grey mt-2 w-full md:w-9/12">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
+          <p className="text-sm md:text-lg lg:text-xl text-t_grey mt-2 w-full md:w-11/12 lg:w-9/12">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
         </div>
       </section>
 
-      <section className="bg-greyBg flex items-center justify-center relative z-30">
-        <div className="w-6/12 hidden md:inline-block">
+      <section className="bg-greyBg flex items-center justify-center relative z-30 mt-10">
+        <div className="w-6/12 hidden xl:inline-block">
           <Image
             src="/prodpage2Img2.svg"
             alt=""
@@ -83,9 +85,10 @@ const Page = () => {
             className=""
           />
         </div>
+
         <div className="w-full md:w-6/12 flex items-start justify-center tracking-wider my-5 md:my-2 gap-3">
           <div className="left relative z-30">
-            <div className="w-44 h-32 sm:w-48 sm:h-48 md:w-96 md:h-56 bg-white shadow-xl border-l-5 border-[#2AA7FF] rounded-md flex flex-col items-center justify-center mt-6 sm:mt-7 md:mt-20">
+            <div className="w-44 h-32 sm:w-48 sm:h-48 md:w-80  px-2 md:h-56 bg-white shadow-xl border-l-5 border-[#2AA7FF] rounded-md flex flex-col items-center justify-center mt-6 sm:mt-7 md:mt-20">
               <div className="text-left">
                 <Image src="/accessibility1.svg" alt="" width={100} height={32} className='mb-2 w-6 sm:w-[32px]' />
                 <p className="text-base sm:text-lg md:text-2xl font-bold text-prodclr1 leading-5 md:leading-6">40 top Companies <br /> data updated</p>
@@ -93,7 +96,7 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="w-44 h-32 sm:w-48 sm:h-48 md:w-96 md:h-56 bg-white shadow-xl border-l-5 border-[#2AA7FF] rounded-md flex flex-col items-center justify-center mt-6 sm:mt-7 md:mt-20">
+            <div className="w-44 h-32 sm:w-48 sm:h-48 md:w-80  px-2 md:h-56 bg-white shadow-xl border-l-5 border-[#2AA7FF] rounded-md flex flex-col items-center justify-center mt-6 sm:mt-7 md:mt-20">
               <div className="text-left">
                 <Image src="/accessibility3.svg" alt="" width={100} height={32} className='mb-2 w-6 sm:w-[32px]' />
                 <p className="text-base sm:text-lg md:text-2xl font-bold text-prodclr1 leading-5 md:leading-6">UI enhanced</p>
@@ -103,15 +106,15 @@ const Page = () => {
           </div>
 
           <div className="right">
-            <div className="w-44 h-32 sm:w-48 sm:h-48 md:w-96 md:h-56 flex flex-col items-center justify-center">
+            <div className="w-44 h-32 sm:w-48 sm:h-48 md:w-80 md:h-56 flex flex-col items-center justify-center">
               <div className="">
                 <Image src="/accessibility2.svg" alt="" width={100} height={32} className='mb-2 w-6 sm:w-[32px]' />
-                <p className="text-base sm:text-lg md:text-2xl font-bold text-prodclr1 leading-5 md:leading-6">Bug in prescription fixed</p>
-                <p className="text-sm sm:text-lg md:text-xl text-prodclr2 mt-2">Our Application Bugs are Been Solved If Any</p>
+                <p className="text-base sm:text-lg md:text-2xl font-bold text-prodclr1 leading-5 md:leading-6">Bug in prescription <br /> fixed</p>
+                <p className="text-sm sm:text-lg md:text-xl text-prodclr2 mt-2">Our Application Bugs <br /> are Been Solved If Any</p>
               </div>
             </div>
 
-            <div className="w-44 h-32 sm:w-48 sm:h-48 md:w-96 md:h-56 flex flex-col items-center justify-center">
+            <div className="w-44 h-32 sm:w-48 sm:h-48 md:w-80 md:h-56 flex flex-col items-center justify-center">
               <div className="">
                 <Image src="/accessibility4.svg" alt="" width={100} height={32} className='mb-2 w-6 sm:w-[32px]' />
                 <p className="text-base sm:text-lg md:text-2xl font-bold text-prodclr1 leading-5 md:leading-6">Best Ux Design</p>
@@ -123,11 +126,11 @@ const Page = () => {
       </section>
 
       {/* FORM */}
-      <section className="m-auto overflow-hidden relative" id='contact'>
+      <section className="m-auto overflow-hidden relative" id='contact' >
         <div className="w-10/12 m-auto flex flex-col-reverse md:flex-row items-center justify-center gap-20 relative py-28">
           <div className="left w-full md:w-1/2 relative z-30">
             <form action="">
-              <div className="flex justify-between items-center gap-2 md:gap-10 mb-4">
+              <div className="flex justify-between items-center gap-2 lg:gap-7 xl:gap-10 mb-4">
                 <div className="flex flex-col items-start justify-center gap-1 w-6/12">
                   <label htmlFor="firstName" >First Name</label>
                   <input type="text" name="firstName" id="firstName" placeholder='First Name' className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' required />
@@ -146,11 +149,11 @@ const Page = () => {
               <div className="mb-4">
                 <label htmlFor="phone" className='text-sm font-medium leading-6'>Phone number</label>
                 <div className='h-12 w-full rounded-lg outline-none border-slate-400 border phone-input '>
-                  <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none'>
-                    <option value="PK">PK +92</option>
-                    <option value="IND">IND +91</option>
+                  <select id="country-code" name="country-code" className='h-11 rounded-l-lg outline-none w-3/12 sm:w-2/12 md:w-3/12 lg:w-3/12 xl:w-2/12'>
+                    <option value="PK">+92</option>
+                    <option value="IND">+91</option>
                   </select>
-                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 md:w-8/12 px-3 outline-none' />
+                  <input type="tel" id="phone" name="phone" placeholder="Phone number" className='h-11 w-9/12 sm:w-10/12 md:w-9/12 lg:w-9/12 xl:w-10/12 px-3 outline-none rounded-2xl' />
                 </div>
               </div>
 
@@ -172,9 +175,9 @@ const Page = () => {
 
           <div className="right w-full md:w-1/2 relative z-30">
             <div className="flex flex-col gap-4">
-              <h2 className="uppercase font-light text-4xl md:text-5xl text-heading_blue tracking-wider">Get in Touch</h2>
+              <h2 className="uppercase font-light text-4xl lg:text-5xl text-heading_blue tracking-wider">Get in Touch</h2>
 
-              <p className="text-sm md:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
+              <p className="text-sm md:text-base lg:text-xl text-t_grey">Lorem ipsum dolor sit amet consectetur. Eu egestas libero viverra vulputate amet nunc lectus non ac. Arcu diam nullam ultrices consectetur. Gravida enim in sagittis mauris aliquam duis.</p>
 
               <button className="button-filled">
                 Contact us
