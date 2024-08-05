@@ -17,7 +17,7 @@ const Page = () => {
 
         <div className="w-11/12 sm:w-9/12 text-center flex flex-col md:flex-row justify-center items-center md:h-[500px] z-40 absolute  lg:mt-40 xl:mt-72">
 
-          <div className="w-full md:pt-20 xl:pt-44 bg-green-300 mt-20 lg:mt-0">
+          <div className="w-full md:pt-20 xl:pt-44 mt-20 lg:mt-0">
             <h1 className="outlined-text m-0 p-0 text-white text-5xl lg:text-8xl xl:text-[140px]">PHARMA<span className='inline xl:block'>PEDIA</span></h1>
             <p className="text-t_grey text-sm sm:text-base md:text-xl w-full  md:w-10/12 text-left md:mt-5">Pharmapedia Private Limited is a company specializing in mobile application development. Our focus lies primarily in the education sector, with an emphasis on medical education and STEM (Science, Technology, Engineering, and Mathematics) education.</p>
           </div>
